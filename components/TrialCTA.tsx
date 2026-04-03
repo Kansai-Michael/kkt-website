@@ -1,0 +1,31 @@
+import BookTrialButton from "@/components/BookTrialButton";
+
+interface TrialCTAProps {
+  heading?: string;
+  subtext?: string;
+  program?: string;
+}
+
+export default function TrialCTA({
+  heading = "Ready to try? Your first class is free.",
+  subtext = "No contracts. No pressure. Just come and see if it's right for your family.",
+  program,
+}: TrialCTAProps) {
+  return (
+    <section className="bg-[#5B7DB1] text-white py-16 px-4">
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">{heading}</h2>
+        <p className="text-white/80 text-lg mb-8">{subtext}</p>
+        <BookTrialButton
+          program={program}
+          className="inline-block bg-[#FFB800] text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors shadow-lg"
+        >
+          Book Your Free Trial Class
+        </BookTrialButton>
+        <p className="mt-4 text-white/50 text-sm">
+          Or call us: <a href="tel:0738485949" className="underline hover:text-white">07 3848 5949</a>
+        </p>
+      </div>
+    </section>
+  );
+}
