@@ -1,20 +1,18 @@
 import Link from "next/link";
 import BookTrialButton from "@/components/BookTrialButton";
 
-const OLD = "https://kansaikarategoldcoast.com.au/wp-content/uploads/sites/27/2025/02";
-
-const BADGE_IMG = `${OLD}/KKA-Logo-Trans-background.png`;
-const HERO_IMG = `${OLD}/adultsgoogle4.webp`;
-const DOJO_INTERIOR = `${OLD}/Lillionsgoogle.webp`;
-const KIDS_PHOTO = `${OLD}/Lillions2.webp`;
-const ADULTS_PHOTO = `${OLD}/adultgoogle6.webp`;
+const BADGE_IMG = "/images/logo.png";
+const HERO_IMG = "/images/hero.jpg";
+const DOJO_INTERIOR = "/images/class1.jpg";
+const KIDS_PHOTO = "/images/class3.jpg";
+const ADULTS_PHOTO = "/images/class5.jpg";
 
 const programs = [
   {
     name: "Little Lions",
     age: "Ages 5–7",
     href: "/programs/little-lions",
-    img: `${OLD}/Lillionsgoogle.webp`,
+    img: "/images/class1.jpg",
     description:
       "There's nothing more satisfying than watching your 5–7 year old gain physical and social skills that you know will benefit them for life. Your little one will learn focus, self-confidence and discipline in a warm, encouraging environment.",
   },
@@ -22,7 +20,7 @@ const programs = [
     name: "Juniors",
     age: "Ages 8–12",
     href: "/programs/juniors",
-    img: `${OLD}/Juniors.webp`,
+    img: "/images/class2.jpg",
     description:
       "Martial Arts is one of the best possible activities for children. They'll learn to defend themselves physically, but more importantly they'll build the mental and emotional skill sets necessary to conquer challenges at school and in life.",
   },
@@ -30,7 +28,7 @@ const programs = [
     name: "Teen Karate",
     age: "Ages 13–17",
     href: "/programs/teens",
-    img: `${OLD}/Teengoogle-1.webp`,
+    img: "/images/class4.jpg",
     description:
       "Karate is the perfect activity for teenagers. It gives them an outlet for their energy in a structured class designed just for them — not lumped in with little kids, not thrown in with adults.",
   },
@@ -38,7 +36,7 @@ const programs = [
     name: "Adult Karate",
     age: "Ages 18+",
     href: "/programs/adults",
-    img: `${OLD}/adultsgoogle4.webp`,
+    img: "/images/class5.jpg",
     description:
       "Whether it's fitness, self-defence, or a genuine challenge — our Adult Karate classes are designed for real people. You'll love the instruction, your body will love the workout, and your spirit will love the community.",
   },

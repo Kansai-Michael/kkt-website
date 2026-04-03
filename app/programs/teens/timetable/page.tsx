@@ -1,7 +1,6 @@
 import TimetablePage from "@/components/TimetablePage";
 import type { MoreInfoContent } from "@/components/TimetablePage";
 
-const OLD = "https://kansaikarategoldcoast.com.au/wp-content/uploads/sites/27/2025/02";
 const BOOKING_URL = "KIHON_BOOKING_CALENDAR_URL";
 
 export const metadata = { title: "Teens Karate Class Timetable | Kansai Karate Tarragindi" };
@@ -22,7 +21,7 @@ const moreInfo: MoreInfoContent = {
       body: "Not only will your teenager be surrounded by positive leadership examples in class, as they advance they'll get opportunities to be in leadership positions of their own if they choose. They'll learn firsthand how to be a positive example in their own lives!",
     },
   ],
-  dividerPhoto: `${OLD}/adultsgoogle5.jpg`,
+  dividerPhoto: "/images/hero2.jpg",
   classHeading: "What do teens do in Teen Karate classes?",
   classIntro: "Most parents understand typical teen activities. But Teen Karate classes at Kansai Karate Tarragindi are something genuinely different — structured, energetic, and rewarding.",
   classItems: [
@@ -43,7 +42,7 @@ const moreInfo: MoreInfoContent = {
       body: "Students are often given challenges and drills to complete with partners and larger teams. This creates an opportunity for them to learn to interact positively with others, effectively communicate their ideas, and be pushed by their teams to do their absolute best.",
     },
   ],
-  classPhoto: `${OLD}/adultgoogle6.jpg`,
+  classPhoto: "/images/class4.jpg",
   faqs: [
     {
       q: "Can we try it before signing up?",
@@ -67,7 +66,7 @@ export default function TeensTimetable() {
     <TimetablePage
       name="Teens Karate"
       slug="teens"
-      heroImg={`${OLD}/Teengoogle-1.webp`}
+      heroImg="/images/class4.jpg"
       headline="Build fitness, focus, and real self-defence skills!"
       subheadline="Teens Karate is for ages 13–17. Book a FREE First Lesson and discover what you're capable of."
       scheduleRows={[

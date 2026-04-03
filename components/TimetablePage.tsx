@@ -1,7 +1,6 @@
 import BookTrialButton from "@/components/BookTrialButton";
 
-const OLD = "https://kansaikarategoldcoast.com.au/wp-content/uploads/sites/27/2025/02";
-const BADGE_IMG = `${OLD}/KKA-Logo-Trans-background.png`;
+const BADGE_IMG = "/images/logo.png";
 
 const TABLE_HEADER_BG = "#003087";
 const LIGHT_COL_BG = "#c5d9f0";

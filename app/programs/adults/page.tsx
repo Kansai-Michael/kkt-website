@@ -1,7 +1,6 @@
 import ProgramPage from "@/components/ProgramPage";
 import type { Metadata } from "next";
 
-const OLD = "https://kansaikarategoldcoast.com.au/wp-content/uploads/sites/27/2025/02";
 
 export const metadata: Metadata = {
   title: "Adult Karate Classes | Kansai Karate Tarragindi",
@@ -24,7 +23,7 @@ export default function AdultsPage() {
       <ProgramPage
       name="Adult Karate"
       slug="adults"
-      heroImg={`${OLD}/adultsgoogle4.webp`}
+      heroImg="/images/class5.jpg"
       headline="See why Adult Karate Classes at Kansai Karate Tarragindi are so rewarding!"
       subheadline="Whether it's losing weight, building muscle, learning to defend yourself, or just having a blast — our Adult Karate classes have exactly what you need."
       introText=""
@@ -57,9 +56,9 @@ export default function AdultsPage() {
       ctaHeading="This Could be the Best Thing you've ever done for yourself."
       ctaText="Adult Karate Classes Build Benefits for Life"
       secondaryImages={[
-        `${OLD}/adultsgoogle4.webp`,
-        `${OLD}/adultgoogle6.webp`,
-        `${OLD}/adultsgoogle4.webp`,
+        "/images/class5.jpg",
+        "/images/class6.jpg",
+        "/images/class7.jpg",
       ]}
     />
     </>

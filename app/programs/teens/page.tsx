@@ -1,7 +1,6 @@
 import ProgramPage from "@/components/ProgramPage";
 import type { Metadata } from "next";
 
-const OLD = "https://kansaikarategoldcoast.com.au/wp-content/uploads/sites/27/2025/02";
 
 export const metadata: Metadata = {
   title: "Teens Karate (Ages 13–17) | Kansai Karate Tarragindi",
@@ -24,7 +23,7 @@ export default function TeensPage() {
       <ProgramPage
       name="Teens Karate"
       slug="teens"
-      heroImg={`${OLD}/Teengoogle-1.webp`}
+      heroImg="/images/class4.jpg"
       headline="Kansai Karate Tarragindi Teen Classes set positive pathways for life!"
       subheadline="Karate is the perfect activity for teenagers. It gives them an outlet for their unique energy in a structured class designed and taught just for them."
       introText=""
@@ -57,9 +56,9 @@ export default function TeensPage() {
       ctaHeading="This Could be the Best Thing you've ever done for your teen."
       ctaText="Teen Karate Classes Build Benefits for Life"
       secondaryImages={[
-        `${OLD}/Teengoogle-1.webp`,
-        `${OLD}/Teengoogle-1.webp`,
-        `${OLD}/Teengoogle-1.webp`,
+        "/images/class4.jpg",
+        "/images/hero2.jpg",
+        "/images/class6.jpg",
       ]}
     />
     </>

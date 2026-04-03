@@ -43,7 +43,7 @@ const localBusinessSchema = {
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Thursday"], "opens": "16:15", "closes": "20:00" }
   ],
   "priceRange": "$$",
-  "image": "https://kansaikarategoldcoast.com.au/wp-content/uploads/sites/27/2025/02/KKA-Logo-Trans-background.png"
+  "image": "https://www.kansaikaratetarragindi.com.au/images/logo.png"
 };
 
 const websiteSchema = {
