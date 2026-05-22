@@ -30,11 +30,13 @@ export default function LittleLionsPage() {
           {
             img: "/images/ll-1.jpg",
             caption: "Focus & Discipline",
+            objectPosition: "bottom",
             body: "Your little one will learn focus, self-confidence and discipline, while getting a full body workout. Little Lions classes teach fantastic martial arts moves plus vital interpersonal skills.",
           },
           {
             img: "/images/ll-2.jpg",
             caption: "Self-Confidence",
+            objectPosition: "top",
             body: "Kids at Kansai Karate Tarragindi build deep, unshakeable confidence that they carry into school, home and friendships — confidence that grows with every class.",
           },
           {

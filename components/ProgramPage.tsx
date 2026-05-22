@@ -11,6 +11,7 @@ interface PhotoCard {
   img: string;
   caption: string;
   body: string;
+  objectPosition?: string;
 }
 
 interface ProgramPageProps {
@@ -95,6 +96,7 @@ export default function ProgramPage({
                     src={p.img}
                     alt={p.caption}
                     className="w-full h-full object-cover"
+                    style={{ objectPosition: p.objectPosition ?? "center" }}
                   />
                 </div>
                 <div className="mt-4">
