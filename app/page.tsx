@@ -233,34 +233,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── ABOUT SENSEI JASON ── */}
+      {/* ── ABOUT SENSEI JASON teaser ── */}
       <section className="py-16 px-4" style={{ background: "#5B7DB1" }}>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-          <div className="md:col-span-2">
-            <p className="text-white/60 text-sm uppercase tracking-widest mb-3">
-              Your head instructor
-            </p>
-            <h2 className="text-3xl font-bold text-white mb-4 leading-snug">
-              About Sensei Jason Sallaway
-            </h2>
-            <hr className="border-white/30 mb-8 w-16" />
-            <p className="text-white/85 text-base leading-relaxed mb-4">
-              Sensei Jason Sallaway leads Kansai Karate Tarragindi with warmth, patience, and a genuine love of the art. He is part of the Kansai Karate Academy family, operating under Shihan Stephen Kelly — ensuring every student at Tarragindi benefits from a strong, proven teaching lineage.
-            </p>
-            <p className="text-white/85 text-base leading-relaxed mb-4">
-              Kansai Karate Tarragindi is a place where every student is seen, valued, and challenged to grow — whether they are stepping on the mat for the very first time or working towards their next belt grading.
-            </p>
-            <p className="text-white/85 text-base leading-relaxed">
-              Classes run Monday, Tuesday and Thursday evenings, with programs for every age group from Little Lions (5–7 years) through to Adults. We are based at the Wellers Hill Bowls Club, 34 Esher St, Tarragindi.
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={JASON_PHOTO}
             alt="Sensei Jason Sallaway — Head Instructor, Kansai Karate Tarragindi"
-            className="rounded-lg mx-auto w-48 md:w-full object-cover"
-            style={{ maxHeight: "420px", objectPosition: "top" }}
+            className="rounded-lg w-40 md:w-48 object-cover flex-shrink-0"
+            style={{ maxHeight: "260px", objectPosition: "top" }}
           />
+          <div>
+            <p className="text-white/60 text-sm uppercase tracking-widest mb-2">Your head instructor</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Sensei Jason Sallaway</h2>
+            <p className="text-white/85 text-base leading-relaxed mb-6">
+              Sensei Jason Sallaway leads Kansai Karate Tarragindi as a licensed dojo of Kansai Karate Academy, under Shihan Stephen Kelly. A warm, patient instructor, Jason ensures every student — from their very first class to their latest grading — is seen, valued, and challenged to grow.
+            </p>
+            <Link
+              href="/about"
+              className="inline-block border-2 border-white text-white font-bold px-8 py-3 hover:bg-white hover:text-[#5B7DB1] transition-colors uppercase tracking-widest text-sm"
+            >
+              Learn More About Us
+            </Link>
+          </div>
         </div>
       </section>
 

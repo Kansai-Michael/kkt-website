@@ -59,6 +59,10 @@ export default function Nav() {
             )}
           </div>
 
+          <Link href="/about" className="hover:text-[#FFB800] transition-colors">
+            About
+          </Link>
+
           <button
             onClick={() => openModal()}
             className="hover:text-[#FFB800] transition-colors"
@@ -105,6 +109,13 @@ export default function Nav() {
             </Link>
           ))}
           <hr className="border-blue-700" />
+          <Link
+            href="/about"
+            onClick={() => setMenuOpen(false)}
+            className="block py-1 hover:text-[#FFB800]"
+          >
+            About
+          </Link>
           <button
             onClick={() => { setMenuOpen(false); openModal(); }}
             className="block py-1 hover:text-[#FFB800] w-full text-left"

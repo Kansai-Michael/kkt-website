@@ -1,7 +1,6 @@
 import ProgramPage from "@/components/ProgramPage";
 import type { Metadata } from "next";
 
-
 export const metadata: Metadata = {
   title: "Juniors Program (Ages 8–12) | Kansai Karate Tarragindi",
   description: "Karate classes for 8–12 year olds in Tarragindi. Juniors builds discipline, resilience, and technical karate skills in a structured, encouraging environment. Monday, Tuesday and Thursday.",
@@ -21,46 +20,96 @@ export default function JuniorsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <ProgramPage
-      name="Juniors"
-      slug="juniors"
-      heroImg="/images/class2.jpg"
-      headline="Kansai Karate Tarragindi Junior Classes set positive pathways for life!"
-      subheadline="Martial Arts is one of the best possible activities for children. They'll learn to defend themselves physically, but more importantly they'll build the mental and emotional skill sets necessary to conquer challenges."
-      introText=""
-      benefitsHeading="Junior Classes Build Benefits for Life"
-      benefits={[
-        {
-          title: "Mental & Emotional Growth",
-          body: "They'll build the mental and emotional skill sets necessary to conquer challenges like high school, university, and becoming a healthy, balanced adult. Martial Arts is one of the best possible activities for children.",
-        },
-        {
-          title: "Real Technique & Physical Development",
-          body: "Kata, kumite, and conditioning. Students at this age can absorb real technique and start to develop their own karate style. They'll gain strength, flexibility, and coordination across Monday, Tuesday and Thursday evening classes.",
-        },
-        {
-          title: "Every Child is Valued",
-          body: "All children are valued members of the class and part of the team, regardless of their skill level. Nobody is left behind, and nobody is held back — Sensei Jason ensures every student trains at the right pace for them.",
-        },
-      ]}
-      whyHeading="Why Kids Love Junior Classes"
-      whyFeatures={[
-        { title: "Mental Toughness", body: "Learning to push through difficulty, handle setbacks, and keep going. Skills that transfer directly to school, sport, and life." },
-        { title: "Positive Peer Group", body: "Training alongside other motivated kids creates friendships built on shared challenge — a very different dynamic to school friendships." },
-        { title: "Grading & Achievement", body: "Clear belt milestones give students real goals and visible progress. Every grading is a moment of genuine pride for the whole family." },
-        { title: "Part of a Bigger Family", body: "Kansai Karate Tarragindi is part of the Kansai Karate Academy network, with access to events and competitions through QKA and AKF affiliations." },
-      ]}
-      testimonial={{
-        text: "All children are valued members of the class and part of the team, regardless of their skill level",
-        author: "Tarragindi parent",
-      }}
-      ctaHeading="This could be the best thing you've ever done for your child."
-      ctaText="Junior Classes Build Benefits for Life"
-      secondaryImages={[
-        "/images/class2.jpg",
-        "/images/hero2.jpg",
-        "/images/class7.jpg",
-      ]}
-    />
+        name="Juniors"
+        slug="juniors"
+        heroImg="/images/jnr-hero.jpg"
+        heroTitle="Juniors Classes at Kansai Karate Tarragindi mean Focus, Fitness and Fun!"
+        heroSubtitle="Kids build Confidence, gain strength and flexibility, and learn amazing skills in the best Kids Martial Arts program in the Tarragindi area."
+        benefitsTitle="Juniors Karate Classes Build Benefits for Life"
+        buildPhotos={[
+          {
+            img: "/images/jnr-1.jpg",
+            caption: "Strength",
+            body: "Juniors Karate classes build strength in a real, functional way that benefits children of all ages. They'll see their strength grow in real time from the very first few weeks.",
+          },
+          {
+            img: "/images/jnr-2.jpg",
+            caption: "Flexibility",
+            body: "Flexibility isn't just for showing off — it has tremendous health benefits from increased quality of life to injury reduction. Your child will develop it naturally through every class.",
+          },
+          {
+            img: "/images/jnr-3.jpg",
+            caption: "Agility",
+            body: "Increased balance, awareness and precision turn your child into a real life ninja — and they'll absolutely love it! Agility that carries into every sport and activity they do.",
+          },
+        ]}
+        benefitCards={[
+          {
+            img: "/images/jnr-4.jpg",
+            caption: "Focus",
+            body: "Juniors Karate gives kids laser-like focus. They'll develop the ability to concentrate with sustained patience — a skill that benefits them in school and throughout life.",
+          },
+          {
+            img: "/images/jnr-5.jpg",
+            caption: "Determination",
+            body: "Children need a safe, structured place to learn to overcome obstacles and build grit and determination. Juniors Karate is exactly that — a place to grow stronger through challenge.",
+          },
+          {
+            img: "/images/jnr-6.jpg",
+            caption: "Confidence",
+            body: "Confidence isn't just a buzzword — it's what we do. Your child will build deep, unshakeable confidence that they'll take everywhere they go, for the rest of their lives.",
+          },
+        ]}
+        parentsTitle="Parents Love Juniors Karate"
+        parentsFeatures={[
+          {
+            title: "Class Times",
+            body: "Juniors Karate class times were designed by parents for parents — Monday, Tuesday and Thursday evenings. You're almost guaranteed to find a time that works for your family.",
+          },
+          {
+            title: "Community",
+            body: "Your child will be surrounded by peers striving towards the same goals they are. They'll build real friendships and be supported in their individual journey.",
+          },
+          {
+            title: "Life Skills",
+            body: "There's literally no better place for your child to learn life skills like Persistence, Determination and Empathy. They'll learn from caring, role-model instructors and they'll love it.",
+          },
+          {
+            title: "Physical Skills",
+            body: "It's more than amazing ninja moves — it's proprioception, balance, agility and more — physical traits that will remain with and benefit your child for the rest of their lives.",
+          },
+        ]}
+        studentsTitle="Kids Love Juniors Karate Classes"
+        studentsFeatures={[
+          {
+            title: "Real Strength",
+            body: "Kids can see their own strength building after only a few weeks. They love to see their strength grow in real time, working each day on becoming the strongest version of themselves.",
+          },
+          {
+            title: "Amazing Agility",
+            body: "Yes, every child thinks they're already a ninja! Once they get into class, they start learning actual real moves — and they absolutely love feeling like a superhero.",
+          },
+          {
+            title: "They Feel 'Cool'",
+            body: "Many kids are new to Kansai Karate Tarragindi, but almost all of them know how awesome it is to be here. It's a blast, and parents can feel great knowing it's packed with benefits.",
+          },
+          {
+            title: "They Have FUN!",
+            body: "We're Martial Arts teachers because we love what we do — and that shows through every single day. The joy is infectious. It's the most fun activity available for them, hands down!",
+          },
+        ]}
+        testimonials={[
+          {
+            text: "Good exercise and skills to learn — all kids should learn the life skills taught here to build confidence and techniques that will help them with life's encounters.",
+            author: "Juniors parent, Tarragindi",
+          },
+          {
+            text: "Great educational and motivational activity for children. The team is so friendly and passionate. Highly recommended.",
+            author: "Juniors parent, Tarragindi",
+          },
+        ]}
+        ctaHeading="This could be the best thing you've ever done for your child."
+      />
     </>
   );
 }
