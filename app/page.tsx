@@ -5,8 +5,6 @@ const BADGE_IMG = "/images/logo.png";
 const HERO_IMG = "/images/hero.jpg";
 const DOJO_INTERIOR = "/images/dojo-interior.jpg";
 const KIDS_PHOTO = "/images/little-lions.jpg";
-const ADULTS_PHOTO = "/images/adults.jpg";
-const JASON_PHOTO = "/images/instructor-jason.png";
 
 const programs = [
   {
@@ -15,7 +13,7 @@ const programs = [
     href: "/programs/little-lions",
     img: "/images/little-lions.jpg",
     description:
-      "There's nothing more satisfying than watching your 5–7 year old gain physical and social skills that you know will benefit them for life. Your little one will learn focus, self-confidence and discipline in a warm, encouraging environment.",
+      "There's nothing more satisfying than watching your 5–7 year old gain physical and social skills that you know will benefit them for life. Your little one will learn focus, self-confidence and discipline, while getting a full body work out. Preschool Martial Arts teach fantastic martial arts moves plus vital interpersonal skills.",
   },
   {
     name: "Juniors",
@@ -23,61 +21,91 @@ const programs = [
     href: "/programs/juniors",
     img: "/images/juniors.jpg",
     description:
-      "Martial Arts is one of the best possible activities for children. They'll learn to defend themselves physically, but more importantly they'll build the mental and emotional skill sets necessary to conquer challenges at school and in life.",
+      "Martial Arts is one of the best possible activities for children. They'll learn to defend themselves physically, but more importantly they'll build the mental and emotional skill sets necessary to conquer challenges like high school, college, and becoming a healthy, balanced adult.",
   },
   {
     name: "Teen Karate",
-    age: "Ages 13–17",
+    age: "Ages 13+",
     href: "/programs/teens",
     img: "/images/teens.jpg",
     description:
-      "Karate is the perfect activity for teenagers. It gives them an outlet for their energy in a structured class designed just for them — not lumped in with little kids, not thrown in with adults.",
+      "Martial Arts is the perfect activity for teenagers! It gives them an outlet for their unique energy through engagement and gross motor skill activity, but at Kansai Karate Tarragindi, they'll do it in a structured class designed and taught just for them.",
   },
   {
     name: "Adult Karate",
-    age: "Ages 18+",
+    age: "",
     href: "/programs/adults",
     img: "/images/adults.jpg",
     description:
-      "Whether it's fitness, self-defence, or a genuine challenge — our Adult Karate classes are designed for real people. You'll love the instruction, your body will love the workout, and your spirit will love the community.",
+      "Whether it's losing weight, building muscle, learning to defend yourself, or just having a blast, our Adult Martial Arts classes have what you need. You'll love the high energy class instruction, your body will love the awesome workout, and your spirit will love the camaraderie and positive atmosphere.",
   },
 ];
 
 const whyFeatures = [
   {
-    icon: "🥋",
-    title: "Traditional Shitoryu Shukokai",
-    body: "We teach the complete art — kata, kihon, kumite, and the philosophy behind each. Students who train here are learning something real, part of a lineage that stretches back decades.",
+    title: "Schedule Focused",
+    body: "Our programs were created for real family schedules. Convenient class times mean that kids, adults, and whole families can improve their quality of life without killing every moment of spare time.",
   },
   {
-    icon: "👥",
-    title: "Part of the Kansai Karate Academy Family",
-    body: "Kansai Karate Tarragindi is part of the Kansai Karate Academy network, led by Shihan Stephen Kelly. Our students have access to gradings, events, and competitions through QKA and AKF affiliations.",
+    title: "Community Positive",
+    body: "Our positive atmosphere is contagious, and you'll know without a doubt that you're in a place where kids will learn positive habits and adults will make meaningful, lasting friendships.",
   },
   {
-    icon: "📅",
-    title: "Age-Specific Classes",
-    body: "Every program is designed for a specific age group and energy level. Little Lions are never mixed with Juniors, and Teens have their own class separate from adults. Everyone trains at the right level.",
+    title: "Values Oriented",
+    body: "All of our programs improve physical prowess, and that's important. But what's far more important is the mental and emotional benefits that our programs bring to everyday life.",
   },
   {
-    icon: "🌟",
-    title: "A Community That Cares",
-    body: "Our positive atmosphere is genuine. From the first class, families tell us they felt immediately welcomed. No cliques, no ego — just people working hard and supporting each other.",
+    title: "Movement Based",
+    body: "Both kids and adults will gain flexibility, agility, and strength, even if they aren't athletic! They'll love it, because it's not only super fun, it's inclusive and accommodating at every step.",
+  },
+];
+
+const kidsFeatures = [
+  {
+    title: "Amazing Classes",
+    body: "Kids love classes at Kansai Karate Tarragindi because they're unbelievably fun (but parents love them because they build benefits for life!)",
+  },
+  {
+    title: "Structured Activity",
+    body: "Everything we do is intentionally structured based on our extensive experience. Kids at Kansai Karate Tarragindi actually like the structure, because it makes them feel safe and cared for. They can trust deep down that they're safe to explore and challenge themselves.",
+  },
+  {
+    title: "Full Inclusion",
+    body: "We take kids' emotions seriously. The culture at Kansai Karate Tarragindi is one of inclusion — no cliques, no cool kids club, no unkind actions or attitudes. Kids love it because they always feel like they belong!",
+  },
+  {
+    title: "Awesome Fun!",
+    body: "It's so much fun! At Kansai Karate Tarragindi, we know that getting your child out of the house, in the car, and across town to an activity is a big deal. We guarantee that when they leave, it will have been 100% worth it, every time!",
+  },
+];
+
+const adultsFeatures = [
+  {
+    title: "Curriculum",
+    body: "Our classes were designed specifically for the average person. You'll build skills step by step, without having to be a superstar to see improvement. But stick with it, and you'll see your abilities soar!",
+  },
+  {
+    title: "Community",
+    body: "You'll be surrounded by peers striving towards the same goals you are, day in, day out. You'll build friendships and be supported in your individual journey.",
+  },
+  {
+    title: "Mental Health",
+    body: "We've always known it, but now the science agrees: You must take time for your own mental health. Our classes help you clear your mind, accomplish your goals, and be more healthy, from the inside out.",
+  },
+  {
+    title: "Physical Skills",
+    body: "It's more than just learning awesome looking moves — it's proprioception, balance, agility and more — physical skills that will remain with and benefit you for the rest of your life.",
   },
 ];
 
 const testimonials = [
   {
-    text: "The senseis are incredible — they're really engaging, fun, and they make sure the kids feel really comfortable and build their confidence",
-    author: "Tarragindi parent",
+    text: "The sensei's are incredible; they're really engaging, fun, and they make sure the kids feel really comfortable and build their confidence. My daughter is loving karate and it's improving her discipline, focus and coordination. Highly recommended!",
+    author: "Member Feedback",
   },
   {
-    text: "All children are valued members of the class and part of the team, regardless of their skill level",
-    author: "Tarragindi parent",
-  },
-  {
-    text: "A blast while being packed with benefits for kids",
-    author: "Tarragindi parent",
+    text: "Fantastic dojo for the whole family! Wonderful atmosphere of support and friendly teachers. Highly recommended!",
+    author: "Member Feedback",
   },
 ];
 
@@ -96,7 +124,7 @@ export default function HomePage() {
       >
         <div
           className="absolute inset-0"
-          style={{ background: "rgba(10, 30, 80, 0.62)" }}
+          style={{ background: "rgba(10, 30, 80, 0.65)" }}
         />
         <div className="relative z-10 text-center px-4 flex flex-col items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -106,14 +134,15 @@ export default function HomePage() {
             className="w-32 md:w-40 mb-8"
           />
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-white max-w-3xl mx-auto leading-snug font-bold mb-4">
-            Traditional Karate for Families in{" "}
-            <span style={{ color: "#FFB800" }}>Tarragindi</span>
+            Kids build{" "}
+            <span style={{ color: "#FFB800" }}>Focus and Discipline</span>,
+            Teens find classes{" "}
+            <span style={{ color: "#FFB800" }}>designed just for them</span>,
+            and Adults have a workout that helps keep them{" "}
+            <span style={{ color: "#FFB800" }}>fit &amp; safe</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Led by <strong className="text-white">Sensei Jason Sallaway</strong>, Kansai Karate Tarragindi offers warm, structured karate classes for Little Lions, Juniors, Teens and Adults in a friendly family environment.
-          </p>
           <BookTrialButton
-            className="inline-block bg-[#FFB800] text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
+            className="inline-block bg-[#FFB800] text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest mt-6"
           />
           <p className="mt-4 text-white/50 text-sm">No experience needed — first lesson is free</p>
         </div>
@@ -124,10 +153,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              Proudly serving Tarragindi and surrounding communities.
+              Proudly Serving Tarragindi and surrounding communities.
             </h2>
             <p className="text-white/70 text-lg">
-              Find the Kansai Karate program for your family:
+              Find the Kansai Karate Tarragindi program for you:
             </p>
           </div>
 
@@ -150,8 +179,12 @@ export default function HomePage() {
                 <div className="relative z-10 flex flex-col h-full p-6">
                   <h3 className="text-2xl font-bold text-white mb-1">
                     {p.name}
-                    <br />
-                    <span className="text-xl font-normal">({p.age})</span>
+                    {p.age && (
+                      <>
+                        <br />
+                        <span className="text-xl font-normal">({p.age})</span>
+                      </>
+                    )}
                   </h3>
                   <p className="text-white/75 text-sm mt-3 leading-relaxed flex-1">
                     {p.description}
@@ -186,8 +219,12 @@ export default function HomePage() {
                 <div className="relative z-10 flex flex-col h-full p-6">
                   <h3 className="text-2xl font-bold text-white mb-1">
                     {p.name}
-                    <br />
-                    <span className="text-xl font-normal">({p.age})</span>
+                    {p.age && (
+                      <>
+                        <br />
+                        <span className="text-xl font-normal">({p.age})</span>
+                      </>
+                    )}
                   </h3>
                   <p className="text-white/75 text-sm mt-3 leading-relaxed flex-1">
                     {p.description}
@@ -205,7 +242,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── WHY CHOOSE KANSAI KARATE TARRAGINDI ── */}
+      {/* ── WHY TARRAGINDI CHOOSES KANSAI ── */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
           <div
@@ -217,13 +254,12 @@ export default function HomePage() {
               The best in Tarragindi
             </p>
             <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-snug">
-              Why choose Kansai Karate Tarragindi
+              Why Tarragindi chooses Kansai Karate Tarragindi
             </h2>
             <hr className="border-gray-300 mb-8 w-16" />
             <div className="grid grid-cols-2 gap-8">
               {whyFeatures.map((f) => (
                 <div key={f.title}>
-                  <div className="text-2xl mb-2">{f.icon}</div>
                   <h3 className="font-bold text-gray-800 mb-2">{f.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{f.body}</p>
                 </div>
@@ -233,54 +269,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── ABOUT SENSEI JASON teaser ── */}
+      {/* ── KIDS CHOOSE KANSAI ── */}
       <section className="py-16 px-4" style={{ background: "#5B7DB1" }}>
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-center">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={JASON_PHOTO}
-            alt="Sensei Jason Sallaway — Head Instructor, Kansai Karate Tarragindi"
-            className="rounded-lg w-40 md:w-48 object-cover flex-shrink-0"
-            style={{ maxHeight: "260px", objectPosition: "top" }}
-          />
-          <div>
-            <p className="text-white/60 text-sm uppercase tracking-widest mb-2">Your head instructor</p>
-            <h2 className="text-3xl font-bold text-white mb-4">Sensei Jason Sallaway</h2>
-            <p className="text-white/85 text-base leading-relaxed mb-6">
-              Sensei Jason Sallaway leads Kansai Karate Tarragindi as a licensed dojo of Kansai Karate Academy, under Shihan Stephen Kelly. A warm, patient instructor, Jason ensures every student — from their very first class to their latest grading — is seen, valued, and challenged to grow.
-            </p>
-            <Link
-              href="/about"
-              className="inline-block border-2 border-white text-white font-bold px-8 py-3 hover:bg-white hover:text-[#5B7DB1] transition-colors uppercase tracking-widest text-sm"
-            >
-              Learn More About Us
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ── */}
-      <section className="bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
           <div
             className="rounded-lg overflow-hidden aspect-[4/5] bg-cover bg-center"
             style={{ backgroundImage: `url(${KIDS_PHOTO})` }}
           />
           <div className="md:col-span-2">
-            <p className="text-gray-400 text-sm uppercase tracking-widest mb-3">
-              What parents say
+            <p className="text-white/60 text-sm uppercase tracking-widest mb-3">
+              Tarragindi Kids agree:
             </p>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-snug">
-              Families love Kansai Karate Tarragindi
+            <h2 className="text-3xl font-bold text-white mb-4 leading-snug">
+              Kids choose Kansai Karate Tarragindi every time
             </h2>
-            <hr className="border-gray-300 mb-8 w-16" />
-            <div className="space-y-6">
-              {testimonials.map((t, i) => (
-                <div key={i} className="p-6 bg-gray-50 rounded-lg">
-                  <p className="text-gray-700 italic leading-relaxed mb-3">
-                    &ldquo;{t.text}&rdquo;
-                  </p>
-                  <p className="text-[#5B7DB1] font-semibold text-sm">— {t.author}</p>
+            <hr className="border-white/30 mb-8 w-16" />
+            <div className="grid grid-cols-2 gap-8">
+              {kidsFeatures.map((f) => (
+                <div key={f.title}>
+                  <h3 className="font-bold text-white mb-2">{f.title}</h3>
+                  <p className="text-white/75 text-sm leading-relaxed">{f.body}</p>
                 </div>
               ))}
             </div>
@@ -288,19 +296,67 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── WHY ADULTS LOVE KANSAI ── */}
+      <section className="bg-white py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-10">
+            <p className="text-gray-400 text-sm uppercase tracking-widest mb-3">
+              Programs built for real people
+            </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-snug">
+              Why Adults love Kansai Karate Tarragindi Programs
+            </h2>
+            <hr className="border-gray-300 mb-8 w-16" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {adultsFeatures.map((f) => (
+              <div key={f.title}>
+                <h3 className="font-bold text-gray-800 mb-2 text-lg">{f.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{f.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ── */}
+      <section className="py-16 px-4" style={{ background: "#5B7DB1" }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-white/60 text-sm uppercase tracking-widest mb-3">
+              What do actual Kansai Karate Tarragindi members say?
+            </p>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              We send regular member feedback surveys to our members. Here&apos;s a sample of the real feedback we get regularly:
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.map((t, i) => (
+              <div key={i} className="p-6 bg-white rounded-lg">
+                <p className="text-gray-700 italic leading-relaxed mb-3">
+                  &ldquo;{t.text}&rdquo;
+                </p>
+                <p className="text-[#5B7DB1] font-semibold text-sm">— {t.author}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
-      <section className="py-20 px-4" style={{ background: "#5B7DB1" }}>
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Ready to Try a Free Class?
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Ready to be part of Kansai Karate Tarragindi?<br />
+            Select a Program and Get Started Today!
           </h2>
-          <p className="text-white/80 text-lg mb-8">
-            Book a no-obligation free trial and see why Tarragindi families choose Kansai Karate.
+          <p className="text-gray-500 text-base mb-8 leading-relaxed">
+            Kansai Karate Tarragindi is the favourite choice of Tarragindi families for their children&apos;s and teens&apos; physical, mental and emotional development. Plus there&apos;s no better facility for adults to improve their physical health and mental wellness. Schedule a trial today!
           </p>
           <BookTrialButton
             className="inline-block bg-[#FFB800] text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
           />
-          <p className="mt-4 text-white/50 text-sm">Spaces limited — book your free trial today</p>
+          <p className="mt-4 text-gray-400 text-sm">Spaces limited — book your free trial today</p>
         </div>
       </section>
     </>
