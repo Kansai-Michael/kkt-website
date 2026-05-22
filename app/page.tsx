@@ -160,82 +160,53 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Top row — 2 cards */}
+          {/* 2x2 grid — plain white cards, no photo background (matches NMN) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {programs.slice(0, 2).map((p) => (
               <div
                 key={p.href}
-                className="relative rounded overflow-hidden flex flex-col"
-                style={{ minHeight: "380px" }}
+                className="bg-white rounded flex flex-col p-6"
               >
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${p.img})` }}
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ background: "rgba(10,20,50,0.78)" }}
-                />
-                <div className="relative z-10 flex flex-col h-full p-6">
-                  <h3 className="text-2xl font-bold text-white mb-1">
-                    {p.name}
-                    {p.age && (
-                      <>
-                        <br />
-                        <span className="text-xl font-normal">({p.age})</span>
-                      </>
-                    )}
-                  </h3>
-                  <p className="text-white/75 text-sm mt-3 leading-relaxed flex-1">
-                    {p.description}
-                  </p>
-                  <Link
-                    href={p.href}
-                    className="mt-6 block text-center border border-white text-white font-bold py-3 hover:bg-white hover:text-[#5B7DB1] transition-colors uppercase tracking-widest text-sm"
-                  >
-                    Learn More
-                  </Link>
-                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                  {p.name}
+                  {p.age && (
+                    <span className="text-lg font-normal text-gray-600"> ({p.age})</span>
+                  )}
+                </h3>
+                <p className="text-gray-600 text-sm mt-3 leading-relaxed flex-1">
+                  {p.description}
+                </p>
+                <Link
+                  href={p.href}
+                  className="mt-6 block text-center border-2 border-[#5B7DB1] text-[#5B7DB1] font-bold py-3 hover:bg-[#5B7DB1] hover:text-white transition-colors uppercase tracking-widest text-sm"
+                >
+                  Learn More
+                </Link>
               </div>
             ))}
           </div>
 
-          {/* Bottom row — 2 cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {programs.slice(2).map((p) => (
               <div
                 key={p.href}
-                className="relative rounded overflow-hidden flex flex-col"
-                style={{ minHeight: "340px" }}
+                className="bg-white rounded flex flex-col p-6"
               >
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${p.img})` }}
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ background: "rgba(10,20,50,0.78)" }}
-                />
-                <div className="relative z-10 flex flex-col h-full p-6">
-                  <h3 className="text-2xl font-bold text-white mb-1">
-                    {p.name}
-                    {p.age && (
-                      <>
-                        <br />
-                        <span className="text-xl font-normal">({p.age})</span>
-                      </>
-                    )}
-                  </h3>
-                  <p className="text-white/75 text-sm mt-3 leading-relaxed flex-1">
-                    {p.description}
-                  </p>
-                  <Link
-                    href={p.href}
-                    className="mt-6 block text-center border border-white text-white font-bold py-3 hover:bg-white hover:text-[#5B7DB1] transition-colors uppercase tracking-widest text-sm"
-                  >
-                    Learn More
-                  </Link>
-                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">
+                  {p.name}
+                  {p.age && (
+                    <span className="text-lg font-normal text-gray-600"> ({p.age})</span>
+                  )}
+                </h3>
+                <p className="text-gray-600 text-sm mt-3 leading-relaxed flex-1">
+                  {p.description}
+                </p>
+                <Link
+                  href={p.href}
+                  className="mt-6 block text-center border-2 border-[#5B7DB1] text-[#5B7DB1] font-bold py-3 hover:bg-[#5B7DB1] hover:text-white transition-colors uppercase tracking-widest text-sm"
+                >
+                  Learn More
+                </Link>
               </div>
             ))}
           </div>
