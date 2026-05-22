@@ -69,6 +69,7 @@ const moreInfo: MoreInfoContent = {
       a: "Adults classes run Monday, Tuesday and Thursday evenings. Many adults are successful with as little as twice a week. If you love classes, we likely have options to attend more!",
     },
   ],
+  closingPhoto: "/images/adults-coa.jpg",
   closingStatement:
     "You're right. Adult Karate at Kansai Karate Tarragindi is 100% worth it.",
   closingSubtext: "But trial class spaces go fast — take advantage of our no-strings-attached offer today.",

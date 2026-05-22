@@ -33,24 +33,24 @@ export default function AdultsPage() {
             body: "Our classes were designed specifically for the average person. You'll build skills step by step, without having to be a superstar to see improvement. Stick with it and your abilities will soar.",
           },
           {
-            img: "/images/adults-2.jpg",
+            img: "/images/adults-community.jpg",
             caption: "Community",
             body: "You'll be surrounded by peers striving towards the same goals you are, day in and day out. You'll build real friendships and be supported in your individual journey.",
           },
           {
-            img: "/images/adults-3.jpg",
+            img: "/images/adults-physical.jpg",
             caption: "Physical Skills",
             body: "It's more than just learning awesome looking moves — it's proprioception, balance, agility and coordination. Physical skills that will remain with and benefit you for the rest of your life.",
           },
         ]}
         benefitCards={[
           {
-            img: "/images/adults-4.jpg",
+            img: "/images/adults-fitness.jpg",
             caption: "Fitness",
             body: "Adult Karate gives you a genuine full-body workout. You'll build strength and cardiovascular fitness in a way that's actually engaging — not grinding away on a machine.",
           },
           {
-            img: "/images/adults-class.jpg",
+            img: "/images/adults-mentalhealth.jpg",
             caption: "Mental Health",
             body: "Now the science agrees: you must take time for your own mental health. Our classes help you clear your mind, accomplish your goals, and be more healthy — from the inside out.",
           },

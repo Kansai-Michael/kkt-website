@@ -108,6 +108,13 @@ export default function JuniorsPage() {
             author: "Juniors parent, Tarragindi",
           },
         ]}
+        faqs={[
+          { q: "My child has never done a martial art before — is that OK?", a: "Absolutely. Most of our Juniors students start with zero experience. Classes are structured so beginners progress at their own pace alongside more experienced students." },
+          { q: "What will my child learn in Juniors Karate?", a: "Traditional Shitoryu Shukokai karate — including kicks, punches, blocks, kata (forms), and basic sparring — alongside discipline, focus, and respect. Skills that carry over into school and life." },
+          { q: "How often should they train?", a: "We recommend two or three times a week. Monday, Tuesday and Thursday evenings are available — most families find a combination that works around school and other activities." },
+          { q: "Can they earn belts?", a: "Yes! Grading happens every few months and is one of the most rewarding parts of training. Kids love the recognition of working hard and progressing through the belt system." },
+          { q: "Is there a free trial?", a: "Yes — book a free trial class with no obligation. Bring them along, see what they think, and take it from there. Most kids are asking to come back before they've even left the dojo." },
+        ]}
         ctaHeading="This could be the best thing you've ever done for your child."
       />
     </>

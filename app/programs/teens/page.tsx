@@ -50,7 +50,7 @@ export default function TeensPage() {
             body: "Teen Karate builds the kind of deep, unshakeable confidence that teenagers carry everywhere they go. Real confidence built through real achievement — not empty praise.",
           },
           {
-            img: "/images/teens-5.jpg",
+            img: "/images/teens-determination.jpg",
             caption: "Determination",
             body: "Teens need a safe, structured place to learn to overcome real challenges and build genuine grit. Karate provides exactly that kind of growth environment.",
           },
@@ -107,6 +107,13 @@ export default function TeensPage() {
             text: "Fantastic dojo for the whole family! Wonderful atmosphere of support and friendly teachers. Highly recommended!",
             author: "Teen Karate parent, Tarragindi",
           },
+        ]}
+        faqs={[
+          { q: "My teenager thinks karate is for little kids — how do I convince them?", a: "Let them try it. Teen Karate at Kansai is a completely different environment from a kids' class — fast-paced, physically demanding, and specifically designed for teenagers. Almost every teen who tries it comes back." },
+          { q: "What will they actually learn?", a: "Traditional Shitoryu Shukokai karate — real strikes, blocks, kata, and controlled sparring — alongside focus, discipline, and practical self-defence. Skills they'll carry into adulthood." },
+          { q: "How often should they train?", a: "Two or three times a week is ideal. Classes run Monday, Tuesday and Thursday evenings, making it easy to fit around school, sport, and social commitments." },
+          { q: "Is it safe?", a: "Yes. All contact drills are controlled, supervised, and age-appropriate. Our instructors are trained to create an environment that challenges teens without putting them at risk." },
+          { q: "Is there a free trial?", a: "Yes — book a free trial class, no commitment required. Let them give it an honest go. We're confident they'll want to come back." },
         ]}
         ctaHeading="This could be the best thing you've ever done for your teenager."
       />

@@ -21,7 +21,7 @@ const moreInfo: MoreInfoContent = {
       body: "Not only will your teenager be surrounded by positive leadership examples in class, as they advance they'll get opportunities to be in leadership positions of their own if they choose. They'll learn firsthand how to be a positive example in their own lives!",
     },
   ],
-  dividerPhoto: "/images/teens.jpg",
+  dividerPhoto: "/images/dojo-class.jpg",
   classHeading: "What do teens do in Teen Karate classes?",
   classIntro: "Most parents understand typical teen activities. But Teen Karate classes at Kansai Karate Tarragindi are something genuinely different — structured, energetic, and rewarding.",
   classItems: [
@@ -43,6 +43,7 @@ const moreInfo: MoreInfoContent = {
     },
   ],
   classPhoto: "/images/teens.jpg",
+  classPhotoPosition: "top",
   faqs: [
     {
       q: "Can we try it before signing up?",
@@ -66,7 +67,7 @@ export default function TeensTimetable() {
     <TimetablePage
       name="Teens Karate"
       slug="teens"
-      heroImg="/images/teens.jpg"
+      heroImg="/images/dojo-class.jpg"
       headline="Build fitness, focus, and real self-defence skills!"
       subheadline="Teens Karate is for ages 13–17. Book a FREE First Lesson and discover what you're capable of."
       scheduleRows={[

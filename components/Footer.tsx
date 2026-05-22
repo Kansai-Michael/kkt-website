@@ -12,7 +12,7 @@ const locations = [
 export default function Footer() {
   return (
     <footer className="bg-[#4A6DA0] text-white">
-      <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-5 gap-8">
         {/* Brand */}
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -52,6 +52,33 @@ export default function Footer() {
             <li><Link href="/programs/juniors" className="hover:text-[#FFB800] transition-colors">Juniors (Ages 8–12)</Link></li>
             <li><Link href="/programs/teens" className="hover:text-[#FFB800] transition-colors">Teens Karate (13–17)</Link></li>
             <li><Link href="/programs/adults" className="hover:text-[#FFB800] transition-colors">Adult Karate</Link></li>
+          </ul>
+        </div>
+
+        {/* Follow Us */}
+        <div>
+          <h4 className="font-semibold mb-3 text-white/90">Follow Us</h4>
+          <ul className="space-y-2 text-sm text-white/60">
+            <li>
+              <a
+                href="https://www.facebook.com/kansaikaratetarragindi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#FFB800] transition-colors"
+              >
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/kansaikaratetarragindi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#FFB800] transition-colors"
+              >
+                Instagram
+              </a>
+            </li>
           </ul>
         </div>
 

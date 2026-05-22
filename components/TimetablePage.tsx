@@ -38,9 +38,11 @@ export interface MoreInfoContent {
   classIntro: string;
   classItems: MoreInfoFeature[];
   classPhoto: string;
+  classPhotoPosition?: string;
   faqs: { q: string; a: string }[];
   closingStatement: string;
   closingSubtext?: string;
+  closingPhoto?: string;
 }
 
 interface TimetablePageProps {
@@ -224,7 +226,7 @@ export default function TimetablePage({
                 src={moreInfo.classPhoto}
                 alt={name + " karate class"}
                 className="rounded-lg mt-10 lg:mt-0 w-full object-cover"
-                style={{ maxHeight: "480px" }}
+                style={{ maxHeight: "480px", objectPosition: moreInfo.classPhotoPosition ?? "center" }}
               />
             </div>
           </section>
@@ -247,15 +249,25 @@ export default function TimetablePage({
           </section>
 
           {/* Closing CTA */}
-          <section className="py-16 px-4 text-center" style={{ background: "#5B7DB1" }}>
-            <div className="max-w-3xl mx-auto">
+          <section
+            className="relative py-16 px-4 text-center"
+            style={moreInfo.closingPhoto ? {
+              backgroundImage: `url(${moreInfo.closingPhoto})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            } : { background: "#5B7DB1" }}
+          >
+            {moreInfo.closingPhoto && (
+              <div className="absolute inset-0" style={{ background: "rgba(10,25,70,0.80)" }} />
+            )}
+            <div className="relative z-10 max-w-3xl mx-auto">
               <p className="text-white text-xl md:text-2xl font-semibold leading-snug mb-2">
                 {moreInfo.closingStatement}
               </p>
               <p className="text-white/80 text-lg mb-8">{moreInfo.closingSubtext ?? "And now your child can."}</p>
               <BookTrialButton
                 program={slug}
-                className="inline-block bg-[#FFB800] text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
+                className="inline-block bg-[#FFB800] text-black font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
               />
               <p className="mt-4 text-white/50 text-sm">Spaces extremely limited — register ASAP</p>
             </div>

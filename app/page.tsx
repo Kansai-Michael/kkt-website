@@ -322,13 +322,21 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+      <section
+        className="relative py-20 px-4"
+        style={{
+          backgroundImage: "url(/images/dojo-interior.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0" style={{ background: "rgba(10,25,70,0.80)" }} />
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
             Ready to be part of Kansai Karate Tarragindi?<br />
             Select a Program and Get Started Today!
           </h2>
-          <BookTrialButton className="inline-block bg-[#FFB800] text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest shadow-lg" />
+          <BookTrialButton className="inline-block bg-[#FFB800] text-black font-bold text-lg px-12 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest shadow-lg" />
         </div>
       </section>
     </>

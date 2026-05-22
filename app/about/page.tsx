@@ -136,7 +136,7 @@ export default function AboutPage() {
             </p>
             <div className="rounded-lg overflow-hidden mb-6" style={{ aspectRatio: "16/9" }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.282!2d153.0361!3d-27.5112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9141d4e03af421%3A0x1234567890abcdef!2sWellers%20Hill%20Bowls%20Club%2C%2034%20Esher%20St%2C%20Tarragindi%20QLD%204121!5e0!3m2!1sen!2sau!4v1716300000000!5m2!1sen!2sau"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4662.621654453885!2d153.04546271199965!3d-27.518027376192546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915b279a2c685f%3A0x637f698d6d03a8e2!2sKansai%20Karate%20Tarragindi!5e1!3m2!1sen!2sau!4v1779440896210!5m2!1sen!2sau"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

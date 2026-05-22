@@ -59,20 +59,17 @@ export default function Nav() {
             )}
           </div>
 
+          <a href="tel:0480566172" className="text-white/80 hover:text-[#FFB800] transition-colors text-sm">
+            📞 0480 566 172
+          </a>
+
           <Link href="/about" className="hover:text-[#FFB800] transition-colors">
             About
           </Link>
 
           <button
             onClick={() => openModal()}
-            className="hover:text-[#FFB800] transition-colors"
-          >
-            Contact
-          </button>
-
-          <button
-            onClick={() => openModal()}
-            className="bg-[#FFB800] text-white font-bold px-5 py-2 rounded-lg hover:bg-[#E6A500] transition-colors"
+            className="bg-[#FFB800] text-black font-bold px-5 py-2 rounded-lg hover:bg-[#E6A500] transition-colors"
           >
             Book Free Trial
           </button>
@@ -116,15 +113,12 @@ export default function Nav() {
           >
             About
           </Link>
+          <a href="tel:0480566172" className="block py-1 hover:text-[#FFB800] transition-colors">
+            📞 0480 566 172
+          </a>
           <button
             onClick={() => { setMenuOpen(false); openModal(); }}
-            className="block py-1 hover:text-[#FFB800] w-full text-left"
-          >
-            Contact
-          </button>
-          <button
-            onClick={() => { setMenuOpen(false); openModal(); }}
-            className="block bg-[#FFB800] text-white font-bold px-4 py-3 rounded-lg text-center mt-2 w-full"
+            className="block bg-[#FFB800] text-black font-bold px-4 py-3 rounded-lg text-center mt-2 w-full"
           >
             Book Free Trial
           </button>

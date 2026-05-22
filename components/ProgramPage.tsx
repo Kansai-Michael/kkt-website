@@ -26,6 +26,7 @@ interface ProgramPageProps {
   parentsFeatures: Feature[];
   studentsTitle: string;
   studentsFeatures: Feature[];
+  faqs?: { q: string; a: string }[];
   testimonials: { text: string; author: string }[];
   ctaHeading: string;
 }
@@ -43,6 +44,7 @@ export default function ProgramPage({
   parentsFeatures,
   studentsTitle,
   studentsFeatures,
+  faqs,
   testimonials,
   ctaHeading,
 }: ProgramPageProps) {
@@ -66,7 +68,7 @@ export default function ProgramPage({
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-8">{heroSubtitle}</p>
           <BookTrialButton
             program={slug}
-            className="inline-block bg-[#FFB800] text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
+            className="inline-block bg-[#FFB800] text-black font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
           />
         </div>
       </section>
@@ -201,6 +203,25 @@ export default function ProgramPage({
         </div>
       </section>
 
+      {/* ── FAQs ── */}
+      {faqs && faqs.length > 0 && (
+        <section className="bg-white py-16 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div key={faq.q} className="border-b border-gray-200 pb-6">
+                  <h3 className="font-bold text-gray-900 mb-2">{faq.q}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── TESTIMONIALS ── */}
       {testimonials.length > 0 && (
         <section className="py-16 px-4 bg-white">
@@ -233,7 +254,7 @@ export default function ProgramPage({
           <p className="text-white/70 text-lg mb-8">{benefitsTitle}</p>
           <BookTrialButton
             program={slug}
-            className="inline-block bg-[#FFB800] text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
+            className="inline-block bg-[#FFB800] text-black font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
           />
           <p className="mt-4 text-white/40 text-sm">
             Kansai Karate Tarragindi · Wellers Hill Bowls Club, 34 Esher St, Tarragindi QLD 4121
