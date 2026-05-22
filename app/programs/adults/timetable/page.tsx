@@ -1,7 +1,7 @@
 import TimetablePage from "@/components/TimetablePage";
 import type { MoreInfoContent } from "@/components/TimetablePage";
 
-const BOOKING_URL = "KIHON_BOOKING_CALENDAR_URL";
+const BOOKING_URL = "https://app.kihonsoft.au/book/tarragindi-first-lesson";
 
 export const metadata = { title: "Adult Karate Class Timetable | Kansai Karate Tarragindi" };
 
@@ -33,7 +33,7 @@ const moreInfo: MoreInfoContent = {
       body: "Staying mentally sharp is often the difference between life and death in a self defence situation. The mental benefits of training regularly will spill over into your life outside of class — our students say they feel more aware and connected in their daily lives.",
     },
   ],
-  dividerPhoto: "/images/class5.jpg",
+  dividerPhoto: "/images/adults.jpg",
   classHeading: "What do members do in Adult Karate classes?",
   classIntro: "Most people know what the \"gym\" is like. There are sweaty machines and too many people. But what is Adult Karate at Kansai Karate Tarragindi like?",
   classItems: [
@@ -54,7 +54,7 @@ const moreInfo: MoreInfoContent = {
       body: "Members are often given challenges and drills to complete with partners, teams and groups. This creates an opportunity for you to learn from and support your fellow members as you all strive to be the best version of yourselves!",
     },
   ],
-  classPhoto: "/images/class6.jpg",
+  classPhoto: "/images/adults-class.jpg",
   faqs: [
     {
       q: "Can I try it before signing up?",
@@ -79,7 +79,7 @@ export default function AdultsTimetable() {
     <TimetablePage
       name="Adult Karate"
       slug="adults"
-      heroImg="/images/class5.jpg"
+      heroImg="/images/adults.jpg"
       headline="The best workout in Tarragindi — for real people."
       subheadline="Book a FREE First Lesson and find out why our adults keep coming back."
       scheduleRows={[

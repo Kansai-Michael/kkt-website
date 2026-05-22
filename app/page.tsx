@@ -3,16 +3,17 @@ import BookTrialButton from "@/components/BookTrialButton";
 
 const BADGE_IMG = "/images/logo.png";
 const HERO_IMG = "/images/hero.jpg";
-const DOJO_INTERIOR = "/images/class1.jpg";
-const KIDS_PHOTO = "/images/class3.jpg";
-const ADULTS_PHOTO = "/images/class5.jpg";
+const DOJO_INTERIOR = "/images/dojo-interior.jpg";
+const KIDS_PHOTO = "/images/little-lions.jpg";
+const ADULTS_PHOTO = "/images/adults.jpg";
+const JASON_PHOTO = "/images/instructor-jason.png";
 
 const programs = [
   {
     name: "Little Lions",
     age: "Ages 5–7",
     href: "/programs/little-lions",
-    img: "/images/class1.jpg",
+    img: "/images/little-lions.jpg",
     description:
       "There's nothing more satisfying than watching your 5–7 year old gain physical and social skills that you know will benefit them for life. Your little one will learn focus, self-confidence and discipline in a warm, encouraging environment.",
   },
@@ -20,7 +21,7 @@ const programs = [
     name: "Juniors",
     age: "Ages 8–12",
     href: "/programs/juniors",
-    img: "/images/class2.jpg",
+    img: "/images/juniors.jpg",
     description:
       "Martial Arts is one of the best possible activities for children. They'll learn to defend themselves physically, but more importantly they'll build the mental and emotional skill sets necessary to conquer challenges at school and in life.",
   },
@@ -28,7 +29,7 @@ const programs = [
     name: "Teen Karate",
     age: "Ages 13–17",
     href: "/programs/teens",
-    img: "/images/class4.jpg",
+    img: "/images/teens.jpg",
     description:
       "Karate is the perfect activity for teenagers. It gives them an outlet for their energy in a structured class designed just for them — not lumped in with little kids, not thrown in with adults.",
   },
@@ -36,7 +37,7 @@ const programs = [
     name: "Adult Karate",
     age: "Ages 18+",
     href: "/programs/adults",
-    img: "/images/class5.jpg",
+    img: "/images/adults.jpg",
     description:
       "Whether it's fitness, self-defence, or a genuine challenge — our Adult Karate classes are designed for real people. You'll love the instruction, your body will love the workout, and your spirit will love the community.",
   },
@@ -93,22 +94,20 @@ export default function HomePage() {
           backgroundPosition: "center 30%",
         }}
       >
-        {/* Blue-tinted dark overlay */}
         <div
           className="absolute inset-0"
           style={{ background: "rgba(10, 30, 80, 0.62)" }}
         />
         <div className="relative z-10 text-center px-4 flex flex-col items-center">
-          {/* Badge */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={BADGE_IMG}
             alt="Kansai Karate Academy"
             className="w-32 md:w-40 mb-8"
           />
-          {/* H1 */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-white max-w-3xl mx-auto leading-snug font-bold mb-4">
-            Traditional Karate for Families in Tarragindi
+            Traditional Karate for Families in{" "}
+            <span style={{ color: "#FFB800" }}>Tarragindi</span>
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
             Led by <strong className="text-white">Sensei Jason Sallaway</strong>, Kansai Karate Tarragindi offers warm, structured karate classes for Little Lions, Juniors, Teens and Adults in a friendly family environment.
@@ -116,6 +115,7 @@ export default function HomePage() {
           <BookTrialButton
             className="inline-block bg-[#FFB800] text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
           />
+          <p className="mt-4 text-white/50 text-sm">No experience needed — first lesson is free</p>
         </div>
       </section>
 
@@ -135,7 +135,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {programs.slice(0, 2).map((p) => (
               <div
-                key={p.href + p.name}
+                key={p.href}
                 className="relative rounded overflow-hidden flex flex-col"
                 style={{ minHeight: "380px" }}
               >
@@ -171,7 +171,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {programs.slice(2).map((p) => (
               <div
-                key={p.href + p.name}
+                key={p.href}
                 className="relative rounded overflow-hidden flex flex-col"
                 style={{ minHeight: "340px" }}
               >
@@ -186,12 +186,8 @@ export default function HomePage() {
                 <div className="relative z-10 flex flex-col h-full p-6">
                   <h3 className="text-2xl font-bold text-white mb-1">
                     {p.name}
-                    {p.age && (
-                      <>
-                        <br />
-                        <span className="text-xl font-normal">({p.age})</span>
-                      </>
-                    )}
+                    <br />
+                    <span className="text-xl font-normal">({p.age})</span>
                   </h3>
                   <p className="text-white/75 text-sm mt-3 leading-relaxed flex-1">
                     {p.description}
@@ -212,11 +208,10 @@ export default function HomePage() {
       {/* ── WHY CHOOSE KANSAI KARATE TARRAGINDI ── */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-          {/* Photo — 1/3 */}
-          <div className="rounded-lg overflow-hidden aspect-[4/5] bg-cover bg-center"
+          <div
+            className="rounded-lg overflow-hidden aspect-[4/5] bg-cover bg-center"
             style={{ backgroundImage: `url(${DOJO_INTERIOR})` }}
           />
-          {/* Features — 2/3 */}
           <div className="md:col-span-2">
             <p className="text-gray-400 text-sm uppercase tracking-widest mb-3">
               The best in Tarragindi
@@ -241,7 +236,6 @@ export default function HomePage() {
       {/* ── ABOUT SENSEI JASON ── */}
       <section className="py-16 px-4" style={{ background: "#5B7DB1" }}>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-          {/* Features — 2/3 */}
           <div className="md:col-span-2">
             <p className="text-white/60 text-sm uppercase tracking-widest mb-3">
               Your head instructor
@@ -257,12 +251,15 @@ export default function HomePage() {
               Kansai Karate Tarragindi is a place where every student is seen, valued, and challenged to grow — whether they are stepping on the mat for the very first time or working towards their next belt grading.
             </p>
             <p className="text-white/85 text-base leading-relaxed">
-              Our classes run Monday, Tuesday and Thursday evenings, with programs for every age group from Little Lions (5–7 years) through to Adults.
+              Classes run Monday, Tuesday and Thursday evenings, with programs for every age group from Little Lions (5–7 years) through to Adults. We are based at the Wellers Hill Bowls Club, 34 Esher St, Tarragindi.
             </p>
           </div>
-          {/* Photo — 1/3 */}
-          <div className="rounded-lg overflow-hidden aspect-[4/5] bg-cover bg-center"
-            style={{ backgroundImage: `url(${KIDS_PHOTO})` }}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={JASON_PHOTO}
+            alt="Sensei Jason Sallaway — Head Instructor, Kansai Karate Tarragindi"
+            className="rounded-lg mx-auto w-48 md:w-full object-cover"
+            style={{ maxHeight: "420px", objectPosition: "top" }}
           />
         </div>
       </section>
@@ -270,11 +267,10 @@ export default function HomePage() {
       {/* ── TESTIMONIALS ── */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-          {/* Photo — 1/3 */}
-          <div className="rounded-lg overflow-hidden aspect-[4/5] bg-cover bg-center"
-            style={{ backgroundImage: `url(${ADULTS_PHOTO})` }}
+          <div
+            className="rounded-lg overflow-hidden aspect-[4/5] bg-cover bg-center"
+            style={{ backgroundImage: `url(${KIDS_PHOTO})` }}
           />
-          {/* Testimonials — 2/3 */}
           <div className="md:col-span-2">
             <p className="text-gray-400 text-sm uppercase tracking-widest mb-3">
               What parents say
@@ -309,6 +305,7 @@ export default function HomePage() {
           <BookTrialButton
             className="inline-block bg-[#FFB800] text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
           />
+          <p className="mt-4 text-white/50 text-sm">Spaces limited — book your free trial today</p>
         </div>
       </section>
     </>

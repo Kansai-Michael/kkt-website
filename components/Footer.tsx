@@ -28,8 +28,8 @@ export default function Footer() {
           <h4 className="font-semibold mb-3 text-white/90">Contact Us:</h4>
           <ul className="space-y-2 text-sm text-white/60">
             <li>
-              <a href="tel:0738485949" className="hover:text-[#FFB800] transition-colors">
-                📞 07 3848 5949
+              <a href="tel:0480566172" className="hover:text-[#FFB800] transition-colors">
+                📞 0480 566 172
               </a>
             </li>
             <li>
@@ -38,8 +38,8 @@ export default function Footer() {
               </a>
             </li>
             <li className="text-white/60">
-              📍 195 Fingal Street<br />
-              Tarragindi QLD 4121
+              📍 Wellers Hill Bowls Club<br />
+              34 Esher St, Tarragindi QLD 4121
             </li>
           </ul>
         </div>

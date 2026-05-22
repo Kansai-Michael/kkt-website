@@ -19,46 +19,87 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: "Kansai Karate Tarragindi | Traditional Karate for Kids, Teens & Adults",
-  description: "Traditional Shitoryu Shukokai karate for families in Tarragindi. Little Lions, Juniors, Teens and Adults classes. Book a free trial today.",
-  keywords: "karate tarragindi, kids karate tarragindi, martial arts tarragindi, karate classes brisbane southside",
+  description:
+    "Traditional Shitoryu Shukokai karate for families in Tarragindi. Little Lions, Juniors, Teens and Adults classes at Wellers Hill Bowls Club. Book a free trial today.",
+  keywords:
+    "karate tarragindi, kids karate tarragindi, martial arts tarragindi, karate classes brisbane southside, wellers hill bowls club karate",
+  openGraph: {
+    title: "Kansai Karate Tarragindi | Traditional Karate for Families",
+    description:
+      "Traditional Shitoryu Shukokai karate for families in Tarragindi. Free trial available.",
+    url: "https://kansaikaratetarragindi.com.au",
+    siteName: "Kansai Karate Tarragindi",
+    images: [
+      {
+        url: "https://kansaikaratetarragindi.com.au/images/og-social.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kansai Karate Tarragindi",
+      },
+    ],
+    locale: "en_AU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kansai Karate Tarragindi",
+    description: "Traditional karate for families in Tarragindi. Free trial available.",
+    images: ["https://kansaikaratetarragindi.com.au/images/og-social.jpg"],
+  },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "SportsActivityLocation",
-  "name": "Kansai Karate Tarragindi",
-  "description": "Traditional Japanese karate for kids, teens and adults in Tarragindi, Brisbane QLD. Programs for all ages: Little Lions (5-7), Juniors (8-12), Teens (13-17) and Adults.",
-  "url": "https://kansaikaratetarragindi.com.au",
-  "telephone": "+61738485949",
-  "email": "jason@kansaikaratetarragindi.com.au",
-  "address": {
+  name: "Kansai Karate Tarragindi",
+  description:
+    "Traditional Japanese karate for kids, teens and adults in Tarragindi, Brisbane QLD. Programs for all ages: Little Lions (5–7), Juniors (8–12), Teens (13–17) and Adults.",
+  url: "https://kansaikaratetarragindi.com.au",
+  telephone: "+61480566172",
+  email: "jason@kansaikaratetarragindi.com.au",
+  address: {
     "@type": "PostalAddress",
-    "streetAddress": "195 Fingal Street",
-    "addressLocality": "Tarragindi",
-    "addressRegion": "QLD",
-    "postalCode": "4121",
-    "addressCountry": "AU"
+    streetAddress: "Wellers Hill Bowls Club, 34 Esher St",
+    addressLocality: "Tarragindi",
+    addressRegion: "QLD",
+    postalCode: "4121",
+    addressCountry: "AU",
   },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Thursday"], "opens": "16:15", "closes": "20:00" }
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Thursday"],
+      opens: "16:15",
+      closes: "20:00",
+    },
   ],
-  "priceRange": "$$",
-  "image": "https://www.kansaikaratetarragindi.com.au/images/logo.png"
+  priceRange: "$$",
+  image: "https://kansaikaratetarragindi.com.au/images/og-social.jpg",
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Kansai Karate Tarragindi",
-  "url": "https://kansaikaratetarragindi.com.au",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://kansaikaratetarragindi.com.au/?s={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
+  name: "Kansai Karate Tarragindi",
+  url: "https://kansaikaratetarragindi.com.au",
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Kansai Karate Tarragindi",
+  url: "https://kansaikaratetarragindi.com.au",
+  logo: "https://kansaikaratetarragindi.com.au/images/logo.png",
+  telephone: "+61480566172",
+  email: "jason@kansaikaratetarragindi.com.au",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Wellers Hill Bowls Club, 34 Esher St",
+    addressLocality: "Tarragindi",
+    addressRegion: "QLD",
+    postalCode: "4121",
+    addressCountry: "AU",
+  },
 };
 
 export default function RootLayout({
@@ -67,7 +108,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${oswald.variable} ${sourceSans.variable}`}>
+    <html lang="en-AU" className={`${oswald.variable} ${sourceSans.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -76,6 +117,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col">

@@ -1,7 +1,7 @@
 import TimetablePage from "@/components/TimetablePage";
 import type { MoreInfoContent } from "@/components/TimetablePage";
 
-const BOOKING_URL = "KIHON_BOOKING_CALENDAR_URL";
+const BOOKING_URL = "https://app.kihonsoft.au/book/tarragindi-first-lesson";
 
 export const metadata = { title: "Little Lions Class Timetable | Kansai Karate Tarragindi" };
 
@@ -21,7 +21,7 @@ const moreInfo: MoreInfoContent = {
       body: "Your child will be surrounded by positive leadership examples in class, and this matters! It can be difficult for young children to know how to choose positive actions when they're with peers. But if they're enrolled in Little Lions, they'll learn firsthand how to be a positive example in their own lives!",
     },
   ],
-  dividerPhoto: "/images/class1.jpg",
+  dividerPhoto: "/images/little-lions.jpg",
   classHeading: "What do kids do in Little Lions classes?",
   classIntro: "Most parents understand traditional sports. There will be practices, games, and you'll have to bring snacks at least once! But what is Little Lions like?",
   classItems: [
@@ -42,7 +42,7 @@ const moreInfo: MoreInfoContent = {
       body: "Students are often given challenges and drills to complete with partners and larger teams. This creates an opportunity for them to learn to interact positively with other children, effectively communicate their ideas, and be pushed by their teams to do their absolute best.",
     },
   ],
-  classPhoto: "/images/class3.jpg",
+  classPhoto: "/images/little-lions-class.jpg",
   faqs: [
     {
       q: "Can we try it before signing up?",
@@ -66,7 +66,7 @@ export default function LittleLionsTimetable() {
     <TimetablePage
       name="Little Lions"
       slug="little-lions"
-      heroImg="/images/class1.jpg"
+      heroImg="/images/little-lions.jpg"
       headline="Unleash your child's inner superhero at Little Lions!"
       subheadline="Little Lions is for ages 5–7. Book a FREE First Lesson and watch your child's confidence grow."
       scheduleRows={[

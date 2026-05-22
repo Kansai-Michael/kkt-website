@@ -1,7 +1,7 @@
 import TimetablePage from "@/components/TimetablePage";
 import type { MoreInfoContent } from "@/components/TimetablePage";
 
-const BOOKING_URL = "KIHON_BOOKING_CALENDAR_URL";
+const BOOKING_URL = "https://app.kihonsoft.au/book/tarragindi-first-lesson";
 
 export const metadata = { title: "Juniors Class Timetable | Kansai Karate Tarragindi" };
 
@@ -21,7 +21,7 @@ const moreInfo: MoreInfoContent = {
       body: "Not only will your child be surrounded by positive leadership examples in class, as they advance they'll get opportunities to be in leadership positions of their own if they choose. They'll learn firsthand how to be a positive example in their own lives!",
     },
   ],
-  dividerPhoto: "/images/class2.jpg",
+  dividerPhoto: "/images/juniors.jpg",
   classHeading: "What do kids do in Juniors Karate classes?",
   classIntro: "Most parents understand traditional sports. There will be practices, games, and you'll have to bring snacks at least once. But what is Juniors Karate like?",
   classItems: [
@@ -42,7 +42,7 @@ const moreInfo: MoreInfoContent = {
       body: "Students are often given challenges and drills to complete with partners and larger teams. This creates an opportunity for them to learn to interact positively with other children, effectively communicate their ideas, and be pushed by their teams to do their absolute best.",
     },
   ],
-  classPhoto: "/images/class2.jpg",
+  classPhoto: "/images/juniors-class.jpg",
   faqs: [
     {
       q: "Can we try it before signing up?",
@@ -66,7 +66,7 @@ export default function JuniorsTimetable() {
     <TimetablePage
       name="Juniors"
       slug="juniors"
-      heroImg="/images/class2.jpg"
+      heroImg="/images/juniors.jpg"
       headline="Take your child's skills to the next level with Juniors!"
       subheadline="Juniors is for ages 8–12. Book a FREE First Lesson and see real growth in confidence and discipline."
       scheduleRows={[

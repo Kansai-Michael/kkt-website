@@ -1,16 +1,14 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://kansaikarategoldcoast.com.au";
+const BASE = "https://kansaikaratetarragindi.com.au";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${BASE}/`, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
-    { url: `${BASE}/programs/cubs`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/programs/little-lions`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/programs/juniors`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/programs/teens`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/programs/adults`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/programs/cubs/timetable`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/programs/little-lions/timetable`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/programs/juniors/timetable`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/programs/teens/timetable`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
