@@ -96,7 +96,7 @@ All photos in `public/images/`. Source: `C:\Users\micha\OneDrive\dojo\`
 | `teens-determination.jpg` | `sports karate training/KANSAI-EMIL0748.jpg` | Teens benefitCards — Determination |
 | `ll-6.jpg` | `little lions/KANSAI-141A6638.jpg` | Little Lions benefitCards — Confidence |
 
-**IMPORTANT:** `sports karate training/` folder photos are from a Croatian WKF competition venue — wrong dojo. Avoid unless specifically confirmed correct (KANSAI-EMIL0748 is one of the few valid ones).
+All subfolders (jnr, little lions, teens, adults, others, sports karate training) are from the actual Kansai dojo. The sports karate training folder includes photos with a flag visible in the background — this is still the correct dojo.
 
 ## Social Media
 

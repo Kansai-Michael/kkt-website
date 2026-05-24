@@ -99,9 +99,7 @@ The Gold Coast site (`C:\Users\micha\Claude-Projects\kkgc-website`) is the struc
 
 All source photos are in `C:\Users\micha\OneDrive\dojo\`.
 
-**IMPORTANT:** The `sports karate training/` subfolder contains photos from a **Croatian WKF competition venue** — wrong dojo, wrong country. Do not use these photos unless specifically confirmed. All other subfolders (jnr, little lions, teens, adults, others) are from the actual Kansai dojo.
-
-See `CLAUDE.md` for the full photo source mapping.
+All subfolders are from the actual Kansai dojo — including `sports karate training/`, which has a flag visible in the background but is the correct venue. See `CLAUDE.md` for the full photo source mapping.
 
 ---
 
