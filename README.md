@@ -1,36 +1,159 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kansai Karate Tarragindi — Website
 
-## Getting Started
+The official website for Kansai Karate Tarragindi, a licensed dojo of Kansai Karate Academy. Built with Next.js and deployed to Vercel.
 
-First, run the development server:
+**Live domain:** kansaikaratetarragindi.com.au (DNS cutover pending — currently on NMN)  
+**Vercel project:** auto-deploys on push to `master`  
+**GitHub repo:** Kansai-Michael/kkt-website
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Tech Stack
+
+| Tool | Version | Purpose |
+|---|---|---|
+| Next.js | 16.2.2 (Turbopack) | Framework |
+| React | 19.2.4 | UI |
+| TypeScript | — | Type safety |
+| Tailwind CSS | v4 | Styling |
+| Vercel | — | Hosting + CDN |
+| Kihon | — | Booking + lead capture |
+
+---
+
+## Project Structure
+
+```
+app/
+  page.tsx                      # Homepage
+  about/page.tsx                # About Sensei Jason + Google Maps
+  programs/
+    little-lions/
+      page.tsx                  # Little Lions program page
+      timetable/page.tsx        # LL timetable + Kihon iframe
+    juniors/
+      page.tsx
+      timetable/page.tsx
+    teens/
+      page.tsx
+      timetable/page.tsx        # Hero + divider = dojo-class.jpg
+    adults/
+      page.tsx
+      timetable/page.tsx        # Closing CTA = adults-coa.jpg bg
+  timetable/page.tsx            # General timetable
+  api/contact/route.ts          # Lead form handler
+
+components/
+  ProgramPage.tsx               # Shared layout for all program pages
+  TimetablePage.tsx             # Shared layout for all timetable pages
+  Nav.tsx                       # Sticky nav with phone + programs dropdown
+  Footer.tsx                    # 5-column footer
+  ContactModal.tsx              # 2-step lead capture modal
+  BookTrialButton.tsx           # Yellow CTA button (always black text)
+
+public/
+  images/                       # All photos (see CLAUDE.md for source mapping)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How It Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Lead Flow
+1. Visitor clicks "Book Free Trial" anywhere on site → opens `ContactModal`
+2. User selects program (step 1) → fills name/email/phone (step 2)
+3. Form POSTs to `/api/contact` with program slug
+4. **Currently:** posts to n8n webhook ← needs updating to Kihon API
+5. **Target:** POST to `https://app.kihonsoft.au/api/leads/inbound` with `X-API-Key` header
 
-## Learn More
+### Booking Flow
+1. From any timetable page → Kihon iframe loads `https://app.kihonsoft.au/book/tarragindi-first-lesson`
+2. User selects time slot + fills details inside the iframe
 
-To learn more about Next.js, take a look at the following resources:
+### Deployment
+- Push to `master` → Vercel auto-builds and deploys
+- Build command: `npm run build`
+- Zero TypeScript errors required before push
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Credentials & Environment Variables
 
-## Deploy on Vercel
+| Variable | Where | Value |
+|---|---|---|
+| `KIHON_API_KEY` | Vercel project settings (Production + Preview) | `cb7877cab7a8dbeeb3063e49d0f89b326664afb82583a54e4e050c361b0cbb72` |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Never put API keys in code.** The key is read via `process.env.KIHON_API_KEY` at runtime.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Reference Codebase
+
+The Gold Coast site (`C:\Users\micha\Claude-Projects\kkgc-website`) is the structural template for KKT. When building new features, compare against KKGC first:
+- Lead API route: `kkgc-website/app/api/contact/route.ts`
+- Contact modal: `kkgc-website/components/ContactModal.tsx`
+
+---
+
+## Photos
+
+All source photos are in `C:\Users\micha\OneDrive\dojo\`.
+
+**IMPORTANT:** The `sports karate training/` subfolder contains photos from a **Croatian WKF competition venue** — wrong dojo, wrong country. Do not use these photos unless specifically confirmed. All other subfolders (jnr, little lions, teens, adults, others) are from the actual Kansai dojo.
+
+See `CLAUDE.md` for the full photo source mapping.
+
+---
+
+## Running Locally
+
+```bash
+cd kkt-website
+npm install
+npm run dev
+# → http://localhost:3000
+```
+
+Build check:
+```bash
+npm run build
+```
+
+---
+
+## Maintaining the Site
+
+### Adding/changing a photo
+1. Copy source file from `C:\Users\micha\OneDrive\dojo\` to `public/images/`
+2. Update the filename reference in the relevant page file
+3. Optionally set `objectPosition` on the photo if crop needs adjusting
+4. `git add public/images/<file>.jpg` → commit → push → Vercel deploys
+
+### Adjusting photo crop
+In program pages, add `objectPosition: "top" | "bottom" | "center 25%"` etc. to the photo object in the page file.  
+In timetable pages, add `classPhotoPosition: "top"` to `moreInfo`.
+
+### Adding FAQs to a program page
+Pass a `faqs` prop to `<ProgramPage>`:
+```tsx
+faqs={[
+  { q: "Question?", a: "Answer." },
+]}
+```
+
+### Updating the timetable
+Edit the `scheduleRows` array in the relevant `timetable/page.tsx`.
+
+### Updating contact details
+- Phone/email: `components/Nav.tsx`, `components/Footer.tsx`, `app/about/page.tsx`
+- Address: `app/about/page.tsx`, `app/layout.tsx` (schema)
+
+---
+
+## Remaining Before DNS Cutover
+
+1. Update `/api/contact/route.ts` to use Kihon API (not n8n)
+2. Add `KIHON_API_KEY` to Vercel project settings
+3. Smoke test on Vercel preview URL
+4. Confirm Facebook + Instagram URLs with Jason
+5. DNS: point kansaikaratetarragindi.com.au to Vercel (confirm with Michael first)
