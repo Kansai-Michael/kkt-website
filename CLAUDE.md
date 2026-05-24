@@ -101,7 +101,7 @@ All subfolders (jnr, little lions, teens, adults, others, sports karate training
 ## Social Media
 
 - Facebook: `https://www.facebook.com/profile.php?id=61584025310463` ✓ confirmed
-- Instagram: `https://www.instagram.com/kansaikaratetarragindi` — unconfirmed, check before launch
+- Instagram: `https://www.instagram.com/kansaikaratetarragindi/` ✓ confirmed
 
 ## Other Kansai Karate Locations (Footer)
 

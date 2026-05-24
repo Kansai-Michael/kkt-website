@@ -71,7 +71,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://www.instagram.com/kansaikaratetarragindi"
+                href="https://www.instagram.com/kansaikaratetarragindi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#FFB800] transition-colors"
