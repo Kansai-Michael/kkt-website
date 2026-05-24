@@ -1,5 +1,14 @@
 # Changelog — Kansai Karate Tarragindi Website
 
+## [1.0.1] — 2026-05-25
+
+### Fixes & confirmations
+- Facebook URL updated to confirmed profile link (`profile.php?id=61584025310463`)
+- Instagram URL confirmed (`/kansaikaratetarragindi/`)
+- `KIHON_API_KEY` added to Vercel project settings (Production + Preview) — manually by Michael
+- Corrected docs: `sports karate training/` folder is the correct Kansai dojo (flag in background, not a different venue)
+- Lead API confirmed already on Kihon — no further change needed
+
 ## [1.0.0] — 2026-05-25
 
 ### Initial production build
