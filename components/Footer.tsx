@@ -61,7 +61,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-white/60">
             <li>
               <a
-                href="https://www.facebook.com/kansaikaratetarragindi"
+                href="https://www.facebook.com/profile.php?id=61584025310463"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#FFB800] transition-colors"
