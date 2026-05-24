@@ -28,7 +28,7 @@
 
 - **Booking URL (all 4 timetable pages):** `https://app.kihonsoft.au/book/tarragindi-first-lesson`
 - **Lead API endpoint:** `POST https://app.kihonsoft.au/api/leads/inbound`
-- **API key env var:** `KIHON_API_KEY` — set in Vercel project settings (never in code)
+- **API key env var:** `KIHON_API_KEY` — ✓ set in Vercel project settings (Production + Preview). Never put in code.
 - **Source labels:** little-lions → `website-little-lions`, juniors → `website-juniors`, teens/adults → `website-teens-adults`, general → `website-general`
 
 **Note:** The `/api/contact` route currently still posts to an n8n webhook. It needs to be updated to POST directly to the Kihon API (see Phase 3 below).
