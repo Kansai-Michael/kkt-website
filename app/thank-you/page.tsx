@@ -1,14 +1,18 @@
 import Link from "next/link";
+import GAConversionEvent from "@/components/GAConversionEvent";
 
 const HERO_IMG = "/images/hero2.jpg";
 
 export const metadata = {
   title: "You're In! | Kansai Karate Tarragindi",
   description: "Thanks for booking your free trial class at Kansai Karate Tarragindi.",
+  robots: { index: false, follow: false },
 };
 
 export default function ThankYouPage() {
   return (
+    <>
+      <GAConversionEvent event="generate_lead" />
     <section
       className="relative flex items-center justify-center text-white"
       style={{
@@ -38,5 +42,6 @@ export default function ThankYouPage() {
         </Link>
       </div>
     </section>
+    </>
   );
 }
