@@ -5,7 +5,7 @@
 ## Site Facts
 
 - **Site name:** Kansai Karate Tarragindi
-- **Domain:** kansaikaratetarragindi.com.au (currently on NMN — not yet pointed to Vercel)
+- **Domain:** kansaikaratetarragindi.com.au (live on Vercel — nameservers at Crazy Domains point to Vercel DNS)
 - **Address:** Wellers Hill Bowls Club, 34 Esher St, Tarragindi QLD 4121
 - **Phone:** 0480 566 172
 - **Email:** jason@kansaikaratetarragindi.com.au
@@ -110,14 +110,40 @@ All subfolders (jnr, little lions, teens, adults, others, sports karate training
 - Willawong: https://kansaikaratewillawong.com.au
 - Clayfield: https://www.karateclayfield.com
 
-## Remaining Tasks Before Go-Live
+## Analytics & Tracking
 
-1. **Lead API (Phase 3)** — Update `/api/contact/route.ts` to POST directly to Kihon API instead of n8n webhook. Reference: `C:\Users\micha\Claude-Projects\kkgc-website\app\api\contact\route.ts`
-2. **Contact Modal (Phase 4)** — Already uses 2-step native form. Verify leads are appearing in Kihon CRM.
-3. **Vercel env var** — Confirm `KIHON_API_KEY=cb7877cab7a8dbeeb3063e49d0f89b326664afb82583a54e4e050c361b0cbb72` is set in Vercel project settings for Production + Preview.
-4. **Smoke test** — On Vercel preview URL: submit trial form per program, check Kihon CRM source labels, mobile hero CTA visible, timetable booking iframes load.
-5. **Social media URLs** — Confirm Facebook/Instagram handles with Jason before launch.
-6. **DNS cutover** — Domain currently on NMN. Confirm with Michael → point kansaikaratetarragindi.com.au to Vercel.
-7. **Real testimonials** — Replace placeholder quotes with real Google reviews.
-8. **Adults page FAQs** — Not yet added to the adults program page (only timetable page has FAQs).
-9. **Schema / metadata** — Review layout.tsx schema for accuracy post-address fix.
+| Item | Detail |
+|---|---|
+| GA4 Measurement ID | `G-V0EWLSYB7P` |
+| GA4 Property ID | `539279772` |
+| GA4 Account | `dojoboidesignstudio@gmail.com` |
+| Search Console | Verified under `dojoboidesignstudio@gmail.com` |
+| Tracking Sheet | `1CqViBSJkEFnQl7vsGVCYMO8fWTjynfMSrkDvLocJTDo` |
+| Apps Script | `1VspgubCtBiGATp06WoINVf5Kngr25HqnBHEDxjMNHySxEsNBozSplDcW` |
+| Local script path | `C:\tmp\clasp-kkt-ga4\` |
+| Daily trigger | Run `createDailyTrigger()` in Apps Script editor to activate 6am Brisbane sync |
+
+**GA4 manual steps (do once):**
+1. GA4 Admin → Property Access Management → add `michaelhunt270@gmail.com` as Viewer
+2. In Apps Script editor → Services → enable **Google Analytics Data API** → run `main()` → run `createDailyTrigger()`
+3. GA4 Admin → Events → mark `generate_lead` as key event
+4. GA4 Admin → Events → Create event: `programs_page_view` (condition: page_location contains /programs/) → mark as key event
+
+## Email
+
+Mailgun on `mg.kansaikaratetarragindi.com.au`. Forwarding route set up for `jason@kansaikaratetarragindi.com.au` → Jason's personal inbox.
+
+## Remaining Tasks
+
+1. **www → apex redirect** — Vercel Settings → Domains → set www to redirect (301) to apex. Currently serves duplicate content.
+2. **H1 keyword fix** — Homepage H1 has no target keyword. Add "karate" + "Tarragindi". See seo-report-2026-05-28.md.
+3. **Jason's belt rank** — Add to About page: "[X]th Dan Black Belt, [X] years teaching."
+4. **Real testimonials** — Replace unattributed "Member Feedback" quotes with named Google reviews.
+5. **Adults page FAQs** — Add 3–5 FAQs to the adults program page.
+6. **Contrast fix** — Yellow #FFB800 on blue #5B7DB1 fails WCAG AA (2.42:1). Fix hero H1 keyword highlights.
+7. **Hero image `priority` prop** — Add to the hero `<Image>` component for LCP improvement.
+8. **Program page boilerplate** — Each page needs unique copy. See seo-report-2026-05-28.md.
+
+## SEO Baseline
+
+Score: 58/100 (2026-05-28). Target: 72/100 in 30 days. Full report: `seo-report-2026-05-28.md`.
