@@ -18,6 +18,9 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/icon.png",
+  },
   title: "Kansai Karate Tarragindi | Traditional Karate for Kids, Teens & Adults",
   description:
     "Traditional Shitoryu Shukokai karate for families in Tarragindi. Little Lions, Juniors, Teens and Adults classes at Wellers Hill Bowls Club. Book a free trial today.",
