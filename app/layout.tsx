@@ -20,6 +20,10 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kansaikaratetarragindi.com.au"),
+  alternates: {
+    canonical: "https://kansaikaratetarragindi.com.au",
+  },
   icons: {
     icon: "/icon.png",
   },
@@ -59,6 +63,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "SportsActivityLocation",
+  "@id": "https://kansaikaratetarragindi.com.au/#location",
   name: "Kansai Karate Tarragindi",
   description:
     "Traditional Japanese karate for kids, teens and adults in Tarragindi, Brisbane QLD. Programs for all ages: Little Lions (5–7), Juniors (8–12), Teens (13–17) and Adults.",
@@ -73,6 +78,11 @@ const localBusinessSchema = {
     postalCode: "4121",
     addressCountry: "AU",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -27.5177,
+    longitude: 153.0368,
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -83,6 +93,10 @@ const localBusinessSchema = {
   ],
   priceRange: "$$",
   image: "https://kansaikaratetarragindi.com.au/images/og-social.jpg",
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61584025310463",
+    "https://www.instagram.com/kansaikaratetarragindi/",
+  ],
 };
 
 const websiteSchema = {
@@ -95,9 +109,13 @@ const websiteSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://kansaikaratetarragindi.com.au/#organization",
   name: "Kansai Karate Tarragindi",
   url: "https://kansaikaratetarragindi.com.au",
-  logo: "https://kansaikaratetarragindi.com.au/images/logo.png",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://kansaikaratetarragindi.com.au/images/logo.png",
+  },
   telephone: "+61480566172",
   email: "jason@kansaikaratetarragindi.com.au",
   address: {
@@ -108,6 +126,10 @@ const organizationSchema = {
     postalCode: "4121",
     addressCountry: "AU",
   },
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61584025310463",
+    "https://www.instagram.com/kansaikaratetarragindi/",
+  ],
 };
 
 export default function RootLayout({

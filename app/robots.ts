@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://kansaikarategoldcoast.com.au/sitemap.xml",
+    sitemap: "https://kansaikaratetarragindi.com.au/sitemap.xml",
   };
 }
