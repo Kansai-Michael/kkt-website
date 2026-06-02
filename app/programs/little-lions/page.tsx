@@ -4,6 +4,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Little Lions Program (Ages 5–7) | Kansai Karate Tarragindi",
   description: "Karate classes for 5, 6, and 7 year olds in Tarragindi. Little Lions builds focus, respect, and real karate foundations in a fun, structured environment. Tuesday and Thursday afternoons.",
+  alternates: { canonical: "https://kansaikaratetarragindi.com.au/programs/little-lions" },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "My child is shy — will they cope in a group class?", "acceptedAnswer": { "@type": "Answer", "text": "Many of our Little Lions students start shy and blossom within the first few weeks. Our instructors are experienced with this age group and create an encouraging environment where every child feels included and safe." } },
+    { "@type": "Question", "name": "What will my child learn in Little Lions?", "acceptedAnswer": { "@type": "Answer", "text": "Focus, listening skills, coordination, self-confidence, and the foundations of Shitoryu Shukokai karate — including basic stances, blocks, and strikes — delivered through fun, structured activities." } },
+    { "@type": "Question", "name": "How often should they train?", "acceptedAnswer": { "@type": "Answer", "text": "We recommend twice a week for the best results. Once a week is a great starting point if you want to ease in, and many families find their kids quickly want to come more often." } },
+    { "@type": "Question", "name": "Can they earn belts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Little Lions can grade for their first coloured belt. Gradings happen every few months and are a huge confidence milestone for kids this age." } },
+    { "@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we offer a free trial class with no obligation. Book online and bring your child along. If they love it (they usually do), we'll get them started from there." } }
+  ]
 };
 
 const breadcrumb = {
@@ -18,13 +31,14 @@ const breadcrumb = {
 export default function LittleLionsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <ProgramPage
         name="Little Lions"
         slug="little-lions"
         heroImg="/images/little-lions.jpg"
         heroTitle="Little Lions Classes at Kansai Karate Tarragindi set positive pathways for life!"
-        heroSubtitle="There's nothing more satisfying than watching your 5–7 year old gain physical and social skills that you know will benefit them for life."
+        heroSubtitle="Little Lions classes build focus, coordination and real confidence in kids aged 5–7 — in a structured, caring environment where every child feels they belong."
         benefitsTitle="Little Lions Classes Build Benefits for Life"
         buildPhotos={[
           {
@@ -78,7 +92,7 @@ export default function LittleLionsPage() {
           },
           {
             title: "Physical Skills",
-            body: "It's more than amazing karate moves — it's proprioception, balance, agility and coordination. Physical traits that will remain with and benefit your child for the rest of their lives.",
+            body: "At 5–7, kids are developing core movement patterns that shape their body for life. Little Lions builds gross motor skills, spatial awareness and hand-eye coordination through structured karate movements — a foundation no gym program can match.",
           },
         ]}
         studentsTitle="Kids Love Little Lions Classes"

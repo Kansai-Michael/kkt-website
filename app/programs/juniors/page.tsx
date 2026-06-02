@@ -4,6 +4,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Juniors Program (Ages 8–12) | Kansai Karate Tarragindi",
   description: "Karate classes for 8–12 year olds in Tarragindi. Juniors builds discipline, resilience, and technical karate skills in a structured, encouraging environment. Monday, Tuesday and Thursday.",
+  alternates: { canonical: "https://kansaikaratetarragindi.com.au/programs/juniors" },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "My child has never done a martial art before — is that OK?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Most of our Juniors students start with zero experience. Classes are structured so beginners progress at their own pace alongside more experienced students." } },
+    { "@type": "Question", "name": "What will my child learn in Juniors Karate?", "acceptedAnswer": { "@type": "Answer", "text": "Traditional Shitoryu Shukokai karate — including kicks, punches, blocks, kata (forms), and basic sparring — alongside discipline, focus, and respect. Skills that carry over into school and life." } },
+    { "@type": "Question", "name": "How often should they train?", "acceptedAnswer": { "@type": "Answer", "text": "We recommend two or three times a week. Monday, Tuesday and Thursday evenings are available — most families find a combination that works around school and other activities." } },
+    { "@type": "Question", "name": "Can they earn belts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Grading happens every few months and is one of the most rewarding parts of training. Kids love the recognition of working hard and progressing through the belt system." } },
+    { "@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — book a free trial class with no obligation. Bring them along, see what they think, and take it from there. Most kids are asking to come back before they've even left the dojo." } }
+  ]
 };
 
 const breadcrumb = {
@@ -18,13 +31,14 @@ const breadcrumb = {
 export default function JuniorsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <ProgramPage
         name="Juniors"
         slug="juniors"
         heroImg="/images/jnr-hero.jpg"
         heroTitle="Juniors Classes at Kansai Karate Tarragindi mean Focus, Fitness and Fun!"
-        heroSubtitle="Kids build Confidence, gain strength and flexibility, and learn amazing skills in the best Kids Martial Arts program in the Tarragindi area."
+        heroSubtitle="Juniors Karate at Tarragindi gives 8–12 year olds real skills, genuine fitness and the kind of self-discipline that shows up everywhere — at school, at home, and in sport."
         benefitsTitle="Juniors Karate Classes Build Benefits for Life"
         buildPhotos={[
           {
@@ -76,7 +90,7 @@ export default function JuniorsPage() {
           },
           {
             title: "Physical Skills",
-            body: "It's more than amazing ninja moves — it's proprioception, balance, agility and more — physical traits that will remain with and benefit your child for the rest of their lives.",
+            body: "Karate is one of the most complete physical activities for 8–12 year olds. Your child will build agility, reaction speed and body control that translates directly into every other sport and physical activity they do.",
           },
         ]}
         studentsTitle="Kids Love Juniors Karate Classes"

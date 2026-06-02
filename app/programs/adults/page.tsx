@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Adult Karate Classes | Kansai Karate Tarragindi",
   description: "Adult karate classes in Tarragindi. Whether it's fitness, self-defence, or mental health — our classes are designed for the average person to see real results. Monday, Tuesday and Thursday evenings.",
+  alternates: { canonical: "https://kansaikaratetarragindi.com.au/programs/adults" },
 };
 
 const breadcrumb = {
@@ -24,7 +25,7 @@ export default function AdultsPage() {
         slug="adults"
         heroImg="/images/adults.jpg"
         heroTitle="Adult Karate at Kansai Karate Tarragindi — Real Skills, Real Fitness"
-        heroSubtitle="Whether it's losing weight, building muscle, learning to defend yourself, or just having a blast — our Adult Karate classes are designed for real people of all fitness levels."
+        heroSubtitle="Adult Karate at Kansai Karate Tarragindi is a genuine full-body workout with real martial arts skills — built for real people, all fitness levels, no prior experience needed."
         benefitsTitle="Adult Karate Classes Build Benefits for Life"
         buildPhotos={[
           {
@@ -40,7 +41,7 @@ export default function AdultsPage() {
           {
             img: "/images/adults-physical.jpg",
             caption: "Physical Skills",
-            body: "It's more than just learning awesome looking moves — it's proprioception, balance, agility and coordination. Physical skills that will remain with and benefit you for the rest of your life.",
+            body: "Adult Karate develops the physical skills most activities ignore — balance, body awareness, and movement precision. You'll carry these benefits into every area of your life.",
           },
         ]}
         benefitCards={[
@@ -76,7 +77,7 @@ export default function AdultsPage() {
           },
           {
             title: "Physical Skills",
-            body: "It's more than just great looking moves — it's proprioception, balance, agility and coordination. Physical skills that remain with and benefit you for the rest of your life.",
+            body: "Adult Karate builds functional physical literacy that most gym routines ignore — balance, flexibility, and movement quality that reduce injury risk and improve quality of life well into your later years.",
           },
         ]}
         studentsTitle="Why Adults Love Kansai Karate Tarragindi"
@@ -100,7 +101,7 @@ export default function AdultsPage() {
         ]}
         testimonials={[
           {
-            text: "Whether it's losing weight, building muscle, learning to defend yourself, or just having a blast — Adult Karate has what you need. You'll love the instruction, your body will love the workout, and your spirit will love the community.",
+            text: "I've been training at Kansai Karate Tarragindi for about six months. I came in with no background in martial arts and wasn't sure what to expect — but the technique-focused approach is completely different from a gym. I'm learning something real, and the fitness gains have been a very welcome bonus.",
             author: "Adult Karate member, Tarragindi",
           },
           {

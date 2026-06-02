@@ -4,6 +4,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Teens Karate (Ages 13–17) | Kansai Karate Tarragindi",
   description: "Teen karate classes in Tarragindi. Build fitness, focus, and real self-defence skills in a structured class designed specifically for teenagers. Monday, Tuesday and Thursday.",
+  alternates: { canonical: "https://kansaikaratetarragindi.com.au/programs/teens" },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "My teenager thinks karate is for little kids — how do I convince them?", "acceptedAnswer": { "@type": "Answer", "text": "Let them try it. Teen Karate at Kansai is a completely different environment from a kids' class — fast-paced, physically demanding, and specifically designed for teenagers. Almost every teen who tries it comes back." } },
+    { "@type": "Question", "name": "What will they actually learn?", "acceptedAnswer": { "@type": "Answer", "text": "Traditional Shitoryu Shukokai karate — real strikes, blocks, kata, and controlled sparring — alongside focus, discipline, and practical self-defence. Skills they'll carry into adulthood." } },
+    { "@type": "Question", "name": "How often should they train?", "acceptedAnswer": { "@type": "Answer", "text": "Two or three times a week is ideal. Classes run Monday, Tuesday and Thursday evenings, making it easy to fit around school, sport, and social commitments." } },
+    { "@type": "Question", "name": "Is it safe?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All contact drills are controlled, supervised, and age-appropriate. Our instructors are trained to create an environment that challenges teens without putting them at risk." } },
+    { "@type": "Question", "name": "Is there a free trial?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — book a free trial class, no commitment required. Let them give it an honest go. We're confident they'll want to come back." } }
+  ]
 };
 
 const breadcrumb = {
@@ -18,13 +31,14 @@ const breadcrumb = {
 export default function TeensPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <ProgramPage
         name="Teens Karate"
         slug="teens"
         heroImg="/images/teens-hero.jpg"
         heroTitle="Teen Karate at Kansai Karate Tarragindi — classes designed just for them"
-        heroSubtitle="Karate is the perfect activity for teenagers. It gives them an outlet for their unique energy in a structured class designed and taught just for them — not lumped in with little kids or adults."
+        heroSubtitle="Teen Karate at Kansai Karate Tarragindi is a class built specifically for teenagers — the right pace, the right challenge, and the right environment for 13–17 year olds who want to push themselves."
         benefitsTitle="Teen Karate Classes Build Benefits for Life"
         buildPhotos={[
           {
@@ -76,7 +90,7 @@ export default function TeensPage() {
           },
           {
             title: "Physical Skills",
-            body: "It's more than kicks and punches — it's proprioception, balance, agility and coordination. Physical traits built through Teen Karate that stay with your child for life.",
+            body: "Teenagers are at the peak age for developing functional strength and athletic coordination. Teen Karate builds real power, speed and body control — the kind of physical literacy that carries into adult life and protects against injury.",
           },
         ]}
         studentsTitle="Teens Love Karate Classes"
