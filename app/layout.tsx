@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     icon: "/icon.png",
   },
   verification: {
-    google: "3PUpFhwHprjOpUSEid5xt66HZ-02Zrj9jU0mO8uWmgY",
+    google: "3GWhA8x1Rgt39ME1Xw6Z88ELuP1txpwk17KLuPQYw74",
   },
   title: "Kansai Karate Tarragindi | Traditional Karate for Kids, Teens & Adults",
   description:
