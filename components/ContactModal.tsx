@@ -111,7 +111,7 @@ export function ContactModalProvider({ children }: { children: React.ReactNode }
             <div className="bg-[#5B7DB1] text-white px-6 py-5 flex items-start justify-between flex-shrink-0">
               <div>
                 <h2 className="text-xl md:text-2xl font-bold uppercase">
-                  Book Your Free First Lesson
+                  See Timetable - Request More Information
                 </h2>
                 <p className="text-white/80 text-sm mt-2">
                   Tell us who you are and we&apos;ll show you the schedule and let you pick your first class

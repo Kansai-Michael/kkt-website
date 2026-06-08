@@ -16,7 +16,7 @@ export default function BookTrialButton({ program, className, children }: BookTr
       onClick={() => openModal(program)}
       className={className}
     >
-      {children || "Book a FREE First Lesson"}
+      {children || "Check Class Times"}
     </button>
   );
 }

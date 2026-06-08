@@ -20,7 +20,7 @@ export default function TrialCTA({
           program={program}
           className="inline-block bg-[#FFB800] text-white font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors shadow-lg"
         >
-          Book Your Free Trial Class
+          Check Class Times
         </BookTrialButton>
         <p className="mt-4 text-white/50 text-sm">
           Or call us: <a href="tel:0738485949" className="underline hover:text-white">07 3848 5949</a>
