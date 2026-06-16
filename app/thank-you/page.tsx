@@ -1,5 +1,6 @@
 import Link from "next/link";
 import GAConversionEvent from "@/components/GAConversionEvent";
+import IframeEscape from "@/components/IframeEscape";
 
 const HERO_IMG = "/images/hero2.jpg";
 
@@ -13,6 +14,7 @@ export default function ThankYouPage() {
   return (
     <>
       <GAConversionEvent event="generate_lead" />
+      <IframeEscape />
     <section
       className="relative flex items-center justify-center text-white"
       style={{

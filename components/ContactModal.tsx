@@ -79,6 +79,12 @@ export function ContactModalProvider({ children }: { children: React.ReactNode }
         throw new Error("Submission failed");
       }
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const win = window as any;
+      if (typeof win.gtag === "function") {
+        win.gtag("event", "generate_lead", { program: selected || "general" });
+      }
+
       const baseDest = selected ? programs[selected]?.timetableUrl : "/timetable";
       const qp = new URLSearchParams();
       if (email) qp.set("email", email);
