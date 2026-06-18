@@ -80,7 +80,7 @@ export default function LittleLionsPage() {
         parentsFeatures={[
           {
             title: "Class Times",
-            body: "Little Lions class times were designed for real family schedules. Tuesday and Thursday afternoons at 4:15pm–5:00pm — you're almost guaranteed to find a time that works.",
+            body: "Little Lions class times were designed for real family schedules. Monday 4:30–5:15pm, Tuesday and Thursday 4:15–5:00pm — you're almost guaranteed to find a time that works.",
           },
           {
             title: "Community",

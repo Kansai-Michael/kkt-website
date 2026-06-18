@@ -9,7 +9,7 @@
 - **Address:** Wellers Hill Bowls Club, 34 Esher St, Tarragindi QLD 4121
 - **Phone:** 0480 566 172
 - **Email:** jason@kansaikaratetarragindi.com.au
-- **Head Instructor:** Sensei Jason Sallaway
+- **Head Instructor:** Sensei Jason Sallaway — 3rd Dan Black Belt, Shitoryu Shukokai
 - **Style:** Shitoryu Shukokai — traditional Japanese karate
 - **Affiliation:** Kansai Karate Academy (Shihan Stephen Kelly, 7th Dan, Kyoshi)
 
@@ -17,12 +17,15 @@
 
 | Program | Ages | Days & Times |
 |---|---|---|
-| Little Lions | 5–7 | Tue 4:15–5:00pm, Thu 4:15–5:00pm |
+| Cubs | 3–4 | Mon 4:30–5:00pm*, Thu 4:15–5:00pm* |
+| Little Lions | 5–7 | Mon 4:30–5:15pm, Tue 4:15–5:00pm, Thu 4:15–5:00pm |
 | Juniors | 8–12 | Mon 5:15–6:15pm, Tue 5:00–5:45pm, Thu 5:00–5:45pm |
 | Teens | 13–17 | Mon 5:15–6:15pm, Tue 5:45–6:30pm, Thu 5:45–6:30pm |
 | Adults | 18+ | Mon 5:15–6:15pm, Tue 5:45–6:30pm, Thu 5:45–6:30pm |
 
-**No Cubs program at Tarragindi.**
+*Cubs classes start Monday 13th July 2026. Wed and Sat sessions coming soon for all programs.
+
+**Cubs images:** Currently using Little Lions photos (ll-1.jpg through ll-6.jpg) as placeholders. Swap when real Cubs photos arrive.
 
 ## Kihon Integration
 
@@ -53,6 +56,8 @@
 | Path | Description |
 |---|---|
 | `/` | Homepage — hero (hero.jpg), 2+2 programs grid, Why Kansai, Kids section, Adults section, Testimonials, CTA with dojo-interior.jpg background |
+| `/programs/cubs` | Cubs program page (Ages 3–4) — with FAQs, starts 13 July 2026 |
+| `/programs/cubs/timetable` | Cubs timetable + Kihon booking iframe |
 | `/programs/little-lions` | Little Lions program page (Ages 5–7) — with FAQs |
 | `/programs/juniors` | Juniors program page (Ages 8–12) — with FAQs |
 | `/programs/teens` | Teens program page (Ages 13–17) — with FAQs |
@@ -61,7 +66,7 @@
 | `/programs/juniors/timetable` | Juniors timetable + Kihon booking iframe |
 | `/programs/teens/timetable` | Teens timetable — hero + divider = dojo-class.jpg; classPhoto objectPosition top |
 | `/programs/adults/timetable` | Adults timetable — closing CTA section = adults-coa.jpg background |
-| `/timetable` | General timetable (Mon/Tue/Thu all programs) |
+| `/timetable` | General timetable (Mon/Tue/Wed CS/Thu/Sat CS — all programs incl Cubs) |
 | `/about` | About Sensei Jason Sallaway, correct Google Maps embed, Kansai Karate Academy lineage |
 | `/contact` | Contact page |
 | `/thank-you` | Post-booking confirmation |
@@ -123,26 +128,40 @@ All subfolders (jnr, little lions, teens, adults, others, sports karate training
 | Local script path | `C:\tmp\clasp-kkt-ga4\` |
 | Daily trigger | Run `createDailyTrigger()` in Apps Script editor to activate 6am Brisbane sync |
 
-**GA4 manual steps (do once):**
-1. GA4 Admin → Property Access Management → add `michaelhunt270@gmail.com` as Viewer
-2. In Apps Script editor → Services → enable **Google Analytics Data API** → run `main()` → run `createDailyTrigger()`
-3. GA4 Admin → Events → mark `generate_lead` as key event
-4. GA4 Admin → Events → Create event: `programs_page_view` (condition: page_location contains /programs/) → mark as key event
+**GA4 setup status:**
+1. ✅ `michaelhunt270@gmail.com` added as Viewer in GA4 Admin
+2. ✅ Apps Script deployed — `main()` runs, daily 6am trigger active
+3. ⬜ GA4 Admin → Events → mark `generate_lead` as key event (needs a lead to fire first)
+4. ⬜ GA4 Admin → Events → Create event: `programs_page_view` (condition: page_location contains /programs/) → mark as key event
 
 ## Email
 
 Mailgun on `mg.kansaikaratetarragindi.com.au`. Forwarding route set up for `jason@kansaikaratetarragindi.com.au` → Jason's personal inbox.
 
+## SEO Fixes Applied (2026-06-05)
+
+All code-side SEO fixes from the initial audit have been applied:
+
+- ✅ Homepage H1 → "Traditional Karate Classes in Tarragindi — Kids, Teens & Adults"
+- ✅ Suburb coverage sentence added (Wellers Hill, Moorooka, Holland Park, Annerley)
+- ✅ Canonical tags on all 4 program pages
+- ✅ FAQPage JSON-LD schema on Little Lions, Juniors, Teens
+- ✅ Unique Physical Skills copy on all 4 program pages (no more boilerplate)
+- ✅ Internal links in ProgramPage → /about + /programs/[slug]/timetable
+- ✅ Hamburger tap target increased to 12px padding (44px minimum met)
+- ✅ All logo `<img>` tags → Next.js `<Image>` (auto WebP delivery)
+- ✅ Program card `sizes` prop on homepage grid
+- ✅ Jason's belt rank on About page: 3rd Dan Black Belt, Shitoryu Shukokai
+- ✅ www → apex 301 redirect set in Vercel Domains
+
 ## Remaining Tasks
 
-1. **www → apex redirect** — Vercel Settings → Domains → set www to redirect (301) to apex. Currently serves duplicate content.
-2. **H1 keyword fix** — Homepage H1 has no target keyword. Add "karate" + "Tarragindi". See seo-report-2026-05-28.md.
-3. **Jason's belt rank** — Add to About page: "[X]th Dan Black Belt, [X] years teaching."
-4. **Real testimonials** — Replace unattributed "Member Feedback" quotes with named Google reviews.
-5. **Adults page FAQs** — Add 3–5 FAQs to the adults program page.
-6. **Contrast fix** — Yellow #FFB800 on blue #5B7DB1 fails WCAG AA (2.42:1). Fix hero H1 keyword highlights.
-7. **Hero image `priority` prop** — Add to the hero `<Image>` component for LCP improvement.
-8. **Program page boilerplate** — Each page needs unique copy. See seo-report-2026-05-28.md.
+1. **Real testimonials** — Replace unattributed quotes with named Google reviews. Ask Jason for 3–4 names + suburbs from his Google Business reviews.
+2. **Adults page FAQs** — Add 3–5 FAQs to the adults program page to reach 800+ words.
+3. **Contrast fix** — Yellow `#FFB800` on blue `#5B7DB1` fails WCAG AA (2.42:1). Darken the hero keyword highlight overlay or change colour.
+4. **GA4 key events** — Mark `generate_lead` (after first lead fires) and create `programs_page_view` event in GA4 Admin.
+5. **Search Console** — Submit sitemap.xml and request indexing for homepage + 4 program pages.
+6. **`/api/contact` route** — Currently posts to n8n webhook; needs updating to POST directly to Kihon API.
 
 ## SEO Baseline
 

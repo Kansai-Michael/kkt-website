@@ -54,7 +54,7 @@ const moreInfo: MoreInfoContent = {
     },
     {
       q: "How many classes do we attend?",
-      a: "That depends on your schedule and program. Little Lions classes run Tuesday and Thursday afternoons, and many kids are successful attending just once a week. If they love classes, we likely have options to attend more!",
+      a: "That depends on your schedule and program. Little Lions classes run Monday, Tuesday and Thursday afternoons, and many kids are successful attending just once a week. If they love classes, we likely have options to attend more!",
     },
   ],
   closingStatement:
@@ -73,6 +73,7 @@ export default function LittleLionsTimetable() {
         {
           label: "LITTLE LIONS",
           sublabel: "5 - 7 YEARS",
+          mon: "4:30 – 5:15pm",
           tue: "4:15 – 5:00pm",
           thu: "4:15 – 5:00pm",
         },

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useContactModal } from "@/components/ContactModal";
 
 const programs = [
+  { name: "Cubs (Ages 3–4)", href: "/programs/cubs" },
   { name: "Little Lions (Ages 5–7)", href: "/programs/little-lions" },
   { name: "Juniors (Ages 8–12)", href: "/programs/juniors" },
   { name: "Teens (Ages 13–17)", href: "/programs/teens" },
@@ -77,7 +78,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-3"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
