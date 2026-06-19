@@ -1,157 +1,116 @@
 # Kansai Karate Tarragindi — Website
 
-The official website for Kansai Karate Tarragindi, a licensed dojo of Kansai Karate Academy. Built with Next.js and deployed to Vercel.
-
-**Live domain:** kansaikaratetarragindi.com.au (DNS cutover pending — currently on NMN)  
-**Vercel project:** auto-deploys on push to `master`  
-**GitHub repo:** Kansai-Michael/kkt-website
+Client website for Sensei Jason Sallaway's karate dojo in Tarragindi, Brisbane.
+Built by Dojoboi Design Studios. Live at [kansaikaratetarragindi.com.au](https://kansaikaratetarragindi.com.au).
 
 ---
 
-## Tech Stack
+## Stack
 
-| Tool | Version | Purpose |
-|---|---|---|
-| Next.js | 16.2.2 (Turbopack) | Framework |
-| React | 19.2.4 | UI |
-| TypeScript | — | Type safety |
-| Tailwind CSS | v4 | Styling |
-| Vercel | — | Hosting + CDN |
-| Kihon | — | Booking + lead capture |
+- **Framework:** Next.js 16.2.2 (App Router, Turbopack)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Hosting:** Vercel (auto-deploy on push to `master`)
+- **Repo:** `Kansai-Michael/kkt-website` on GitHub
 
 ---
 
-## Project Structure
-
-```
-app/
-  page.tsx                      # Homepage
-  about/page.tsx                # About Sensei Jason + Google Maps
-  programs/
-    little-lions/
-      page.tsx                  # Little Lions program page
-      timetable/page.tsx        # LL timetable + Kihon iframe
-    juniors/
-      page.tsx
-      timetable/page.tsx
-    teens/
-      page.tsx
-      timetable/page.tsx        # Hero + divider = dojo-class.jpg
-    adults/
-      page.tsx
-      timetable/page.tsx        # Closing CTA = adults-coa.jpg bg
-  timetable/page.tsx            # General timetable
-  api/contact/route.ts          # Lead form handler
-
-components/
-  ProgramPage.tsx               # Shared layout for all program pages
-  TimetablePage.tsx             # Shared layout for all timetable pages
-  Nav.tsx                       # Sticky nav with phone + programs dropdown
-  Footer.tsx                    # 5-column footer
-  ContactModal.tsx              # 2-step lead capture modal
-  BookTrialButton.tsx           # Yellow CTA button (always black text)
-
-public/
-  images/                       # All photos (see CLAUDE.md for source mapping)
-```
-
----
-
-## How It Works
-
-### Lead Flow
-1. Visitor clicks "Book Free Trial" anywhere on site → opens `ContactModal`
-2. User selects program (step 1) → fills name/email/phone (step 2)
-3. Form POSTs to `/api/contact` with program slug
-4. **Currently:** posts to n8n webhook ← needs updating to Kihon API
-5. **Target:** POST to `https://app.kihonsoft.au/api/leads/inbound` with `X-API-Key` header
-
-### Booking Flow
-1. From any timetable page → Kihon iframe loads `https://app.kihonsoft.au/book/tarragindi-first-lesson`
-2. User selects time slot + fills details inside the iframe
-
-### Deployment
-- Push to `master` → Vercel auto-builds and deploys
-- Build command: `npm run build`
-- Zero TypeScript errors required before push
-
----
-
-## Credentials & Environment Variables
-
-| Variable | Where | Value |
-|---|---|---|
-| `KIHON_API_KEY` | Vercel project settings (Production + Preview) | `cb7877cab7a8dbeeb3063e49d0f89b326664afb82583a54e4e050c361b0cbb72` |
-
-**Never put API keys in code.** The key is read via `process.env.KIHON_API_KEY` at runtime.
-
----
-
-## Reference Codebase
-
-The Gold Coast site (`C:\Users\micha\Claude-Projects\kkgc-website`) is the structural template for KKT. When building new features, compare against KKGC first:
-- Lead API route: `kkgc-website/app/api/contact/route.ts`
-- Contact modal: `kkgc-website/components/ContactModal.tsx`
-
----
-
-## Photos
-
-All source photos are in `C:\Users\micha\OneDrive\dojo\`.
-
-All subfolders are from the actual Kansai dojo — including `sports karate training/`, which has a flag visible in the background but is the correct venue. See `CLAUDE.md` for the full photo source mapping.
-
----
-
-## Running Locally
+## Local Development
 
 ```bash
-cd kkt-website
 npm install
 npm run dev
-# → http://localhost:3000
 ```
 
-Build check:
-```bash
-npm run build
-```
+Site runs at `http://localhost:3000`.
 
 ---
 
-## Maintaining the Site
+## Deployment
 
-### Adding/changing a photo
-1. Copy source file from `C:\Users\micha\OneDrive\dojo\` to `public/images/`
-2. Update the filename reference in the relevant page file
-3. Optionally set `objectPosition` on the photo if crop needs adjusting
-4. `git add public/images/<file>.jpg` → commit → push → Vercel deploys
+Push to `master` — Vercel deploys automatically. No manual steps needed.
 
-### Adjusting photo crop
-In program pages, add `objectPosition: "top" | "bottom" | "center 25%"` etc. to the photo object in the page file.  
-In timetable pages, add `classPhotoPosition: "top"` to `moreInfo`.
-
-### Adding FAQs to a program page
-Pass a `faqs` prop to `<ProgramPage>`:
-```tsx
-faqs={[
-  { q: "Question?", a: "Answer." },
-]}
-```
-
-### Updating the timetable
-Edit the `scheduleRows` array in the relevant `timetable/page.tsx`.
-
-### Updating contact details
-- Phone/email: `components/Nav.tsx`, `components/Footer.tsx`, `app/about/page.tsx`
-- Address: `app/about/page.tsx`, `app/layout.tsx` (schema)
+Environment variables required in Vercel:
+- `KIHON_API_KEY` — Kihon CRM inbound leads API key (set in Vercel project settings, Production + Preview)
 
 ---
 
-## Remaining Before DNS Cutover
+## Key Integrations
 
-1. Update `/api/contact/route.ts` to use Kihon API (not n8n)
-2. Add `KIHON_API_KEY` to Vercel project settings
-3. Smoke test on Vercel preview URL
-4. Confirm Facebook + Instagram URLs with Jason
-5. DNS: point kansaikaratetarragindi.com.au to Vercel (confirm with Michael first)
+### Kihon (Bookings & Leads)
+- Booking iframe URL: `https://app.kihonsoft.au/book/tarragindi-first-lesson`
+- Lead API: `POST https://app.kihonsoft.au/api/leads/inbound`
+- API key stored in Vercel env var `KIHON_API_KEY` — never put in code
+- Source labels per form: `website-little-lions`, `website-juniors`, `website-teens-adults`, `website-general`
+
+### Google Analytics 4
+- Measurement ID: `G-V0EWLSYB7P`
+- Property ID: `539279772`
+- Account: `dojoboidesignstudio@gmail.com`
+- SPA tracking: `send_page_view: false` in gtag init + `GAPageView` component handles route changes
+- Conversion events: `generate_lead` (fires on /thank-you) and `programs_page_view` (fires on all /programs/* pages)
+
+### Google Search Console
+- Verified under `dojoboidesignstudio@gmail.com`
+- Sitemap: `https://kansaikaratetarragindi.com.au/sitemap.xml`
+
+### GA4 → Google Sheets Analytics Pipeline
+- Tracking Sheet: `1CqViBSJkEFnQl7vsGVCYMO8fWTjynfMSrkDvLocJTDo`
+- Apps Script ID: `1VspgubCtBiGATp06WoINVf5Kngr25HqnBHEDxjMNHySxEsNBozSplDcW`
+- Local script: `C:\tmp\clasp-kkt-ga4\`
+- Daily 6am Brisbane trigger active — syncs 9 sheet tabs (Summary, Daily, Sources, Top Pages, Conversions, Geographic, Landing Pages, Devices, Thank-You Sources)
+
+### Email (Mailgun)
+- Domain: `mg.kansaikaratetarragindi.com.au`
+- `jason@kansaikaratetarragindi.com.au` forwards to Jason's personal inbox
+- DNS records managed in Vercel DNS (nameservers delegated from Crazy Domains)
+
+---
+
+## Updating Content
+
+All page content is in the page files under `app/`. Program pages use the shared `ProgramPage` component — edit the props in each page file.
+
+| What to change | Where |
+|---|---|
+| Timetable times | `CLAUDE.md` (reference) + each timetable page in `/programs/*/timetable/` |
+| Schedule footnote (e.g. start date) | `scheduleNote` prop on `TimetablePage` in the relevant timetable page |
+| Program descriptions | `/app/programs/[slug]/page.tsx` |
+| Homepage programs grid | `/app/page.tsx` — `programs` array (currently 5 programs: Cubs, LL, Juniors, Teens, Adults) |
+| Testimonials | Each program page's `testimonials` prop |
+| Contact details | `components/Nav.tsx`, `components/Footer.tsx`, `/app/contact/page.tsx` |
+| FAQs | Each program page's `faqs` prop |
+| Schema / SEO metadata | Each page's `export const metadata` and JSON-LD `const` blocks |
+| Book Free Trial modal programs | `components/ContactModal.tsx` — `programs` object at the top of the file |
+| Cubs photos | `public/images/cubs*.jpg` — source: `C:\Users\micha\OneDrive\Kansai Karate Gold Coast\Claude Assets\Images\Cubs\` |
+
+---
+
+## Maintaining the Analytics Pipeline
+
+To push script changes to Apps Script:
+
+```powershell
+cd C:\tmp\clasp-kkt-ga4
+$env:NODE_TLS_REJECT_UNAUTHORIZED = "0"
+npx clasp push
+```
+
+To manually run a sync or reset the trigger, open the Apps Script editor:
+`https://script.google.com` → find project `kkt-ga4` → run `main()` or `createDailyTrigger()`
+
+---
+
+## DNS (managed in Vercel)
+
+Nameservers at Crazy Domains point to Vercel DNS. All DNS records are in Vercel → Settings → Domains. This includes:
+- A record for apex (`kansaikaratetarragindi.com.au`)
+- CNAME for `www` (301 permanent redirect to apex)
+- Mailgun records (MX ×2, SPF TXT, DKIM TXT) under `mg.` subdomain
+
+---
+
+## Reference
+
+Full project context, brand colours, photo sources, and remaining tasks: see `CLAUDE.md`.
+SEO audit and fix history: see `seo-report-2026-05-28.md`.

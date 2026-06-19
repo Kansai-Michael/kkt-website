@@ -17,7 +17,7 @@
 
 | Program | Ages | Days & Times |
 |---|---|---|
-| Cubs | 3–4 | Mon 4:30–5:00pm*, Thu 4:15–5:00pm* |
+| Cubs | 3–4 | Mon 4:30–5:00pm*, Thu 4:15–4:45pm* |
 | Little Lions | 5–7 | Mon 4:30–5:15pm, Tue 4:15–5:00pm, Thu 4:15–5:00pm |
 | Juniors | 8–12 | Mon 5:15–6:15pm, Tue 5:00–5:45pm, Thu 5:00–5:45pm |
 | Teens | 13–17 | Mon 5:15–6:15pm, Tue 5:45–6:30pm, Thu 5:45–6:30pm |
@@ -25,14 +25,14 @@
 
 *Cubs classes start Monday 13th July 2026. Wed and Sat sessions coming soon for all programs.
 
-**Cubs images:** Currently using Little Lions photos (ll-1.jpg through ll-6.jpg) as placeholders. Swap when real Cubs photos arrive.
+Wed and Sat times show as "Coming Soon" across all program timetable pages.
 
 ## Kihon Integration
 
 - **Booking URL (all 4 timetable pages):** `https://app.kihonsoft.au/book/tarragindi-first-lesson`
 - **Lead API endpoint:** `POST https://app.kihonsoft.au/api/leads/inbound`
 - **API key env var:** `KIHON_API_KEY` — ✓ set in Vercel project settings (Production + Preview). Never put in code.
-- **Source labels:** little-lions → `website-little-lions`, juniors → `website-juniors`, teens/adults → `website-teens-adults`, general → `website-general`
+- **Source labels:** cubs → `website-cubs`, little-lions → `website-little-lions`, juniors → `website-juniors`, teens/adults → `website-teens-adults`, general → `website-general`
 
 **Note:** The `/api/contact` route currently still posts to an n8n webhook. It needs to be updated to POST directly to the Kihon API (see Phase 3 below).
 
@@ -55,7 +55,7 @@
 
 | Path | Description |
 |---|---|
-| `/` | Homepage — hero (hero.jpg), 2+2 programs grid, Why Kansai, Kids section, Adults section, Testimonials, CTA with dojo-interior.jpg background |
+| `/` | Homepage — hero (hero.jpg), 2+3 programs grid (Cubs+LL top row; Juniors/Teens/Adults bottom row), Why Kansai, CTA with dojo-interior.jpg background |
 | `/programs/cubs` | Cubs program page (Ages 3–4) — with FAQs, starts 13 July 2026 |
 | `/programs/cubs/timetable` | Cubs timetable + Kihon booking iframe |
 | `/programs/little-lions` | Little Lions program page (Ages 5–7) — with FAQs |
@@ -77,10 +77,10 @@
 | File | Description |
 |---|---|
 | `components/ProgramPage.tsx` | Shared program page layout. Props: `faqs?: {q,a}[]`, `buildPhotos[].objectPosition?` |
-| `components/TimetablePage.tsx` | Shared timetable layout. Props: `moreInfo.classPhotoPosition?`, `moreInfo.closingPhoto?` |
-| `components/Nav.tsx` | Sticky nav — phone 0480 566 172, Programs dropdown, Book Free Trial (black text) |
+| `components/TimetablePage.tsx` | Shared timetable layout. Props: `scheduleNote?` (footnote below table), `moreInfo.classPhotoPosition?`, `moreInfo.closingPhoto?` |
+| `components/Nav.tsx` | Sticky nav — phone 0480 566 172, Programs dropdown (Cubs first), Book Free Trial (black text) |
 | `components/Footer.tsx` | 5-column footer — Brand, Contact, Programs, Follow Us (Facebook/Instagram), Other Locations |
-| `components/ContactModal.tsx` | 2-step lead capture modal → POST /api/contact |
+| `components/ContactModal.tsx` | 2-step lead capture modal → POST /api/contact. Programs: Cubs, Little Lions, Juniors, Teens, Adults |
 | `components/BookTrialButton.tsx` | Reusable CTA button — always yellow with black text |
 
 ## Photos
@@ -100,8 +100,16 @@ All photos in `public/images/`. Source: `C:\Users\micha\OneDrive\dojo\`
 | `adults-coa.jpg` | `adults/KANSAI-EMIL1875.jpg` | Adults timetable closing CTA background |
 | `teens-determination.jpg` | `sports karate training/KANSAI-EMIL0748.jpg` | Teens benefitCards — Determination |
 | `ll-6.jpg` | `little lions/KANSAI-141A6638.jpg` | Little Lions benefitCards — Confidence |
+| `cubs.jpg` | KKGC Claude Assets/Images/Cubs/IMG_0775.jpg | Cubs hero, timetable hero+divider, homepage card |
+| `cubs-1.jpg` | KKGC Claude Assets/Images/Cubs/IMG_4065.jpg | Cubs buildPhotos — Listening & Focus |
+| `cubs-2.jpg` | KKGC Claude Assets/Images/Cubs/IMG_0838.jpg | Cubs buildPhotos — Body Confidence |
+| `cubs-3.jpg` | KKGC Claude Assets/Images/Cubs/IMG_4090.jpg | Cubs buildPhotos — Social Skills |
+| `cubs-4.jpg` | KKGC Claude Assets/Images/Cubs/IMG_4083.jpg | Cubs benefitCards — Listening |
+| `cubs-5.jpg` | KKGC Claude Assets/Images/Cubs/IMG_4067.jpg | Cubs benefitCards — Coordination |
+| `cubs-6.jpg` | KKGC Claude Assets/Images/Cubs/IMG_5205.jpg | Cubs benefitCards — Confidence |
+| `cubs-class.jpg` | KKGC Claude Assets/Images/Cubs/IMG_0775.jpg | Cubs timetable classPhoto (obstacle course) |
 
-All subfolders (jnr, little lions, teens, adults, others, sports karate training) are from the actual Kansai dojo. The sports karate training folder includes photos with a flag visible in the background — this is still the correct dojo.
+All subfolders (jnr, little lions, teens, adults, others, sports karate training) are from the actual Kansai dojo. The sports karate training folder includes photos with a flag visible in the background — this is still the correct dojo. Cubs photos are from KKGC (Gold Coast dojo) as Tarragindi Cubs photos don't exist yet.
 
 ## Social Media
 
@@ -160,8 +168,11 @@ All code-side SEO fixes from the initial audit have been applied:
 2. **Adults page FAQs** — Add 3–5 FAQs to the adults program page to reach 800+ words.
 3. **Contrast fix** — Yellow `#FFB800` on blue `#5B7DB1` fails WCAG AA (2.42:1). Darken the hero keyword highlight overlay or change colour.
 4. **GA4 key events** — Mark `generate_lead` (after first lead fires) and create `programs_page_view` event in GA4 Admin.
-5. **Search Console** — Submit sitemap.xml and request indexing for homepage + 4 program pages.
+5. **Search Console** — Submit sitemap.xml and request indexing for homepage + 5 program pages (now includes Cubs).
 6. **`/api/contact` route** — Currently posts to n8n webhook; needs updating to POST directly to Kihon API.
+7. **Cubs real photos** — Swap KKGC placeholder photos for Tarragindi-specific Cubs photos once Jason takes them.
+8. **Cubs FAQPage schema** — Add FAQPage JSON-LD schema to `/programs/cubs` (same pattern as Little Lions/Juniors/Teens).
+9. **Wednesday/Saturday classes** — Update timetable pages when Wed/Sat times are confirmed (currently "Coming Soon").
 
 ## SEO Baseline
 
