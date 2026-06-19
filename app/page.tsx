@@ -12,7 +12,7 @@ const programs = [
     name: "Cubs",
     age: "Ages 3–4",
     href: "/programs/cubs",
-    img: "/images/little-lions.jpg",
+    img: "/images/cubs.jpg",
     description:
       "The perfect first step for little ones aged 3–4. Cubs classes are short, fun and structured — building listening skills, body confidence and social skills in a caring environment. Starting Monday 13th July 2026.",
     isNew: true,

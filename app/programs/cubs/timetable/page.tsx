@@ -21,7 +21,7 @@ const moreInfo: MoreInfoContent = {
       body: "Cubs is often one of the first group settings for young children. They learn to take turns, interact positively with peers, and build friendships — all within a structured, caring environment that makes them feel safe to try.",
     },
   ],
-  dividerPhoto: "/images/little-lions.jpg",
+  dividerPhoto: "/images/cubs.jpg",
   classHeading: "What do kids do in Cubs classes?",
   classIntro: "Cubs classes are 30 minutes of structured fun. Here's what a typical session looks like for your little one:",
   classItems: [
@@ -42,7 +42,7 @@ const moreInfo: MoreInfoContent = {
       body: "Short partner activities and group games teach little ones how to interact positively with other children — taking turns, encouraging each other and working together.",
     },
   ],
-  classPhoto: "/images/little-lions-class.jpg",
+  classPhoto: "/images/cubs-class.jpg",
   faqs: [
     {
       q: "Can we try it before signing up?",
@@ -66,7 +66,7 @@ export default function CubsTimetable() {
     <TimetablePage
       name="Cubs"
       slug="cubs"
-      heroImg="/images/little-lions.jpg"
+      heroImg="/images/cubs.jpg"
       headline="Your little one's first karate adventure starts here!"
       subheadline="Cubs is for ages 3–4. Book a FREE First Lesson and discover what your child is capable of."
       scheduleRows={[

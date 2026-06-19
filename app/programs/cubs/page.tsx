@@ -36,42 +36,42 @@ export default function CubsPage() {
       <ProgramPage
         name="Cubs"
         slug="cubs"
-        heroImg="/images/little-lions.jpg"
+        heroImg="/images/cubs.jpg"
         heroTitle="Cubs Classes at Kansai Karate Tarragindi — your child's first big adventure!"
         heroSubtitle="Cubs is our program for little ones aged 3–4. Short, fun classes that build listening skills, body awareness and confidence from the very first session."
         benefitsTitle="Cubs Classes Build a Foundation for Life"
         buildPhotos={[
           {
-            img: "/images/ll-1.jpg",
+            img: "/images/cubs-1.jpg",
             caption: "Listening & Focus",
             objectPosition: "center 75%",
             body: "At 3–4 years old, learning to listen and follow instructions is one of the most important skills a child can develop. Cubs classes make it fun — so they don't even notice they're learning.",
           },
           {
-            img: "/images/ll-2.jpg",
+            img: "/images/cubs-2.jpg",
             caption: "Body Confidence",
             objectPosition: "center 25%",
             body: "Little ones discover what their bodies can do in a safe, encouraging environment. Balance, coordination and physical awareness all grow naturally through play-based karate activities.",
           },
           {
-            img: "/images/ll-3.jpg",
+            img: "/images/cubs-3.jpg",
             caption: "Social Skills",
             body: "Cubs learn to take turns, work alongside other children and interact positively in a group. These early social foundations carry forward into preschool, school and beyond.",
           },
         ]}
         benefitCards={[
           {
-            img: "/images/ll-4.jpg",
+            img: "/images/cubs-4.jpg",
             caption: "Listening",
             body: "Cubs learn to listen and respond to simple instructions — a skill that transfers directly into preschool and school readiness. Our instructors make it engaging so kids actually want to pay attention.",
           },
           {
-            img: "/images/ll-5.jpg",
+            img: "/images/cubs-5.jpg",
             caption: "Coordination",
             body: "Short, structured movement activities develop gross motor skills at exactly the right age. Little ones build spatial awareness, balance and basic coordination through karate fundamentals.",
           },
           {
-            img: "/images/ll-6.jpg",
+            img: "/images/cubs-6.jpg",
             caption: "Confidence",
             body: "Every class is a win. Cubs classes are designed so children experience success and encouragement constantly — building confidence that shows up at home, in childcare and everywhere else.",
           },
