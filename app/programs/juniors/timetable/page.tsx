@@ -75,7 +75,9 @@ export default function JuniorsTimetable() {
           sublabel: "8 - 12 YEARS",
           mon: "5:15 – 6:15pm",
           tue: "5:00 – 5:45pm",
+          wed: "Coming Soon",
           thu: "5:00 – 5:45pm",
+          sat: "Coming Soon",
         },
       ]}
       bookingIframeUrl={BOOKING_URL}

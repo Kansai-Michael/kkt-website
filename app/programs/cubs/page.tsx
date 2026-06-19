@@ -80,7 +80,7 @@ export default function CubsPage() {
         parentsFeatures={[
           {
             title: "Class Times",
-            body: "Cubs classes run Monday 4:30–5:00pm and Thursday 4:15–5:00pm — short 30-minute sessions designed for little ones. Easy to fit into your week, and over before the afternoon rush.",
+            body: "Cubs classes run Monday 4:30–5:00pm and Thursday 4:15–4:45pm — short 30-minute sessions designed for little ones. Easy to fit into your week, and over before the afternoon rush.",
           },
           {
             title: "Safe Environment",

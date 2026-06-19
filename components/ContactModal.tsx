@@ -4,6 +4,10 @@ import { createContext, useContext, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 
 const programs: Record<string, { label: string; timetableUrl: string }> = {
+  cubs: {
+    label: "Cubs (Ages 3–4)",
+    timetableUrl: "/programs/cubs/timetable",
+  },
   "little-lions": {
     label: "Little Lions (Ages 5–7)",
     timetableUrl: "/programs/little-lions/timetable",

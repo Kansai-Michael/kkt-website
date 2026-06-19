@@ -76,7 +76,9 @@ export default function TeensTimetable() {
           sublabel: "13 - 17 YEARS",
           mon: "5:15 – 6:15pm",
           tue: "5:45 – 6:30pm",
+          wed: "Coming Soon",
           thu: "5:45 – 6:30pm",
+          sat: "Coming Soon",
         },
       ]}
       bookingIframeUrl={BOOKING_URL}

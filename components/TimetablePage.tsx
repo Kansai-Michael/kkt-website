@@ -1,3 +1,4 @@
+import Image from "next/image";
 import BookTrialButton from "@/components/BookTrialButton";
 
 const BADGE_IMG = "/images/logo.png";
@@ -52,6 +53,7 @@ interface TimetablePageProps {
   headline: string;
   subheadline: string;
   scheduleRows: ScheduleRow[];
+  scheduleNote?: string;
   bookingIframeUrl: string;
   moreInfo?: MoreInfoContent;
 }
@@ -63,6 +65,7 @@ export default function TimetablePage({
   headline,
   subheadline,
   scheduleRows,
+  scheduleNote,
   bookingIframeUrl,
   moreInfo,
 }: TimetablePageProps) {
@@ -80,8 +83,7 @@ export default function TimetablePage({
       >
         <div className="absolute inset-0" style={{ background: "rgba(10,30,80,0.75)" }} />
         <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center justify-center min-h-[28vh]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={BADGE_IMG} alt="Kansai Karate Academy" className="w-20 mb-4" />
+          <Image src={BADGE_IMG} alt="Kansai Karate Academy" width={80} height={80} className="w-20 mb-4" />
           <h1 className="text-3xl md:text-4xl font-bold mb-3">{headline}</h1>
           <p className="text-white/80 text-lg">{subheadline}</p>
         </div>
@@ -146,6 +148,9 @@ export default function TimetablePage({
                   </tbody>
                 </table>
               </div>
+              {scheduleNote && (
+                <p className="mt-3 text-sm text-gray-500">{scheduleNote}</p>
+              )}
             </div>
 
             {/* RIGHT: Booking — 2/5 */}

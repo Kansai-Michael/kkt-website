@@ -38,7 +38,7 @@ export default function TimetablePage() {
                 </thead>
                 <tbody>
                   {[
-                    { program: "Cubs (3–4 yrs)", mon: "4:30–5:00pm*", tue: "—", wed: "—", thu: "4:15–5:00pm*", sat: "Coming Soon" },
+                    { program: "Cubs (3–4 yrs)", mon: "4:30–5:00pm*", tue: "—", wed: "—", thu: "4:15–4:45pm*", sat: "Coming Soon" },
                     { program: "Little Lions (5–7 yrs)", mon: "4:30–5:15pm", tue: "4:15–5:00pm", wed: "Coming Soon", thu: "4:15–5:00pm", sat: "Coming Soon" },
                     { program: "Juniors (8–12 yrs)", mon: "5:15–6:15pm", tue: "5:00–5:45pm", wed: "Coming Soon", thu: "5:00–5:45pm", sat: "Coming Soon" },
                     { program: "Teens (13–17 yrs)", mon: "5:15–6:15pm", tue: "5:45–6:30pm", wed: "Coming Soon", thu: "5:45–6:30pm", sat: "Coming Soon" },

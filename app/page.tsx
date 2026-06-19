@@ -9,6 +9,15 @@ const DOJO_INTERIOR = "/images/dojo-interior.jpg";
 
 const programs = [
   {
+    name: "Cubs",
+    age: "Ages 3–4",
+    href: "/programs/cubs",
+    img: "/images/little-lions.jpg",
+    description:
+      "The perfect first step for little ones aged 3–4. Cubs classes are short, fun and structured — building listening skills, body confidence and social skills in a caring environment. Starting Monday 13th July 2026.",
+    isNew: true,
+  },
+  {
     name: "Little Lions",
     age: "Ages 5–7",
     href: "/programs/little-lions",
@@ -30,7 +39,7 @@ const programs = [
     href: "/programs/teens",
     img: "/images/teens-hero.jpg",
     description:
-      "A class built for teenagers — not lumped in with little kids, not thrown in with adults. Teen Karate at Tarragindi gives teens a physical and mental outlet that builds genuine confidence and real self-defence skills in a class that respects where they're at.",
+      "A class built for teenagers — not lumped in with little kids, not thrown in with adults. Teen Karate at Tarragindi gives teens a physical and mental outlet that builds genuine confidence and real self-defence skills.",
   },
   {
     name: "Adult Karate",
@@ -38,7 +47,7 @@ const programs = [
     href: "/programs/adults",
     img: "/images/adults.jpg",
     description:
-      "Whether you want to get fitter, clear your head, learn to actually defend yourself, or just do something challenging — Adult Karate at Tarragindi is a real workout with real skills. Traditional Shitoryu Shukokai, all fitness levels, no experience required.",
+      "Whether you want to get fitter, clear your head, learn to actually defend yourself, or just do something challenging — Adult Karate at Tarragindi is a real workout with real skills. Traditional Shitoryu Shukokai, all fitness levels.",
   },
 ];
 
@@ -116,7 +125,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Top row — 2 cards */}
+          {/* Top row — 2 cards (Cubs + Little Lions) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {programs.slice(0, 2).map((p) => (
               <div
@@ -127,10 +136,15 @@ export default function HomePage() {
                 <Image src={p.img} alt={`${p.name} karate program`} fill sizes="(min-width: 768px) 50vw, 100vw" style={{ objectFit: "cover" }} />
                 <div className="absolute inset-0" style={{ background: "rgba(10,20,50,0.78)" }} />
                 <div className="relative z-10 flex flex-col h-full p-6">
-                  <h3 className="text-2xl font-bold text-white mb-1">
-                    {p.name}
-                    {p.age && <><br /><span className="text-xl font-normal">({p.age})</span></>}
-                  </h3>
+                  <div className="flex items-start gap-3 mb-1">
+                    <h3 className="text-2xl font-bold text-white">
+                      {p.name}
+                      {p.age && <><br /><span className="text-xl font-normal">({p.age})</span></>}
+                    </h3>
+                    {"isNew" in p && p.isNew && (
+                      <span className="mt-1 shrink-0 bg-[#FFB800] text-black text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">New</span>
+                    )}
+                  </div>
                   <p className="text-white/75 text-sm mt-3 leading-relaxed flex-1">{p.description}</p>
                   <Link
                     href={p.href}
@@ -143,15 +157,15 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Bottom row — 2 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Bottom row — 3 cards (Juniors, Teens, Adults) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {programs.slice(2).map((p) => (
               <div
                 key={p.href}
                 className="relative rounded overflow-hidden flex flex-col"
                 style={{ minHeight: "340px" }}
               >
-                <Image src={p.img} alt={`${p.name} karate program`} fill sizes="(min-width: 768px) 50vw, 100vw" style={{ objectFit: "cover" }} />
+                <Image src={p.img} alt={`${p.name} karate program`} fill sizes="(min-width: 768px) 33vw, 100vw" style={{ objectFit: "cover" }} />
                 <div className="absolute inset-0" style={{ background: "rgba(10,20,50,0.78)" }} />
                 <div className="relative z-10 flex flex-col h-full p-6">
                   <h3 className="text-2xl font-bold text-white mb-1">

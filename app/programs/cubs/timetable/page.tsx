@@ -74,9 +74,11 @@ export default function CubsTimetable() {
           label: "CUBS",
           sublabel: "3 - 4 YEARS",
           mon: "4:30 – 5:00pm",
-          thu: "4:15 – 5:00pm",
+          thu: "4:15 – 4:45pm",
+          sat: "Coming Soon",
         },
       ]}
+      scheduleNote="* Cubs Classes start Monday 13th July 2026"
       bookingIframeUrl={BOOKING_URL}
       moreInfo={moreInfo}
     />

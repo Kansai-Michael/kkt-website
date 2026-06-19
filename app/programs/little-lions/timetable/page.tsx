@@ -75,7 +75,10 @@ export default function LittleLionsTimetable() {
           sublabel: "5 - 7 YEARS",
           mon: "4:30 – 5:15pm",
           tue: "4:15 – 5:00pm",
+          wed: "Coming Soon",
           thu: "4:15 – 5:00pm",
+          sat: "Coming Soon",
+
         },
       ]}
       bookingIframeUrl={BOOKING_URL}
