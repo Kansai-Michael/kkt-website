@@ -73,7 +73,7 @@ export default function LittleLionsTimetable() {
         {
           label: "LITTLE LIONS",
           sublabel: "5 - 7 YEARS",
-          mon: "4:30 – 5:15pm",
+          mon: "4:30 – 5:15pm*",
           tue: "4:15 – 5:00pm",
           wed: "Coming Soon",
           thu: "4:15 – 5:00pm",
@@ -81,6 +81,7 @@ export default function LittleLionsTimetable() {
 
         },
       ]}
+      scheduleNote="* Monday Little Lions class starts Monday 13th July 2026"
       bookingIframeUrl={BOOKING_URL}
       moreInfo={moreInfo}
     />
