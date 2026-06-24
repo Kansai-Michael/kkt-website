@@ -39,7 +39,7 @@ export default function TimetablePage() {
                 <tbody>
                   {[
                     { program: "Cubs (3–4 yrs)", mon: "4:30–5:00pm*", tue: "—", wed: "—", thu: "4:15–4:45pm*", sat: "Coming Soon" },
-                    { program: "Little Lions (5–7 yrs)", mon: "4:30–5:15pm", tue: "4:15–5:00pm", wed: "Coming Soon", thu: "4:15–5:00pm", sat: "Coming Soon" },
+                    { program: "Little Lions (5–7 yrs)", mon: "4:30–5:15pm*", tue: "4:15–5:00pm", wed: "Coming Soon", thu: "4:15–5:00pm", sat: "Coming Soon" },
                     { program: "Juniors (8–12 yrs)", mon: "5:15–6:15pm", tue: "5:00–5:45pm", wed: "Coming Soon", thu: "5:00–5:45pm", sat: "Coming Soon" },
                     { program: "Teens (13–17 yrs)", mon: "5:15–6:15pm", tue: "5:45–6:30pm", wed: "Coming Soon", thu: "5:45–6:30pm", sat: "Coming Soon" },
                     { program: "Adults (18+)", mon: "5:15–6:15pm", tue: "5:45–6:30pm", wed: "Coming Soon", thu: "5:45–6:30pm", sat: "Coming Soon" },
@@ -57,7 +57,7 @@ export default function TimetablePage() {
               </table>
             </div>
             <p className="mt-4 text-sm text-gray-500">
-              * Cubs Classes start Monday 13th July 2026
+              * Cubs classes and the Monday Little Lions class start Monday 13th July 2026
             </p>
             <p className="mt-1 text-sm text-gray-500">
               Timetable subject to change. Check with Sensei Jason for holiday schedules.
