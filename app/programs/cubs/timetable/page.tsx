@@ -78,7 +78,6 @@ export default function CubsTimetable() {
           sat: "Coming Soon",
         },
       ]}
-      scheduleNote="* Cubs Classes start Monday 13th July 2026"
       bookingIframeUrl={BOOKING_URL}
       moreInfo={moreInfo}
     />

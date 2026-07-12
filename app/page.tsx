@@ -14,7 +14,7 @@ const programs = [
     href: "/programs/cubs",
     img: "/images/cubs.jpg",
     description:
-      "The perfect first step for little ones aged 3–4. Cubs classes are short, fun and structured — building listening skills, body confidence and social skills in a caring environment. Starting Monday 13th July 2026.",
+      "The perfect first step for little ones aged 3–4. Cubs classes are short, fun and structured — building listening skills, body confidence and social skills in a caring environment.",
     isNew: true,
   },
   {

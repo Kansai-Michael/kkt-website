@@ -57,9 +57,6 @@ export default function TimetablePage() {
               </table>
             </div>
             <p className="mt-4 text-sm text-gray-500">
-              * Cubs classes and the Monday Little Lions class start Monday 13th July 2026
-            </p>
-            <p className="mt-1 text-sm text-gray-500">
               Timetable subject to change. Check with Sensei Jason for holiday schedules.
             </p>
           </div>
