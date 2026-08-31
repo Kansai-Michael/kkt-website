@@ -5,6 +5,26 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,
   },
+  async redirects() {
+    return [
+      // Mailgun's old click-tracking host. Until Aug 2026 every link in our outbound
+      // email was rewritten to http://email.kansaikaratetarragindi.com.au/c/<blob>. That
+      // host is served by Mailgun with a mailgun.org certificate, while this site sends
+      // HSTS with includeSubDomains + preload — so browsers force-upgrade the link to
+      // https, hit a certificate name mismatch, and show families a full-page warning
+      // that we may be impersonating ourselves. Tracking is off now, but the rewritten
+      // links are permanent in every email already delivered, so the subdomain is
+      // pointed at this project (valid certificate) and parked on /link-expired. The
+      // real destination is inside that opaque blob and cannot be recovered.
+      // DO NOT re-point the DNS back at mailgun.org — that re-arms the warning.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "email.kansaikaratetarragindi.com.au" }],
+        destination: "https://kansaikaratetarragindi.com.au/link-expired",
+        permanent: false, // 302 — a stopgap, not a mapping browsers should cache forever
+      },
+    ];
+  },
   async headers() {
     const cspBase = [
       "default-src 'self'",
