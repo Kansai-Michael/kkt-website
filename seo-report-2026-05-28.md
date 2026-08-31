@@ -36,6 +36,18 @@
 - **Added programs_page_view event** on all /programs/* pages
 - **Added Google Search Console** verification token
 
+## ✅ Fixed 2026-06-03 (second pass)
+
+- **Homepage H1** — replaced marketing tagline with keyword H1: "Traditional Karate Classes in Tarragindi — Kids, Teens & Adults"
+- **Suburb coverage sentence** — added "southside Brisbane / Wellers Hill / Moorooka / Holland Park / Annerley" to Programs section
+- **Canonical tags** — added to all 4 program pages
+- **FAQPage schema** — added JSON-LD to Little Lions, Juniors, Teens pages
+- **Boilerplate copy** — rewrote "Physical Skills" feature to be unique on all 4 program pages; Adults buildPhotos fixed too
+- **Internal links** — ProgramPage now links to /about and /programs/[slug]/timetable from the parents section
+- **Hamburger tap target** — increased from p-2 (8px) to p-3 (12px) — now meets 44px minimum
+- **Logo optimisation** — all 4 `<img>` tags (homepage, ProgramPage, Footer, TimetablePage) converted to Next.js `<Image>` for automatic WebP delivery
+- **Program card sizes** — added `sizes="(min-width: 768px) 50vw, 100vw"` to homepage program grid images
+
 ---
 
 ## 🔴 Critical (fix immediately)
@@ -140,13 +152,13 @@ After the first lead conversion fires on the live site:
 
 | Item | Status |
 |---|---|
-| GA4 Measurement ID | G-V0EWLSYB7P (live) |
+| GA4 Measurement ID | G-V0EWLSYB7P ✅ live |
 | GA4 Account | dojoboidesignstudio@gmail.com |
-| GA4 Numeric Property ID | **Needed** — check GA4 Admin → Property Settings |
-| Google Search Console | Verified (pending GA4 live data) |
-| Tracking Sheet | Created — ID: 1CqViBSJkEFnQl7vsGVCYMO8fWTjynfMSrkDvLocJTDo |
-| Apps Script | Ready at C:\tmp\clasp-kkt-ga4\ — needs Property ID to deploy |
-| Daily trigger | Pending — set up after Apps Script deployed |
+| GA4 Property ID | 539279772 ✅ |
+| Google Search Console | ✅ verified under dojoboidesignstudio@gmail.com |
+| Tracking Sheet | ✅ live — ID: 1CqViBSJkEFnQl7vsGVCYMO8fWTjynfMSrkDvLocJTDo |
+| Apps Script | ✅ deployed — C:\tmp\clasp-kkt-ga4\ |
+| Daily trigger | ✅ 6am Brisbane — live as of 2026-05-28 |
 
 ---
 

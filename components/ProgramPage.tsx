@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import BookTrialButton from "@/components/BookTrialButton";
 
 const BADGE_IMG = "/images/logo.png";
@@ -63,8 +65,7 @@ export default function ProgramPage({
       >
         <div className="absolute inset-0" style={{ background: "rgba(10,25,70,0.72)" }} />
         <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center justify-center min-h-[70vh] px-4 py-20">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={BADGE_IMG} alt="Kansai Karate Academy" className="w-24 md:w-32 mb-6" />
+          <Image src={BADGE_IMG} alt="Kansai Karate Academy" width={128} height={128} className="w-24 md:w-32 mb-6" />
           <h1 className="text-3xl md:text-5xl font-bold mb-5 leading-snug">{heroTitle}</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-8">{heroSubtitle}</p>
           <BookTrialButton
@@ -152,6 +153,12 @@ export default function ProgramPage({
             <p className="text-[#5B7DB1] text-sm uppercase tracking-widest mb-2">Tarragindi parents agree:</p>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">{parentsTitle}</h2>
             <p className="text-gray-500 text-base">Why Tarragindi parents love {name} Classes</p>
+            <p className="text-gray-500 text-sm mt-2">
+              Classes run at Wellers Hill Bowls Club, 34 Esher St, Tarragindi —&nbsp;
+              <Link href={`/programs/${slug}/timetable`} className="text-[#5B7DB1] underline hover:text-[#4A6DA0]">view the full timetable</Link>
+              {" "}or{" "}
+              <Link href="/about" className="text-[#5B7DB1] underline hover:text-[#4A6DA0]">meet your instructor</Link>.
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
             {parentsFeatures.map((f) => (

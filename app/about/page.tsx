@@ -13,7 +13,7 @@ const personSchema = {
   "name": "Jason Sallaway",
   "honorificPrefix": "Sensei",
   "jobTitle": "Head Instructor",
-  "description": "Head instructor at Kansai Karate Tarragindi. A licensed dojo of Kansai Karate Academy, operating under Shihan Stephen Kelly.",
+  "description": "3rd Dan Black Belt and head instructor at Kansai Karate Tarragindi. A licensed dojo of Kansai Karate Academy, operating under Shihan Stephen Kelly.",
   "image": "https://kansaikaratetarragindi.com.au/images/instructor-jason.png",
   "worksFor": {
     "@type": "SportsActivityLocation",
@@ -66,9 +66,10 @@ export default function AboutPage() {
                 />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">Sensei Jason Sallaway</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-1">Sensei Jason Sallaway</h3>
+                <p className="text-[#5B7DB1] font-semibold text-sm mb-3">3rd Dan Black Belt — Shitoryu Shukokai Karate</p>
                 <p className="text-gray-600 mb-4">
-                  Sensei Jason Sallaway leads Kansai Karate Tarragindi with warmth, patience, and a genuine love of the art. He is a licensed instructor under Kansai Karate Academy, operating within the teaching framework established by Shihan Stephen Kelly — ensuring every student at Tarragindi benefits from a strong, proven teaching lineage.
+                  Sensei Jason Sallaway leads Kansai Karate Tarragindi with warmth, patience, and a genuine love of the art. A 3rd Dan Black Belt in Shitoryu Shukokai, he is a licensed instructor under Kansai Karate Academy, operating within the teaching framework established by Shihan Stephen Kelly — ensuring every student at Tarragindi benefits from a strong, proven teaching lineage.
                 </p>
                 <p className="text-gray-600 mb-4">
                   Kansai Karate Tarragindi is a place where every student is seen, valued, and challenged to grow — whether they are stepping on the mat for the very first time or working towards their next belt grading.
