@@ -17,13 +17,13 @@
 
 | Program | Ages | Days & Times |
 |---|---|---|
-| Cubs | 3–4 | Mon 4:30–5:00pm*, Thu 4:15–4:45pm* |
+| Cubs | 3–4 | Mon 4:30–5:00pm, Tue 4:15–4:45pm, Thu 4:15–4:45pm |
 | Little Lions | 5–6 | Mon 4:30–5:15pm, Tue 4:15–5:00pm, Thu 4:15–5:00pm |
 | Juniors | 7–12 | Mon 5:15–6:15pm, Tue 5:00–5:45pm, Thu 5:00–5:45pm |
 | Teens | 13–17 | Mon 5:15–6:15pm, Tue 5:45–6:30pm, Thu 5:45–6:30pm |
 | Adults | 18+ | Mon 5:15–6:15pm, Tue 5:45–6:30pm, Thu 5:45–6:30pm |
 
-*Cubs classes start Monday 13th July 2026. Wed and Sat sessions coming soon for all programs.
+Wed and Sat sessions coming soon for all programs.
 
 Wed and Sat times show as "Coming Soon" across all program timetable pages.
 

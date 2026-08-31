@@ -54,7 +54,7 @@ const moreInfo: MoreInfoContent = {
     },
     {
       q: "How many classes do we attend?",
-      a: "Cubs classes run Monday and Thursday afternoons. Once a week is a great starting point — many families find their little one quickly wants to come twice a week once they settle in.",
+      a: "Cubs classes run Monday, Tuesday and Thursday afternoons. Once a week is a great starting point — many families find their little one quickly wants to come more often once they settle in.",
     },
   ],
   closingStatement:
@@ -74,6 +74,7 @@ export default function CubsTimetable() {
           label: "CUBS",
           sublabel: "3 - 4 YEARS",
           mon: "4:30 – 5:00pm",
+          tue: "4:15 – 4:45pm",
           thu: "4:15 – 4:45pm",
           sat: "Coming Soon",
         },

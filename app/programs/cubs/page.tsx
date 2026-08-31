@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Cubs Program (Ages 3–4) | Kansai Karate Tarragindi",
-  description: "Karate classes for 3 and 4 year olds in Tarragindi. Cubs is a gentle, fun introduction to movement, listening and confidence. Monday and Thursday afternoons.",
+  description: "Karate classes for 3 and 4 year olds in Tarragindi. Cubs is a gentle, fun introduction to movement, listening and confidence. Monday, Tuesday and Thursday afternoons.",
   alternates: { canonical: "https://kansaikaratetarragindi.com.au/programs/cubs" },
 };
 
@@ -80,7 +80,7 @@ export default function CubsPage() {
         parentsFeatures={[
           {
             title: "Class Times",
-            body: "Cubs classes run Monday 4:30–5:00pm and Thursday 4:15–4:45pm — short 30-minute sessions designed for little ones. Easy to fit into your week, and over before the afternoon rush.",
+            body: "Cubs classes run Monday 4:30–5:00pm, Tuesday 4:15–4:45pm and Thursday 4:15–4:45pm — short 30-minute sessions designed for little ones. Easy to fit into your week, and over before the afternoon rush.",
           },
           {
             title: "Safe Environment",
