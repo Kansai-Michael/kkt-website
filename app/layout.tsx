@@ -66,7 +66,7 @@ const localBusinessSchema = {
   "@id": "https://kansaikaratetarragindi.com.au/#location",
   name: "Kansai Karate Tarragindi",
   description:
-    "Traditional Japanese karate for kids, teens and adults in Tarragindi, Brisbane QLD. Programs for all ages: Little Lions (5–7), Juniors (8–12), Teens (13–17) and Adults.",
+    "Traditional Japanese karate for kids, teens and adults in Tarragindi, Brisbane QLD. Programs for all ages: Little Lions (5–6), Juniors (7–12), Teens (13–17) and Adults.",
   url: "https://kansaikaratetarragindi.com.au",
   telephone: "+61480566172",
   email: "jason@kansaikaratetarragindi.com.au",

@@ -2,8 +2,8 @@ import ProgramPage from "@/components/ProgramPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Little Lions Program (Ages 5–7) | Kansai Karate Tarragindi",
-  description: "Karate classes for 5, 6, and 7 year olds in Tarragindi. Little Lions builds focus, respect, and real karate foundations in a fun, structured environment. Tuesday and Thursday afternoons.",
+  title: "Little Lions Program (Ages 5–6) | Kansai Karate Tarragindi",
+  description: "Karate classes for 5 and 6 year olds in Tarragindi. Little Lions builds focus, respect, and real karate foundations in a fun, structured environment. Tuesday and Thursday afternoons.",
   alternates: { canonical: "https://kansaikaratetarragindi.com.au/programs/little-lions" },
 };
 
@@ -24,7 +24,7 @@ const breadcrumb = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kansaikaratetarragindi.com.au" },
-    { "@type": "ListItem", "position": 2, "name": "Little Lions Karate (Ages 5–7)", "item": "https://kansaikaratetarragindi.com.au/programs/little-lions" }
+    { "@type": "ListItem", "position": 2, "name": "Little Lions Karate (Ages 5–6)", "item": "https://kansaikaratetarragindi.com.au/programs/little-lions" }
   ]
 };
 
@@ -38,7 +38,7 @@ export default function LittleLionsPage() {
         slug="little-lions"
         heroImg="/images/little-lions.jpg"
         heroTitle="Little Lions Classes at Kansai Karate Tarragindi set positive pathways for life!"
-        heroSubtitle="Little Lions classes build focus, coordination and real confidence in kids aged 5–7 — in a structured, caring environment where every child feels they belong."
+        heroSubtitle="Little Lions classes build focus, coordination and real confidence in kids aged 5–6 — in a structured, caring environment where every child feels they belong."
         benefitsTitle="Little Lions Classes Build Benefits for Life"
         buildPhotos={[
           {
@@ -92,7 +92,7 @@ export default function LittleLionsPage() {
           },
           {
             title: "Physical Skills",
-            body: "At 5–7, kids are developing core movement patterns that shape their body for life. Little Lions builds gross motor skills, spatial awareness and hand-eye coordination through structured karate movements — a foundation no gym program can match.",
+            body: "At 5–6, kids are developing core movement patterns that shape their body for life. Little Lions builds gross motor skills, spatial awareness and hand-eye coordination through structured karate movements — a foundation no gym program can match.",
           },
         ]}
         studentsTitle="Kids Love Little Lions Classes"

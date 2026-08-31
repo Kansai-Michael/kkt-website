@@ -68,11 +68,11 @@ export default function JuniorsTimetable() {
       slug="juniors"
       heroImg="/images/juniors.jpg"
       headline="Take your child's skills to the next level with Juniors!"
-      subheadline="Juniors is for ages 8–12. Book a FREE First Lesson and see real growth in confidence and discipline."
+      subheadline="Juniors is for ages 7–12. Book a FREE First Lesson and see real growth in confidence and discipline."
       scheduleRows={[
         {
           label: "JUNIORS",
-          sublabel: "8 - 12 YEARS",
+          sublabel: "7 - 12 YEARS",
           mon: "5:15 – 6:15pm",
           tue: "5:00 – 5:45pm",
           wed: "Coming Soon",

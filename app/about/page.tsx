@@ -75,7 +75,7 @@ export default function AboutPage() {
                   Kansai Karate Tarragindi is a place where every student is seen, valued, and challenged to grow — whether they are stepping on the mat for the very first time or working towards their next belt grading.
                 </p>
                 <p className="text-gray-600">
-                  Classes run Monday, Tuesday and Thursday evenings, with programs for every age group from Little Lions (5–7 years) through to Adults. The dojo is based at the Wellers Hill Bowls Club — a welcoming and well-resourced training space for the Tarragindi community.
+                  Classes run Monday, Tuesday and Thursday evenings, with programs for every age group from Little Lions (5–6 years) through to Adults. The dojo is based at the Wellers Hill Bowls Club — a welcoming and well-resourced training space for the Tarragindi community.
                 </p>
               </div>
             </div>

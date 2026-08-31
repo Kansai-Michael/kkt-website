@@ -19,19 +19,19 @@ const programs = [
   },
   {
     name: "Little Lions",
-    age: "Ages 5–7",
+    age: "Ages 5–6",
     href: "/programs/little-lions",
     img: "/images/little-lions.jpg",
     description:
-      "Your 5–7 year old will surprise you. Little Lions classes build the focus, coordination and confidence that set kids up for school — wrapped in the most fun hour of their week. No experience needed, no gear required.",
+      "Your 5–6 year old will surprise you. Little Lions classes build the focus, coordination and confidence that set kids up for school — wrapped in the most fun hour of their week. No experience needed, no gear required.",
   },
   {
     name: "Juniors",
-    age: "Ages 8–12",
+    age: "Ages 7–12",
     href: "/programs/juniors",
     img: "/images/jnr-hero.jpg",
     description:
-      "Karate is one of the best things an 8–12 year old can do with a Monday or Tuesday night. They'll build real fitness, focus and self-discipline in traditional Shitoryu Shukokai classes — and develop skills that follow them into school, sport and life.",
+      "Karate is one of the best things a 7–12 year old can do with a Monday or Tuesday night. They'll build real fitness, focus and self-discipline in traditional Shitoryu Shukokai classes — and develop skills that follow them into school, sport and life.",
   },
   {
     name: "Teen Karate",

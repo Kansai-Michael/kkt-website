@@ -2,8 +2,8 @@ import ProgramPage from "@/components/ProgramPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Juniors Program (Ages 8–12) | Kansai Karate Tarragindi",
-  description: "Karate classes for 8–12 year olds in Tarragindi. Juniors builds discipline, resilience, and technical karate skills in a structured, encouraging environment. Monday, Tuesday and Thursday.",
+  title: "Juniors Program (Ages 7–12) | Kansai Karate Tarragindi",
+  description: "Karate classes for 7–12 year olds in Tarragindi. Juniors builds discipline, resilience, and technical karate skills in a structured, encouraging environment. Monday, Tuesday and Thursday.",
   alternates: { canonical: "https://kansaikaratetarragindi.com.au/programs/juniors" },
 };
 
@@ -24,7 +24,7 @@ const breadcrumb = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kansaikaratetarragindi.com.au" },
-    { "@type": "ListItem", "position": 2, "name": "Juniors Karate (Ages 8–12)", "item": "https://kansaikaratetarragindi.com.au/programs/juniors" }
+    { "@type": "ListItem", "position": 2, "name": "Juniors Karate (Ages 7–12)", "item": "https://kansaikaratetarragindi.com.au/programs/juniors" }
   ]
 };
 
@@ -38,7 +38,7 @@ export default function JuniorsPage() {
         slug="juniors"
         heroImg="/images/jnr-hero.jpg"
         heroTitle="Juniors Classes at Kansai Karate Tarragindi mean Focus, Fitness and Fun!"
-        heroSubtitle="Juniors Karate at Tarragindi gives 8–12 year olds real skills, genuine fitness and the kind of self-discipline that shows up everywhere — at school, at home, and in sport."
+        heroSubtitle="Juniors Karate at Tarragindi gives 7–12 year olds real skills, genuine fitness and the kind of self-discipline that shows up everywhere — at school, at home, and in sport."
         benefitsTitle="Juniors Karate Classes Build Benefits for Life"
         buildPhotos={[
           {
@@ -90,7 +90,7 @@ export default function JuniorsPage() {
           },
           {
             title: "Physical Skills",
-            body: "Karate is one of the most complete physical activities for 8–12 year olds. Your child will build agility, reaction speed and body control that translates directly into every other sport and physical activity they do.",
+            body: "Karate is one of the most complete physical activities for 7–12 year olds. Your child will build agility, reaction speed and body control that translates directly into every other sport and physical activity they do.",
           },
         ]}
         studentsTitle="Kids Love Juniors Karate Classes"

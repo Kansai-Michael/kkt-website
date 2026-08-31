@@ -18,8 +18,8 @@
 | Program | Ages | Days & Times |
 |---|---|---|
 | Cubs | 3–4 | Mon 4:30–5:00pm*, Thu 4:15–4:45pm* |
-| Little Lions | 5–7 | Mon 4:30–5:15pm, Tue 4:15–5:00pm, Thu 4:15–5:00pm |
-| Juniors | 8–12 | Mon 5:15–6:15pm, Tue 5:00–5:45pm, Thu 5:00–5:45pm |
+| Little Lions | 5–6 | Mon 4:30–5:15pm, Tue 4:15–5:00pm, Thu 4:15–5:00pm |
+| Juniors | 7–12 | Mon 5:15–6:15pm, Tue 5:00–5:45pm, Thu 5:00–5:45pm |
 | Teens | 13–17 | Mon 5:15–6:15pm, Tue 5:45–6:30pm, Thu 5:45–6:30pm |
 | Adults | 18+ | Mon 5:15–6:15pm, Tue 5:45–6:30pm, Thu 5:45–6:30pm |
 
@@ -58,8 +58,8 @@ Wed and Sat times show as "Coming Soon" across all program timetable pages.
 | `/` | Homepage — hero (hero.jpg), 2+3 programs grid (Cubs+LL top row; Juniors/Teens/Adults bottom row), Why Kansai, CTA with dojo-interior.jpg background |
 | `/programs/cubs` | Cubs program page (Ages 3–4) — with FAQs, starts 13 July 2026 |
 | `/programs/cubs/timetable` | Cubs timetable + Kihon booking iframe |
-| `/programs/little-lions` | Little Lions program page (Ages 5–7) — with FAQs |
-| `/programs/juniors` | Juniors program page (Ages 8–12) — with FAQs |
+| `/programs/little-lions` | Little Lions program page (Ages 5–6) — with FAQs |
+| `/programs/juniors` | Juniors program page (Ages 7–12) — with FAQs |
 | `/programs/teens` | Teens program page (Ages 13–17) — with FAQs |
 | `/programs/adults` | Adults program page (Ages 18+) |
 | `/programs/little-lions/timetable` | LL timetable + Kihon booking iframe |

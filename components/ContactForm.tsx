@@ -6,11 +6,11 @@ import { Suspense } from "react";
 
 const programForms: Record<string, { label: string; iframe: string }> = {
   "little-lions": {
-    label: "Little Lions (Ages 5–7)",
+    label: "Little Lions (Ages 5–6)",
     iframe: "https://app.kihonsoft.au/book/tarragindi-first-lesson",
   },
   juniors: {
-    label: "Juniors (Ages 8–12)",
+    label: "Juniors (Ages 7–12)",
     iframe: "https://app.kihonsoft.au/book/tarragindi-first-lesson",
   },
   teens: {
