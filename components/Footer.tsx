@@ -18,7 +18,7 @@ const affiliations = [
 export default function Footer() {
   return (
     <footer className="bg-[#4A6DA0] text-white">
-      <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1.5fr_1fr_0.8fr_1.2fr_1fr] gap-8">
         {/* Brand */}
         <div>
           <Image src={BADGE_IMG} alt="Kansai Karate Academy" width={80} height={80} className="w-20 mb-4" />
@@ -105,23 +105,23 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-      </div>
 
-      {/* Affiliations */}
-      <div className="border-t border-white/10 px-4 py-8 max-w-6xl mx-auto flex flex-col items-center gap-4">
-        <h4 className="font-semibold text-white/90 text-center">Affiliated with Karate Queensland and Karate Australia</h4>
-        <div className="flex gap-6">
-          {affiliations.map((a) => (
-            <a
-              key={a.name}
-              href={a.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white rounded-lg p-3 hover:opacity-90 transition-opacity"
-            >
-              <Image src={a.src} alt={a.name} width={a.width} height={a.height} className="h-24 w-auto" />
-            </a>
-          ))}
+        {/* Affiliations */}
+        <div>
+          <h4 className="font-semibold mb-3 text-white/90">Affiliated with:</h4>
+          <div className="flex gap-3">
+            {affiliations.map((a) => (
+              <a
+                key={a.name}
+                href={a.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-md p-1.5 hover:opacity-90 transition-opacity"
+              >
+                <Image src={a.src} alt={a.name} width={a.width} height={a.height} className="h-12 w-auto" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
