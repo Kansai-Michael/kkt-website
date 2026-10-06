@@ -110,6 +110,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── OFFER BANNER ── */}
+      <section className="py-14 px-4 text-center" style={{ background: "#003087" }}>
+        <h2 className="text-2xl md:text-4xl font-bold text-white leading-snug mb-6">
+          2 Weeks Of Karate For $39 + <i className="text-[#FFB800]">FREE</i> Uniform
+        </h2>
+        <BookTrialButton className="bg-[#FFB800] text-black font-bold px-8 py-3 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-wide shadow-lg">
+          Claim Offer
+        </BookTrialButton>
+      </section>
+
       {/* ── PROGRAMS ── */}
       <section id="programs" className="py-16 px-4" style={{ background: "#5B7DB1" }}>
         <div className="max-w-6xl mx-auto">

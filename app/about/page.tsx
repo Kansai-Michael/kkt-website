@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Kansai Karate Tarragindi | Sensei Jason Sallaway",
-  description: "Learn about Kansai Karate Tarragindi, led by Sensei Jason Sallaway. Traditional Shitoryu Shukokai karate at Wellers Hill Bowls Club, Tarragindi. Affiliated with Kansai Karate Academy, QKA and AKF.",
+  description: "Learn about Kansai Karate Tarragindi, led by Sensei Jason Sallaway. Traditional Shitoryu Shukokai karate at Wellers Hill Bowls Club, Tarragindi. Affiliated with Kansai Karate Academy, Karate Queensland and Karate Australia.",
   alternates: { canonical: "https://kansaikaratetarragindi.com.au/about" },
 };
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
               Kansai Karate Tarragindi is a licensed dojo of <strong>Kansai Karate Academy</strong>, led by <strong>Shihan Stephen Kelly</strong>. The Academy maintains the highest standards of instruction across all affiliated dojos, with regular seminars, gradings, and events that connect students across the network.
             </p>
             <p className="text-gray-600">
-              As a student of Kansai Karate Tarragindi, you benefit from this network — including access to Queensland Karate Association and Australian Karate Federation gradings, events, and competitions.
+              As a student of Kansai Karate Tarragindi, you benefit from this network — including access to Karate Queensland and Karate Australia gradings, events, and competitions.
             </p>
           </div>
 
@@ -107,13 +107,13 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl font-bold text-[#1a3a7a] mb-4">Affiliations</h2>
             <p className="text-gray-600 mb-4">
-              Kansai Karate Tarragindi is affiliated with the Queensland Karate Association (QKA) and the Australian Karate Federation (AKF) — the recognised governing bodies for karate in Queensland and Australia.
+              Kansai Karate Tarragindi is affiliated with Karate Queensland and Karate Australia — the recognised governing bodies for karate in Queensland and Australia.
             </p>
             <div className="flex flex-wrap gap-4">
               {[
                 { name: "Kansai Karate Academy", full: "Licensed dojo of Kansai Karate Academy", href: "https://kansaikarate.com.au/" },
-                { name: "Queensland Karate Association", full: "State governing body for karate", href: "https://karatequeensland.com.au/" },
-                { name: "Australian Karate Federation", full: "National governing body for karate", href: "https://www.karateaustralia.org.au/" },
+                { name: "Karate Queensland", full: "State governing body for karate", href: "https://karatequeensland.com.au/" },
+                { name: "Karate Australia", full: "National governing body for karate", href: "https://www.karateaustralia.org.au/" },
               ].map((a) => (
                 <a
                   key={a.name}

@@ -10,6 +10,11 @@ const locations = [
   { name: "Clayfield", href: "https://www.karateclayfield.com" },
 ];
 
+const affiliations = [
+  { name: "Karate Queensland", href: "https://karatequeensland.com.au/", src: "/images/karate-queensland-logo.png", width: 245, height: 261 },
+  { name: "Karate Australia", href: "https://www.karateaustralia.org.au/", src: "/images/karate-australia-logo.png", width: 295, height: 317 },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#4A6DA0] text-white">
@@ -99,6 +104,24 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+        </div>
+      </div>
+
+      {/* Affiliations */}
+      <div className="border-t border-white/10 px-4 py-8 max-w-6xl mx-auto flex flex-col items-center gap-4">
+        <h4 className="font-semibold text-white/90 text-center">Affiliated with Karate Queensland and Karate Australia</h4>
+        <div className="flex gap-6">
+          {affiliations.map((a) => (
+            <a
+              key={a.name}
+              href={a.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white rounded-lg p-3 hover:opacity-90 transition-opacity"
+            >
+              <Image src={a.src} alt={a.name} width={a.width} height={a.height} className="h-24 w-auto" />
+            </a>
+          ))}
         </div>
       </div>
 
