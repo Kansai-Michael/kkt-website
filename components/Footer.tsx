@@ -109,19 +109,23 @@ export default function Footer() {
         {/* Affiliations */}
         <div>
           <h4 className="font-semibold mb-3 text-white/90">Affiliated with:</h4>
-          <div className="flex gap-3">
+          <ul className="space-y-3 text-sm text-white/60">
             {affiliations.map((a) => (
-              <a
-                key={a.name}
-                href={a.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white rounded-md p-1.5 hover:opacity-90 transition-opacity"
-              >
-                <Image src={a.src} alt={a.name} width={a.width} height={a.height} className="h-12 w-auto" />
-              </a>
+              <li key={a.name}>
+                <a
+                  href={a.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 hover:text-[#FFB800] transition-colors"
+                >
+                  <span className="bg-white rounded-md p-1.5 shrink-0">
+                    <Image src={a.src} alt="" width={a.width} height={a.height} className="h-12 w-auto" />
+                  </span>
+                  {a.name}
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
 
