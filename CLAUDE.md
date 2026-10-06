@@ -79,7 +79,7 @@ Wed and Sat times show as "Coming Soon" across all program timetable pages.
 | `components/ProgramPage.tsx` | Shared program page layout. Props: `faqs?: {q,a}[]`, `buildPhotos[].objectPosition?` |
 | `components/TimetablePage.tsx` | Shared timetable layout. Props: `scheduleNote?` (footnote below table), `moreInfo.classPhotoPosition?`, `moreInfo.closingPhoto?` |
 | `components/Nav.tsx` | Sticky nav — phone 0480 566 172, Programs dropdown (Cubs first), Book Free Trial (black text) |
-| `components/Footer.tsx` | 5-column footer — Brand, Contact, Programs, Follow Us (Facebook/Instagram), Other Locations |
+| `components/Footer.tsx` | 6-column footer — Brand, Contact, Programs, Follow Us (Facebook/Instagram), Other Locations, Affiliated with (stacked Karate Queensland + Karate Australia logos with names beside, `affiliations` array at top). Uses a custom `lg:grid-cols-[1fr_1.5fr_1fr_0.8fr_1.2fr_1fr]` so the long email fits |
 | `components/ContactModal.tsx` | 2-step lead capture modal → POST /api/contact. Programs: Cubs, Little Lions, Juniors, Teens, Adults |
 | `components/BookTrialButton.tsx` | Reusable CTA button — always yellow with black text |
 
@@ -110,6 +110,22 @@ All photos in `public/images/`. Source: `C:\Users\micha\OneDrive\dojo\`
 | `cubs-class.jpg` | KKGC Claude Assets/Images/Cubs/IMG_0775.jpg | Cubs timetable classPhoto (obstacle course) |
 
 All subfolders (jnr, little lions, teens, adults, others, sports karate training) are from the actual Kansai dojo. The sports karate training folder includes photos with a flag visible in the background — this is still the correct dojo. Cubs photos are from KKGC (Gold Coast dojo) as Tarragindi Cubs photos don't exist yet.
+
+| `karate-queensland-logo.png` | Supplied by Michael 2026-10-06 (whitespace trimmed) | Footer — Affiliated with |
+| `karate-australia-logo.png` | Supplied by Michael 2026-10-06 (whitespace trimmed) | Footer — Affiliated with |
+
+## Homepage Offer Banner (added 2026-10-06)
+
+- Full-width strip directly below the hero in `app/page.tsx`: **"2 Weeks Of Karate For $39 + *FREE* Uniform"** + **Claim Offer** button.
+- Copied from the live kansaikarate.com.au (WordPress/Elementor) banner at Jason's request.
+- **Claim Offer reuses `BookTrialButton`** → opens the ContactModal pop-up (chosen over linking to /contact — fewer clicks, stays on homepage).
+- Background `#003087` (darker than KKA's) because the Programs section directly below is already `#5B7DB1` — same-blue would merge. Button keeps this site's yellow + **black text** rule (KKA uses blue text).
+- Homepage only (not program pages) — Michael's choice.
+- ⚠️ The rest of the site still says "first lesson is free" — Michael chose to leave that wording; both offers now coexist. Confirm with Jason which is current before changing either.
+
+## Affiliations
+
+- Official names are now **Karate Queensland** (https://karatequeensland.com.au/) and **Karate Australia** (https://www.karateaustralia.org.au/) — the old names QKA / AKF were replaced on the About page (copy, metadata, affiliation cards) and in `public/llms.txt` on 2026-10-06. Don't reintroduce QKA/AKF.
 
 ## Social Media
 
@@ -173,6 +189,8 @@ All code-side SEO fixes from the initial audit have been applied:
 7. **Cubs real photos** — Swap KKGC placeholder photos for Tarragindi-specific Cubs photos once Jason takes them.
 8. **Cubs FAQPage schema** — Add FAQPage JSON-LD schema to `/programs/cubs` (same pattern as Little Lions/Juniors/Teens).
 9. **Wednesday/Saturday classes** — Update timetable pages when Wed/Sat times are confirmed (currently "Coming Soon").
+10. **Footer Programs list missing Cubs** — `components/Footer.tsx` Programs column lists LL/Juniors/Teens/Adults only.
+11. **Confirm the offer with Jason** — $39 + free uniform banner vs. "first lesson is free" wording elsewhere.
 
 ## SEO Baseline
 

@@ -1,5 +1,24 @@
 # Changelog — Kansai Karate Tarragindi Website
 
+## [1.5.0] — 2026-10-06
+
+### $39 Offer Banner + Affiliation Logos
+
+**Homepage offer banner** (`639e701`)
+- New full-width strip below the hero: "2 Weeks Of Karate For $39 + FREE Uniform" with a Claim Offer button (matches kansaikarate.com.au, requested by Jason)
+- Claim Offer opens the existing enquiry pop-up (`BookTrialButton` → ContactModal)
+- Dark blue `#003087` background so it stands apart from the Programs section below
+
+**Footer affiliations** (`639e701` → `8d8c853` → `44d933b`)
+- New "Affiliated with:" column on the right of the footer (6th column)
+- Karate Queensland and Karate Australia logos stacked, each with its name beside it, linking to karatequeensland.com.au and karateaustralia.org.au
+- Logo files added: `public/images/karate-queensland-logo.png`, `karate-australia-logo.png` (whitespace trimmed)
+
+**Naming update**
+- About page + `llms.txt`: "Queensland Karate Association (QKA)" / "Australian Karate Federation (AKF)" → Karate Queensland / Karate Australia
+
+---
+
 ## [1.4.0] — 2026-06-19
 
 ### Cubs Program + 2026 Timetable Overhaul

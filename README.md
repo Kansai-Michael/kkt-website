@@ -82,6 +82,8 @@ All page content is in the page files under `app/`. Program pages use the shared
 | FAQs | Each program page's `faqs` prop |
 | Schema / SEO metadata | Each page's `export const metadata` and JSON-LD `const` blocks |
 | Book Free Trial modal programs | `components/ContactModal.tsx` — `programs` object at the top of the file |
+| Homepage $39 offer banner | `/app/page.tsx` — `OFFER BANNER` section below the hero; button is `BookTrialButton` (opens the modal) |
+| Footer affiliation logos | `components/Footer.tsx` — `affiliations` array (name, link, logo file, size); logos in `public/images/karate-*-logo.png` |
 | Cubs photos | `public/images/cubs*.jpg` — source: `C:\Users\micha\OneDrive\Kansai Karate Gold Coast\Claude Assets\Images\Cubs\` |
 
 ---
