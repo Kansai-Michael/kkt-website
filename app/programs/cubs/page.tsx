@@ -116,12 +116,12 @@ export default function CubsPage() {
         ]}
         testimonials={[
           {
-            text: "My daughter started Cubs at 3 and the change in her confidence and listening has been incredible. The instructors are so patient and warm — she absolutely loves it.",
-            author: "Cubs parent, Tarragindi",
+            text: "My daughter is absolutely loving Kansai Karate. It's a true family business, and the instructors are so awesome with the kids (of all abilities and confidence levels). Highly recommend doing a trial class if you're considering karate for you or your child.",
+            author: "Helen, Google review",
           },
           {
-            text: "I wasn't sure if my son was old enough but from the very first class he was engaged and happy. Best decision we made — he asks to go every week!",
-            author: "Cubs parent, Tarragindi",
+            text: "Great facility and training space. Instructors here are really patient, welcoming and passionate about Karate. Would really recommend giving this place a try and is suitable for anyone of all ages and fitness levels!",
+            author: "Wei Sheng, Google review",
           },
         ]}
         faqs={[

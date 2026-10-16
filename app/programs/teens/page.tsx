@@ -114,12 +114,12 @@ export default function TeensPage() {
         ]}
         testimonials={[
           {
-            text: "The senseis are incredible — they're really engaging, fun, and they make sure students feel comfortable while building their confidence.",
-            author: "Teen Karate parent, Tarragindi",
+            text: "Have been involved in Karate for some time, and really appreciate how Tarragindi Kansai approaches it, a balance between formal and sports Karate. Sensei is well experienced and very patient… Family oriented, it's been great to train along side my daughter. Kids thru to adults, men and women, no egos. Highly recommend.",
+            author: "Mell, Google review",
           },
           {
-            text: "Fantastic dojo for the whole family! Wonderful atmosphere of support and friendly teachers. Highly recommended!",
-            author: "Teen Karate parent, Tarragindi",
+            text: "Sensei Jason is incredibly patient, knowledgeable and genuinely invested in helping students grow. All of the sensei and senpai are passionate about teaching and sharing their love of karate. They help you understand not only the techniques, but also the values and discipline behind this martial art.",
+            author: "Blossom, Google review",
           },
         ]}
         faqs={[

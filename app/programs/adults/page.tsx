@@ -101,12 +101,12 @@ export default function AdultsPage() {
         ]}
         testimonials={[
           {
-            text: "I've been training at Kansai Karate Tarragindi for about six months. I came in with no background in martial arts and wasn't sure what to expect — but the technique-focused approach is completely different from a gym. I'm learning something real, and the fitness gains have been a very welcome bonus.",
-            author: "Adult Karate member, Tarragindi",
+            text: "As an adult student I was a bit hesitant to start martial arts as I had no idea what I was getting myself into. Sensei Jason made me feel welcome and a part of the karate family from the first lesson… You're never too old to start learning, and you know you'll be supported here.",
+            author: "Ashleigh, Google review",
           },
           {
-            text: "Fantastic dojo for the whole family! Wonderful atmosphere of support and friendly teachers. Highly recommended!",
-            author: "Adult Karate member, Tarragindi",
+            text: "Jason sensei taught first my daughter, then myself when I decided to give karate a go. Kansai Karate is now our second family, the support and friendships made have been invaluable. Jason sensei's classes are always fun and engaging, and he is approachable and caring.",
+            author: "Angela, Google review",
           },
         ]}
         ctaHeading="This could be the best thing you've ever done for yourself."

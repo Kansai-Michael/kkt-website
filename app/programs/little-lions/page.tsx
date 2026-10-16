@@ -116,12 +116,12 @@ export default function LittleLionsPage() {
         ]}
         testimonials={[
           {
-            text: "The senseis are incredible — they're really engaging, fun, and they make sure the kids feel really comfortable and build their confidence. My daughter is loving karate and it's improving her discipline, focus and coordination. Highly recommended!",
-            author: "Little Lions parent, Tarragindi",
+            text: "Great experience at Kansai Karate Tarragindi. Small classes gives a good hands on experience for my 5 year old. Great teachers! Jacob does a fantastic job with the little kids.",
+            author: "Rhiannon, Google review",
           },
           {
-            text: "Fantastic dojo for the whole family! Wonderful atmosphere of support and friendly teachers. Highly recommended!",
-            author: "Little Lions parent, Tarragindi",
+            text: "An excellent activity for my 5 yo. The Senseis / Instructors are excellent.",
+            author: "Jade, Google review",
           },
         ]}
         faqs={[

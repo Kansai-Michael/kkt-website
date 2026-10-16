@@ -114,12 +114,12 @@ export default function JuniorsPage() {
         ]}
         testimonials={[
           {
-            text: "Good exercise and skills to learn — all kids should learn the life skills taught here to build confidence and techniques that will help them with life's encounters.",
-            author: "Juniors parent, Tarragindi",
+            text: "As a parent, I've watched my son grow in confidence, discipline, and resilience under both Jason and Ryley's guidance. They hold high standards while providing genuine support and encouragement, creating a fun and supportive environment where students are challenged to improve and encouraged to succeed.",
+            author: "Shane, Google review",
           },
           {
-            text: "Great educational and motivational activity for children. The team is so friendly and passionate. Highly recommended.",
-            author: "Juniors parent, Tarragindi",
+            text: "Sensei Jason and his family are truly amazing people. Their patience, commitment, and dedication are an inspiration to everyone around them. I am very happy to bring my son to them every week. Thank you",
+            author: "Guillaume, Google review",
           },
         ]}
         faqs={[
