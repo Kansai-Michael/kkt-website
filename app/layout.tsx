@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   title: "Kansai Karate Tarragindi | Traditional Karate for Kids, Teens & Adults",
   description:
-    "Traditional Shitoryu Shukokai karate for families in Tarragindi. Little Lions, Juniors, Teens and Adults classes at Wellers Hill Bowls Club. Book a free trial today.",
+    "Traditional Shitoryu Shukokai karate for families in Tarragindi. Little Lions, Juniors, Teens and Adults classes at St Luke's Anglican Church Hall, Ekibin Road East. Book a free trial today.",
   keywords:
-    "karate tarragindi, kids karate tarragindi, martial arts tarragindi, karate classes brisbane southside, wellers hill bowls club karate",
+    "karate tarragindi, kids karate tarragindi, martial arts tarragindi, karate classes brisbane southside, ekibin road karate tarragindi",
   openGraph: {
     title: "Kansai Karate Tarragindi | Traditional Karate for Families",
     description:
@@ -72,7 +72,7 @@ const localBusinessSchema = {
   email: "jason@kansaikaratetarragindi.com.au",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Wellers Hill Bowls Club, 34 Esher St",
+    streetAddress: "St Luke's Anglican Church Hall, 193 Ekibin Road East",
     addressLocality: "Tarragindi",
     addressRegion: "QLD",
     postalCode: "4121",
@@ -80,15 +80,27 @@ const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: -27.5177,
-    longitude: 153.0368,
+    latitude: -27.5156,
+    longitude: 153.0384,
   },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Thursday"],
+      dayOfWeek: "Monday",
+      opens: "16:00",
+      closes: "18:45",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Tuesday",
       opens: "16:15",
-      closes: "20:00",
+      closes: "18:30",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Thursday",
+      opens: "16:15",
+      closes: "19:45",
     },
   ],
   priceRange: "$$",
@@ -120,7 +132,7 @@ const organizationSchema = {
   email: "jason@kansaikaratetarragindi.com.au",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Wellers Hill Bowls Club, 34 Esher St",
+    streetAddress: "St Luke's Anglican Church Hall, 193 Ekibin Road East",
     addressLocality: "Tarragindi",
     addressRegion: "QLD",
     postalCode: "4121",

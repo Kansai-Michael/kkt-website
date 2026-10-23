@@ -75,12 +75,10 @@ export default function LittleLionsTimetable() {
           sublabel: "5 - 6 YEARS",
           mon: "4:30 – 5:15pm",
           tue: "4:15 – 5:00pm",
-          wed: "Coming Soon",
-          thu: "4:15 – 5:00pm",
-          sat: "Coming Soon",
-
+          thu: "4:45 – 5:30pm",
         },
       ]}
+      scheduleNote="This timetable applies from Monday 2 November 2026, at our new home — St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi."
       bookingIframeUrl={BOOKING_URL}
       moreInfo={moreInfo}
     />

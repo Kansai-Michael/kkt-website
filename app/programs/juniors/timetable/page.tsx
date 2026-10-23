@@ -73,13 +73,17 @@ export default function JuniorsTimetable() {
         {
           label: "JUNIORS",
           sublabel: "7 - 12 YEARS",
-          mon: "5:15 – 6:15pm",
+          mon: "5:15 – 6:00pm",
           tue: "5:00 – 5:45pm",
-          wed: "Coming Soon",
-          thu: "5:00 – 5:45pm",
-          sat: "Coming Soon",
+          thu: "5:30 – 6:15pm",
+        },
+        {
+          label: "JUNIORS, TEENS & ADULTS",
+          sublabel: "COMBINED CLASS",
+          thu: "6:15 – 7:00pm",
         },
       ]}
+      scheduleNote="This timetable applies from Monday 2 November 2026, at our new home — St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi."
       bookingIframeUrl={BOOKING_URL}
       moreInfo={moreInfo}
     />

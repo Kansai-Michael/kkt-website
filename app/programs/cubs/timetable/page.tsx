@@ -54,7 +54,7 @@ const moreInfo: MoreInfoContent = {
     },
     {
       q: "How many classes do we attend?",
-      a: "Cubs classes run Monday, Tuesday and Thursday afternoons. Once a week is a great starting point — many families find their little one quickly wants to come more often once they settle in.",
+      a: "Cubs classes run Monday and Thursday afternoons. Once a week is a great starting point — many families find their little one quickly wants to come more often once they settle in.",
     },
   ],
   closingStatement:
@@ -73,12 +73,11 @@ export default function CubsTimetable() {
         {
           label: "CUBS",
           sublabel: "3 - 4 YEARS",
-          mon: "4:30 – 5:00pm",
-          tue: "4:15 – 4:45pm",
+          mon: "4:00 – 4:30pm",
           thu: "4:15 – 4:45pm",
-          sat: "Coming Soon",
         },
       ]}
+      scheduleNote="This timetable applies from Monday 2 November 2026, at our new home — St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi."
       bookingIframeUrl={BOOKING_URL}
       moreInfo={moreInfo}
     />

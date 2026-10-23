@@ -43,8 +43,9 @@ export default function Footer() {
               </a>
             </li>
             <li className="text-white/60">
-              📍 Wellers Hill Bowls Club<br />
-              34 Esher St, Tarragindi QLD 4121
+              📍 St Luke&apos;s Anglican Church Hall<br />
+              193 Ekibin Road East, Tarragindi QLD 4121
+              <span className="block mt-1 text-[#FFB800]">New location from Monday 2 November 2026</span>
             </li>
           </ul>
         </div>

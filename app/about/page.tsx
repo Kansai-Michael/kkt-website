@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Kansai Karate Tarragindi | Sensei Jason Sallaway",
-  description: "Learn about Kansai Karate Tarragindi, led by Sensei Jason Sallaway. Traditional Shitoryu Shukokai karate at Wellers Hill Bowls Club, Tarragindi. Affiliated with Kansai Karate Academy, Karate Queensland and Karate Australia.",
+  description: "Learn about Kansai Karate Tarragindi, led by Sensei Jason Sallaway. Traditional Shitoryu Shukokai karate at St Luke's Anglican Church Hall, Ekibin Road East, Tarragindi. Affiliated with Kansai Karate Academy, Karate Queensland and Karate Australia.",
   alternates: { canonical: "https://kansaikaratetarragindi.com.au/about" },
 };
 
@@ -75,7 +75,7 @@ export default function AboutPage() {
                   Kansai Karate Tarragindi is a place where every student is seen, valued, and challenged to grow — whether they are stepping on the mat for the very first time or working towards their next belt grading.
                 </p>
                 <p className="text-gray-600">
-                  Classes run Monday, Tuesday and Thursday evenings, with programs for every age group from Little Lions (5–6 years) through to Adults. The dojo is based at the Wellers Hill Bowls Club — a welcoming and well-resourced training space for the Tarragindi community.
+                  Classes run Monday, Tuesday and Thursday evenings, with programs for every age group from Little Lions (5–6 years) through to Adults. From Monday 2 November 2026, the dojo trains at St Luke&apos;s Anglican Church Hall on Ekibin Road East — right in the heart of the Tarragindi community.
                 </p>
               </div>
             </div>
@@ -133,11 +133,14 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl font-bold text-[#1a3a7a] mb-4">Our Dojo</h2>
             <p className="text-gray-600 mb-4">
-              We are located at Wellers Hill Bowls Club, 34 Esher St, Tarragindi QLD 4121 — conveniently situated for families from Tarragindi, Wellers Hill, Moorooka, Annerley, Salisbury, Rocklea, Yeronga, Greenslopes, Holland Park, and surrounding areas.
+              We are located at St Luke&apos;s Anglican Church Hall, 193 Ekibin Road East, Tarragindi QLD 4121 — conveniently situated for families from Tarragindi, Wellers Hill, Moorooka, Annerley, Salisbury, Rocklea, Yeronga, Greenslopes, Holland Park, and surrounding areas.
+            </p>
+            <p className="text-[#1a3a7a] bg-[#FFB800]/20 rounded-lg px-4 py-3 mb-4 text-sm">
+              <strong>We&apos;re moving!</strong> Classes move to our new home at St Luke&apos;s Anglican Church Hall from Monday 2 November 2026. If you have any questions about the move, give Sensei Jason a call on 0480 566 172.
             </p>
             <div className="rounded-lg overflow-hidden mb-6" style={{ aspectRatio: "16/9" }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4662.621654453885!2d153.04546271199965!3d-27.518027376192546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915b279a2c685f%3A0x637f698d6d03a8e2!2sKansai%20Karate%20Tarragindi!5e1!3m2!1sen!2sau!4v1779440896210!5m2!1sen!2sau"
+                src="https://www.google.com/maps?q=St%20Luke%27s%20Anglican%20Church%20Hall%2C%20193%20Ekibin%20Road%20East%2C%20Tarragindi%20QLD%204121&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

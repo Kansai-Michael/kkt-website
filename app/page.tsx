@@ -31,7 +31,7 @@ const programs = [
     href: "/programs/juniors",
     img: "/images/jnr-hero.jpg",
     description:
-      "Karate is one of the best things a 7–12 year old can do with a Monday or Tuesday night. They'll build real fitness, focus and self-discipline in traditional Shitoryu Shukokai classes — and develop skills that follow them into school, sport and life.",
+      "Karate is one of the best things a 7–12 year old can do after school on a Monday, Tuesday or Thursday. They'll build real fitness, focus and self-discipline in traditional Shitoryu Shukokai classes — and develop skills that follow them into school, sport and life.",
   },
   {
     name: "Teen Karate",
@@ -55,7 +55,7 @@ const dojoFeatures = [
   {
     icon: <MapPin className="w-8 h-8 text-[#5B7DB1]" />,
     title: "A real southside dojo",
-    body: "Kansai Karate Tarragindi trains at the Wellers Hill Bowls Club — a proper, purpose-run dojo that's been part of the southside community for years.",
+    body: "From Monday 2 November 2026, Kansai Karate Tarragindi trains at St Luke's Anglican Church Hall on Ekibin Road East, Tarragindi — a friendly, local space for southside families.",
   },
   {
     icon: <GraduationCap className="w-8 h-8 text-[#5B7DB1]" />,

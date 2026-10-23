@@ -154,7 +154,7 @@ export default function ProgramPage({
             <h2 className="text-3xl font-bold text-gray-900 mb-2">{parentsTitle}</h2>
             <p className="text-gray-500 text-base">Why Tarragindi parents love {name} Classes</p>
             <p className="text-gray-500 text-sm mt-2">
-              Classes run at Wellers Hill Bowls Club, 34 Esher St, Tarragindi —&nbsp;
+              Classes run at St Luke&apos;s Anglican Church Hall, 193 Ekibin Road East, Tarragindi —&nbsp;
               <Link href={`/programs/${slug}/timetable`} className="text-[#5B7DB1] underline hover:text-[#4A6DA0]">view the full timetable</Link>
               {" "}or{" "}
               <Link href="/about" className="text-[#5B7DB1] underline hover:text-[#4A6DA0]">meet your instructor</Link>.
@@ -266,7 +266,7 @@ export default function ProgramPage({
             className="inline-block bg-[#FFB800] text-black font-bold text-lg px-10 py-4 rounded-lg hover:bg-[#E6A500] transition-colors uppercase tracking-widest"
           />
           <p className="mt-4 text-white/40 text-sm">
-            Kansai Karate Tarragindi · Wellers Hill Bowls Club, 34 Esher St, Tarragindi QLD 4121
+            Kansai Karate Tarragindi · St Luke&apos;s Anglican Church Hall, 193 Ekibin Road East, Tarragindi QLD 4121
           </p>
         </div>
       </section>

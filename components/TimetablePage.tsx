@@ -9,10 +9,7 @@ const LIGHT_COL_BG = "#c5d9f0";
 const DAYS: { label: string; key: keyof ScheduleRow; light: boolean }[] = [
   { label: "MONDAY",    key: "mon", light: false },
   { label: "TUESDAY",   key: "tue", light: true  },
-  { label: "WEDNESDAY", key: "wed", light: false },
-  { label: "THURSDAY",  key: "thu", light: true  },
-  { label: "FRIDAY",    key: "fri", light: false },
-  { label: "SATURDAY",  key: "sat", light: true  },
+  { label: "THURSDAY",  key: "thu", light: false },
 ];
 
 interface ScheduleRow {
@@ -20,10 +17,7 @@ interface ScheduleRow {
   sublabel?: string;
   mon?: string;
   tue?: string;
-  wed?: string;
   thu?: string;
-  fri?: string;
-  sat?: string;
 }
 
 export interface MoreInfoFeature {

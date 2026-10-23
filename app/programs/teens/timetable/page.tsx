@@ -74,13 +74,17 @@ export default function TeensTimetable() {
         {
           label: "TEENS",
           sublabel: "13 - 17 YEARS",
-          mon: "5:15 – 6:15pm",
+          mon: "6:00 – 6:45pm",
           tue: "5:45 – 6:30pm",
-          wed: "Coming Soon",
-          thu: "5:45 – 6:30pm",
-          sat: "Coming Soon",
+          thu: "7:00 – 7:45pm",
+        },
+        {
+          label: "JUNIORS, TEENS & ADULTS",
+          sublabel: "COMBINED CLASS",
+          thu: "6:15 – 7:00pm",
         },
       ]}
+      scheduleNote="This timetable applies from Monday 2 November 2026, at our new home — St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi."
       bookingIframeUrl={BOOKING_URL}
       moreInfo={moreInfo}
     />

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Little Lions Program (Ages 5–6) | Kansai Karate Tarragindi",
-  description: "Karate classes for 5 and 6 year olds in Tarragindi. Little Lions builds focus, respect, and real karate foundations in a fun, structured environment. Tuesday and Thursday afternoons.",
+  description: "Karate classes for 5 and 6 year olds in Tarragindi. Little Lions builds focus, respect, and real karate foundations in a fun, structured environment. Monday, Tuesday and Thursday afternoons.",
   alternates: { canonical: "https://kansaikaratetarragindi.com.au/programs/little-lions" },
 };
 
@@ -80,7 +80,7 @@ export default function LittleLionsPage() {
         parentsFeatures={[
           {
             title: "Class Times",
-            body: "Little Lions class times were designed for real family schedules. Monday 4:30–5:15pm, Tuesday and Thursday 4:15–5:00pm — you're almost guaranteed to find a time that works.",
+            body: "Little Lions class times were designed for real family schedules. Monday 4:30–5:15pm, Tuesday 4:15–5:00pm and Thursday 4:45–5:30pm — you're almost guaranteed to find a time that works.",
           },
           {
             title: "Community",

@@ -6,7 +6,7 @@
 
 - **Site name:** Kansai Karate Tarragindi
 - **Domain:** kansaikaratetarragindi.com.au (live on Vercel — nameservers at Crazy Domains point to Vercel DNS)
-- **Address:** Wellers Hill Bowls Club, 34 Esher St, Tarragindi QLD 4121
+- **Address:** St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi QLD 4121 (from Mon 2 Nov 2026; previously Wellers Hill Bowls Club, 34 Esher St)
 - **Phone:** 0480 566 172
 - **Email:** jason@kansaikaratetarragindi.com.au
 - **Head Instructor:** Sensei Jason Sallaway — 3rd Dan Black Belt, Shitoryu Shukokai
@@ -15,17 +15,17 @@
 
 ## Programs & Timetable
 
-| Program | Ages | Days & Times |
-|---|---|---|
-| Cubs | 3–4 | Mon 4:30–5:00pm, Tue 4:15–4:45pm, Thu 4:15–4:45pm |
-| Little Lions | 5–6 | Mon 4:30–5:15pm, Tue 4:15–5:00pm, Thu 4:15–5:00pm |
-| Juniors | 7–12 | Mon 5:15–6:15pm, Tue 5:00–5:45pm, Thu 5:00–5:45pm |
-| Teens | 13–17 | Mon 5:15–6:15pm, Tue 5:45–6:30pm, Thu 5:45–6:30pm |
-| Adults | 18+ | Mon 5:15–6:15pm, Tue 5:45–6:30pm, Thu 5:45–6:30pm |
+From Monday 2 November 2026 (new hall). Classes run **Mon, Tue and Thu only** — no Wed/Fri/Sat.
 
-Wed and Sat sessions coming soon for all programs.
+| Program | Ages | Monday | Tuesday | Thursday |
+|---|---|---|---|---|
+| Cubs | 3–4 | 4:00–4:30pm | — | 4:15–4:45pm |
+| Little Lions | 5–6 | 4:30–5:15pm | 4:15–5:00pm | 4:45–5:30pm |
+| Juniors | 7–12 | 5:15–6:00pm | 5:00–5:45pm | 5:30–6:15pm |
+| Juniors, Teens & Adults (combined) | 7+ | — | — | 6:15–7:00pm |
+| Teens & Adults | 13+ | 6:00–6:45pm | 5:45–6:30pm | 7:00–7:45pm |
 
-Wed and Sat times show as "Coming Soon" across all program timetable pages.
+The combined Thursday class shows as a second row on the Juniors, Teens and Adults timetable pages. `TimetablePage.tsx` only has Mon/Tue/Thu columns.
 
 ## Kihon Integration
 
@@ -66,7 +66,7 @@ Wed and Sat times show as "Coming Soon" across all program timetable pages.
 | `/programs/juniors/timetable` | Juniors timetable + Kihon booking iframe |
 | `/programs/teens/timetable` | Teens timetable — hero + divider = dojo-class.jpg; classPhoto objectPosition top |
 | `/programs/adults/timetable` | Adults timetable — closing CTA section = adults-coa.jpg background |
-| `/timetable` | General timetable (Mon/Tue/Wed CS/Thu/Sat CS — all programs incl Cubs) |
+| `/timetable` | General timetable (Mon/Tue/Thu — all programs incl Cubs + the Thursday combined class) |
 | `/about` | About Sensei Jason Sallaway, correct Google Maps embed, Kansai Karate Academy lineage |
 | `/contact` | Contact page |
 | `/thank-you` | Post-booking confirmation |
@@ -188,7 +188,7 @@ All code-side SEO fixes from the initial audit have been applied:
 6. **`/api/contact` route** — Currently posts to n8n webhook; needs updating to POST directly to Kihon API.
 7. **Cubs real photos** — Swap KKGC placeholder photos for Tarragindi-specific Cubs photos once Jason takes them.
 8. **Cubs FAQPage schema** — Add FAQPage JSON-LD schema to `/programs/cubs` (same pattern as Little Lions/Juniors/Teens).
-9. **Wednesday/Saturday classes** — Update timetable pages when Wed/Sat times are confirmed (currently "Coming Soon").
+9. ~~**Wednesday/Saturday classes**~~ — Done 2026-10-23: no Wed/Sat classes in the Nov 2026 timetable; "Coming Soon" removed everywhere.
 10. **Footer Programs list missing Cubs** — `components/Footer.tsx` Programs column lists LL/Juniors/Teens/Adults only.
 11. **Confirm the offer with Jason** — $39 + free uniform banner vs. "first lesson is free" wording elsewhere.
 

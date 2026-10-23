@@ -1,5 +1,29 @@
 # Changelog — Kansai Karate Tarragindi Website
 
+## [1.6.0] — 2026-10-23
+
+### New Training Location — St Luke's Anglican Church Hall (from Mon 2 Nov 2026)
+
+**Address updated everywhere** (Wellers Hill Bowls Club, 34 Esher St → St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi QLD 4121)
+- Contact page (metadata + Location block), Footer, ProgramPage (parents section + closing CTA line), About page (metadata, body text, "Our Dojo" section), homepage "A real southside dojo" card, `public/llms.txt`, CLAUDE.md
+- `app/layout.tsx`: meta description, keyword `wellers hill bowls club karate` → `ekibin road karate tarragindi`, JSON-LD `streetAddress` (LocalBusiness + Organization), geo → -27.5156, 153.0384 (OpenStreetMap Nominatim, 193 Ekibin Road East)
+- About page map embed → keyless `google.com/maps?q=…&output=embed` for the new address (old embed pointed at the Bowls Club pin)
+
+**Moving notice**
+- Contact page (under the address), About page ("Our Dojo" section) and Footer: classes move to the new location from Monday 2 November 2026
+- Suburb references (Wellers Hill, Moorooka, …) kept — they are suburbs, not the venue
+
+**New timetable from Monday 2 November 2026** (Jason's new hall timetable — Mon, Tue and Thu only)
+- Cubs Mon 4:00–4:30 / Thu 4:15–4:45 (no Tuesday) · Little Lions Mon 4:30–5:15 / Tue 4:15–5:00 / Thu 4:45–5:30 · Juniors Mon 5:15–6:00 / Tue 5:00–5:45 / Thu 5:30–6:15 · Teens & Adults Mon 6:00–6:45 / Tue 5:45–6:30 / Thu 7:00–7:45 · new combined Juniors, Teens & Adults class Thu 6:15–7:00
+- `TimetablePage.tsx`: Wednesday, Friday and Saturday columns removed (Mon/Tue/Thu only); `wed`/`fri`/`sat` dropped from `ScheduleRow`
+- All 5 program timetable pages: new times, "Coming Soon" cells removed, combined Thursday class added as a second row on Juniors/Teens/Adults, `scheduleNote` "This timetable applies from Monday 2 November 2026…"
+- `/timetable`: Wed/Sat columns removed, new times, Teens + Adults merged into one "Teens & Adults (13+)" row, combined-class row added, start-date note
+- Cubs + Little Lions program pages (metadata + class-times copy), Cubs timetable FAQ, homepage Juniors card ("after school on a Monday, Tuesday or Thursday")
+- `app/layout.tsx` JSON-LD opening hours split per day (Mon 16:00–18:45, Tue 16:15–18:30, Thu 16:15–19:45)
+- `public/llms.txt` schedule rewritten (Cubs added to Programs too); CLAUDE.md timetable table + remaining-task 9 closed
+
+---
+
 ## [1.5.0] — 2026-10-06
 
 ### $39 Offer Banner + Affiliation Logos

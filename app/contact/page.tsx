@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Kansai Karate Tarragindi",
-  description: "Get in touch with Kansai Karate Tarragindi. Classes at Wellers Hill Bowls Club, 34 Esher St, Tarragindi QLD 4121. Call 0480 566 172.",
+  description: "Get in touch with Kansai Karate Tarragindi. Classes at St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi QLD 4121. Call 0480 566 172.",
   alternates: { canonical: "https://kansaikaratetarragindi.com.au/contact" },
 };
 
@@ -40,7 +40,10 @@ export default function ContactPage() {
           </div>
           <div>
             <p className="font-semibold text-[#5B7DB1] mb-1">Location</p>
-            <p>Wellers Hill Bowls Club<br />34 Esher St, Tarragindi QLD 4121</p>
+            <p>St Luke&apos;s Anglican Church Hall<br />193 Ekibin Road East<br />Tarragindi QLD 4121</p>
+            <p className="mt-2 text-xs text-[#1a3a7a] bg-[#FFB800]/20 rounded px-2 py-1">
+              We&apos;re moving! Classes start at our new home from Monday 2 November 2026.
+            </p>
           </div>
         </div>
       </section>
