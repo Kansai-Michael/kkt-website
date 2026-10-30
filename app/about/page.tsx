@@ -75,7 +75,7 @@ export default function AboutPage() {
                   Kansai Karate Tarragindi is a place where every student is seen, valued, and challenged to grow — whether they are stepping on the mat for the very first time or working towards their next belt grading.
                 </p>
                 <p className="text-gray-600">
-                  Classes run Monday, Tuesday and Thursday evenings, with programs for every age group from Little Lions (5–6 years) through to Adults. From Monday 2 November 2026, the dojo trains at St Luke&apos;s Anglican Church Hall on Ekibin Road East — right in the heart of the Tarragindi community.
+                  Classes run Monday, Tuesday and Thursday evenings, with programs for every age group from Little Lions (5–6 years) through to Adults. Classes are held at St Luke&apos;s Anglican Church Hall on Ekibin Road East — right in the heart of the Tarragindi community.
                 </p>
               </div>
             </div>
@@ -134,9 +134,6 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-[#1a3a7a] mb-4">Our Dojo</h2>
             <p className="text-gray-600 mb-4">
               We are located at St Luke&apos;s Anglican Church Hall, 193 Ekibin Road East, Tarragindi QLD 4121 — conveniently situated for families from Tarragindi, Wellers Hill, Moorooka, Annerley, Salisbury, Rocklea, Yeronga, Greenslopes, Holland Park, and surrounding areas.
-            </p>
-            <p className="text-[#1a3a7a] bg-[#FFB800]/20 rounded-lg px-4 py-3 mb-4 text-sm">
-              <strong>We&apos;re moving!</strong> Classes move to our new home at St Luke&apos;s Anglican Church Hall from Monday 2 November 2026. If you have any questions about the move, give Sensei Jason a call on 0480 566 172.
             </p>
             <div className="rounded-lg overflow-hidden mb-6" style={{ aspectRatio: "16/9" }}>
               <iframe

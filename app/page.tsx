@@ -55,7 +55,7 @@ const dojoFeatures = [
   {
     icon: <MapPin className="w-8 h-8 text-[#5B7DB1]" />,
     title: "A real southside dojo",
-    body: "From Monday 2 November 2026, Kansai Karate Tarragindi trains at St Luke's Anglican Church Hall on Ekibin Road East, Tarragindi — a friendly, local space for southside families.",
+    body: "Kansai Karate Tarragindi classes are held at St Luke's Anglican Church Hall on Ekibin Road East, Tarragindi — a friendly, local space for southside families.",
   },
   {
     icon: <GraduationCap className="w-8 h-8 text-[#5B7DB1]" />,

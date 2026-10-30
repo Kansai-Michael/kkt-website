@@ -41,9 +41,6 @@ export default function ContactPage() {
           <div>
             <p className="font-semibold text-[#5B7DB1] mb-1">Location</p>
             <p>St Luke&apos;s Anglican Church Hall<br />193 Ekibin Road East<br />Tarragindi QLD 4121</p>
-            <p className="mt-2 text-xs text-[#1a3a7a] bg-[#FFB800]/20 rounded px-2 py-1">
-              We&apos;re moving! Classes start at our new home from Monday 2 November 2026.
-            </p>
           </div>
         </div>
       </section>
