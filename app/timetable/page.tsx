@@ -53,7 +53,7 @@ export default function TimetablePage() {
               </table>
             </div>
             <p className="mt-4 text-sm text-gray-500">
-              This timetable applies from Monday 2 November 2026. Timetable subject to change. Check with Sensei Jason for holiday schedules.
+              Timetable subject to change. Check with Sensei Jason for holiday schedules.
             </p>
           </div>
 

@@ -84,7 +84,7 @@ export default function TeensTimetable() {
           thu: "6:15 – 7:00pm",
         },
       ]}
-      scheduleNote="This timetable applies from Monday 2 November 2026, at our new home — St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi."
+      scheduleNote="Classes are held at St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi."
       bookingIframeUrl={BOOKING_URL}
       moreInfo={moreInfo}
     />
