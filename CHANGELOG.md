@@ -1,5 +1,16 @@
 # Changelog — Kansai Karate Tarragindi Website
 
+## [1.6.1] — 2026-10-30
+
+### Move Notices Removed — St Luke's Shown as the Current Venue
+Michael asked for all move/date wording to come off the site, so it reads as though classes have always been at St Luke's.
+- All 6 timetables: dropped "This timetable applies from Monday 2 November 2026". `/timetable` now just says "Timetable subject to change…"; the 5 program `scheduleNote`s read "Classes are held at St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi." (`3421a51`)
+- Removed the "We're moving!" boxes on the Contact and About pages and the Footer's "New location from Monday 2 November 2026" line (`adb3150`)
+- Homepage location card and About intro reworded to "classes are held at St Luke's…"
+- `public/llms.txt`: removed the "from Monday 2 November 2026" mentions and "previously Wellers Hill Bowls Club"
+
+---
+
 ## [1.6.0] — 2026-10-23
 
 ### New Training Location — St Luke's Anglican Church Hall (from Mon 2 Nov 2026)

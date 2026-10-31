@@ -6,7 +6,7 @@
 
 - **Site name:** Kansai Karate Tarragindi
 - **Domain:** kansaikaratetarragindi.com.au (live on Vercel — nameservers at Crazy Domains point to Vercel DNS)
-- **Address:** St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi QLD 4121 (from Mon 2 Nov 2026; previously Wellers Hill Bowls Club, 34 Esher St)
+- **Address:** St Luke's Anglican Church Hall, 193 Ekibin Road East, Tarragindi QLD 4121 (since Mon 2 Nov 2026; previously Wellers Hill Bowls Club, 34 Esher St). **The site presents St Luke's as the current venue — no "we're moving", "new home", "new location" or "from 2 Nov" wording anywhere on it** (removed 2026-10-30 at Michael's request).
 - **Phone:** 0480 566 172
 - **Email:** jason@kansaikaratetarragindi.com.au
 - **Head Instructor:** Sensei Jason Sallaway — 3rd Dan Black Belt, Shitoryu Shukokai
@@ -15,7 +15,7 @@
 
 ## Programs & Timetable
 
-From Monday 2 November 2026 (new hall). Classes run **Mon, Tue and Thu only** — no Wed/Fri/Sat.
+Current timetable (in effect since Mon 2 Nov 2026 at St Luke's). Classes run **Mon, Tue and Thu only** — no Wed/Fri/Sat.
 
 | Program | Ages | Monday | Tuesday | Thursday |
 |---|---|---|---|---|
