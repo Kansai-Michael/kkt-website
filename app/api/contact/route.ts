@@ -5,7 +5,11 @@ import { sanitizeAttribution } from "@/lib/leadAttribution";
 const KIHON_API_URL = "https://app.kihonsoft.au/api/leads/inbound";
 const KIHON_API_KEY = process.env.KIHON_API_KEY || "";
 
+// Maps the program value from the form to the source label Kihon's "New Lead"
+// sequences filter on. Each program needs an entry here, or its leads fall
+// through to website-general and get the wrong follow-up texts.
 const SOURCE_MAP: Record<string, string> = {
+  cubs: "website-cubs",
   "little-lions": "website-little-lions",
   juniors: "website-juniors",
   teens: "website-teens-adults",

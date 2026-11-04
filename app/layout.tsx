@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import ClientLayout from "@/components/ClientLayout";
 import GAPageView from "@/components/GAPageView";
 import AttributionTracker from "@/components/AttributionTracker";
+import PhoneClickTracker from "@/components/PhoneClickTracker";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -183,6 +184,7 @@ export default function RootLayout({
         `}</Script>
         <GAPageView />
         <AttributionTracker />
+        <PhoneClickTracker />
       </body>
     </html>
   );

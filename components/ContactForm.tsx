@@ -5,6 +5,10 @@ import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
 const programForms: Record<string, { label: string; iframe: string }> = {
+  cubs: {
+    label: "Cubs (Ages 3–4)",
+    iframe: "https://app.kihonsoft.au/book/tarragindi-first-lesson",
+  },
   "little-lions": {
     label: "Little Lions (Ages 5–6)",
     iframe: "https://app.kihonsoft.au/book/tarragindi-first-lesson",
