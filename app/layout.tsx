@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ClientLayout from "@/components/ClientLayout";
 import GAPageView from "@/components/GAPageView";
+import AttributionTracker from "@/components/AttributionTracker";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -178,8 +179,10 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-V0EWLSYB7P', { send_page_view: false });
+          gtag('config', 'AW-17874080223');
         `}</Script>
         <GAPageView />
+        <AttributionTracker />
       </body>
     </html>
   );

@@ -26,13 +26,26 @@ const nextConfig: NextConfig = {
     ];
   },
   async headers() {
+    // Google Ads conversion pings (AW-17874080223) go out as an image beacon or
+    // fetch to googleadservices.com and googleads.g.doubleclick.net, plus a
+    // regional google.com / google.com.au collect. They must be allowed in BOTH
+    // img-src and connect-src or the conversion is silently dropped — exactly
+    // what kept the Gold Coast account at zero conversions until Sept 2026.
+    const googleAds = [
+      "https://www.googleadservices.com",
+      "https://googleads.g.doubleclick.net",
+      "https://ad.doubleclick.net",
+      "https://www.google.com",
+      "https://www.google.com.au",
+    ].join(" ");
+
     const cspBase = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+      `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com ${googleAds}`,
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://www.gstatic.com",
+      `img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://www.gstatic.com ${googleAds}`,
       "frame-src https://app.kihonsoft.au https://maps.google.com https://www.google.com",
-      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com",
+      `connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com ${googleAds}`,
       "font-src 'self' data:",
       "media-src 'self'",
       "object-src 'none'",

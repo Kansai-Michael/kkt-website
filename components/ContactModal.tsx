@@ -3,6 +3,9 @@
 import { createContext, useContext, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 
+import { fireAdsEnquiry } from "@/lib/adsConversion";
+import { getAttribution } from "@/lib/attribution";
+
 const programs: Record<string, { label: string; timetableUrl: string }> = {
   cubs: {
     label: "Cubs (Ages 3–4)",
@@ -76,7 +79,13 @@ export function ContactModalProvider({ children }: { children: React.ReactNode }
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, program: selected || "general" }),
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          program: selected || "general",
+          attribution: getAttribution() ?? undefined,
+        }),
       });
 
       if (!res.ok) {
@@ -88,6 +97,7 @@ export function ContactModalProvider({ children }: { children: React.ReactNode }
       if (typeof win.gtag === "function") {
         win.gtag("event", "generate_lead", { program: selected || "general" });
       }
+      fireAdsEnquiry();
 
       const baseDest = selected ? programs[selected]?.timetableUrl : "/timetable";
       const qp = new URLSearchParams();

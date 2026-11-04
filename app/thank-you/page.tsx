@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AdsConversionEvent from "@/components/AdsConversionEvent";
 import GAConversionEvent from "@/components/GAConversionEvent";
 import IframeEscape from "@/components/IframeEscape";
 
@@ -14,6 +15,7 @@ export default function ThankYouPage() {
   return (
     <>
       <GAConversionEvent event="generate_lead" />
+      <AdsConversionEvent />
       <IframeEscape />
     <section
       className="relative flex items-center justify-center text-white"
